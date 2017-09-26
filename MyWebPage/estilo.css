@@ -6,7 +6,7 @@ body {
   }
 h1 {
       background-color:#33FFCC; 
-      color: #fff;
+      color: rgba(255, 255, 255, 0.49);
       text-transform: uppercase;
       padding: 100px 25px;
       text-align: center;     
