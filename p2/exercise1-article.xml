@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE articulos SYSTEM "articles.dtd"> -->
+<!DOCTYPE articles [
+<!ELEMENT articles (article*)>
+<!ELEMENT article (authors*, abstract, keywordset, magazine)>
+<!ELEMENT authors (author*)>
+<!ELEMENT abstract (#PCDATA)>
+<!ELEMENT keywordset (#PCDATA)>
+<!ELEMENT magazine (#PCDATA)>
+<!ATTLIST article titulo CDATA #REQUIRED>
+<!ATTLIST article pagina_inicio CDATA #REQUIRED>
+<!ATTLIST article pagina_final CDATA #REQUIRED>
+<!ATTLIST article año CDATA #REQUIRED>
+<!ATTLIST author nombre CDATA #REQUIRED>
+<!ATTLIST author email CDATA #REQUIRED>
+<!ATTLIST author nombre CDATA #REQUIRED>
+<!ATTLIST magazine nombre CDATA #REQUIRED>
+<!ATTLIST magazine volumenum CDATA #REQUIRED>
+]>
+<articles>
+	<article titulo = "Catalunya independent" 
+	pagina_inicio = " 5" 
+	pagina_final = " 15"
+	año = "2019">
+	<authors>
+		<author nombre = "Manolo" email = "manolin@gmail.com"/>
+	</authors>
+	<abstract>
+		Este es el resumen del articulo de Manolo.
+	</abstract>
+	<keywordset>
+		Manolin, fisica
+	</keywordset>
+	<magazine nombre = "Mundo deportivo"
+	 volumenum = "4"/>
+	</article>
+</articles>

@@ -1,0 +1,15 @@
+<!ELEMENT articles (article*)>
+<!ELEMENT article (authors*, abstract, keywordset, magazine)>
+<!ELEMENT authors (author*)>
+<!ELEMENT abstract (#PCDATA)>
+<!ELEMENT keywordset (#PCDATA)>
+<!ELEMENT magazine (#PCDATA)>
+<!ATTLIST article titulo CDATA #REQUIRED>
+<!ATTLIST article pagina_inicio CDATA #REQUIRED>
+<!ATTLIST article pagina_final CDATA #REQUIRED>
+<!ATTLIST article año CDATA #REQUIRED>
+<!ATTLIST author nombre CDATA #REQUIRED>
+<!ATTLIST author email CDATA #REQUIRED>
+<!ATTLIST author nombre CDATA #REQUIRED>
+<!ATTLIST magazine nombre CDATA #REQUIRED>
+<!ATTLIST magazine volumenum CDATA #REQUIRED>

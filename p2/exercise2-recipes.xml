@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipes>
+	<recipe nombre = "Fabada"
+	tipo = "Primer plato"
+	dificultad = "facil"
+	calorias = "100000 millones, pa aguantar el invierno"
+	tiempo_de_elaboracion = "na, 5 mins">
+	
+		<ingredients>
+			<ingredient nombre = "Fabes" cantidad = "500 gramos"/>
+			<ingredient nombre = "Chorizu" cantidad = "1"/>
+		</ingredients>
+		
+		<cooking_steps>
+			<step numero = "1" > Freir el agua </step>
+			<step numero = "2" > Llamar a guela</step>
+		</cooking_steps>
+		
+		<tools>
+			<tool nombre = "Pota"/>
+			<tool nombre = "Garfilla"/>
+		</tools>
+		
+		<origin>
+		Ye la receta de mi güela maribel, surgida en motecolla, mas conocida como la quintana de güela
+		</origin>
+	</recipe>
+</recipes>
