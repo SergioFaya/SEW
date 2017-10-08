@@ -9,13 +9,16 @@
 <!ATTLIST recipe nombre CDATA #REQUIRED>
 <!ATTLIST recipe tipo CDATA #REQUIRED>
 <!ATTLIST recipe dificultad CDATA #REQUIRED>
-<!ATTLIST recipe calorias CDATA >
+<!ATTLIST recipe calorias CDATA #REQUIRED>
 <!ATTLIST recipe tiempo_de_elaboracion CDATA #REQUIRED>
 <!ATTLIST ingredient nombre CDATA #REQUIRED>
+<!ATTLIST ingredient cantidad CDATA #REQUIRED>
 <!ATTLIST step numero CDATA #REQUIRED>
 <!ATTLIST tool nombre CDATA #REQUIRED>
 ]>
+
 <recipes>
+
 	<recipe nombre = "Fabada Asturiana"
 	tipo = "Primer plato"
 	dificultad = "fácil"
@@ -48,16 +51,17 @@
 		<tools>
 			<tool nombre = "Pota baja y ancha"/>
 			<tool nombre = "Cuchara de madera"/>
-			<tool nombre = "Fuente">
-			<tool nombre = "Espumadera">
-			<tool nombre = "Garfilla">
-			<tool nombre = "Cacillo o cucharón">
+			<tool nombre = "Fuente"/>
+			<tool nombre = "Espumadera"/>
+			<tool nombre = "Garfilla"/>
+			<tool nombre = "Cacillo o cucharón"/>
 		</tools>
 		
 		<origin>
 		Receta popular Asturiana.
 		</origin>
 	</recipe>
+
 	<recipe nombre = "Ensalada de Arroz"
 	tipo = "Entrante"
 	dificultad = "fácil"
@@ -129,7 +133,7 @@
 			Receta del libro de repostería para principiantes.
 		</origin>
 	</recipe>
-	</recipe>
+
 	<recipe nombre = "Pasta arrabiata"
 	tipo = "Primer o segundo plato"
 	dificultad = "fácil"
@@ -173,8 +177,8 @@
 	
 		<ingredients>
 			<ingredient nombre = "Pollo, ya troceado" cantidad = "500 gramos"/>
-			<ingredient nombre = "Ajo" cantidad = "3 o 4 dientes">
-			<ingredient nombre = "Harina" cantidad = "! paquete, para rebozar">
+			<ingredient nombre = "Ajo" cantidad = "3 o 4 dientes"/>
+			<ingredient nombre = "Harina" cantidad = "! paquete, para rebozar"/>
 		</ingredients>
 		
 		<cooking_steps>
