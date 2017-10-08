@@ -18,20 +18,81 @@
 <!ATTLIST magazine volumenum CDATA #REQUIRED>
 ]>
 <articles>
-	<article titulo = "Catalunya independent" 
-	pagina_inicio = " 5" 
-	pagina_final = " 15"
-	año = "2019">
+	<article titulo = "Driver Fatigue Detection using Mean Intensity, SVM, and SIFT"
+	pagina_inicio = "1" 
+	pagina_final = " 8"
+	año = "2017">
 	<authors>
-		<author nombre = "Manolo" email = "manolin@gmail.com"/>
+		<author nombre = "Naz S" email = ""/>
+		<author nombre = "Ziauddin S" email = ""/>
+		<author nombre = "A. R. Shahid" email = ""/>
 	</authors>
 	<abstract>
-		Este es el resumen del articulo de Manolo.
+		Driver fatigue is one of the major causes of accidents. This has increased the need for driver fatigue detection mechanism in the vehicles to reduce human and vehicle loss during accidents. In the proposed scheme, we capture videos from a camera mounted inside the vehicle. From the captured video, we localize the eyes using Viola-Jones algorithm. Once the eyes have been localized, they are classified as open or closed using three different techniques namely mean intensity, SVM, and SIFT. If eyes are found closed for a considerable amount of time, it indicates fatigue and consequently an alarm is generated to alert the driver. Our experiments show that SIFT outperforms both mean intensity and SVM, achieving an average accuracy of 97.45% on a dataset of five videos, each having a length of two minutes.
 	</abstract>
 	<keywordset>
-		Manolin, fisica
+		Driver Fatigue Detection, Eye Detection, Scale Invariant Feature Transform, Support Vector Machine, Traffic Accidents.
 	</keywordset>
-	<magazine nombre = "Mundo deportivo"
+	<magazine nombre = "Ijimai"
+	 volumenum = "1"/>
+	</article>
+	
+	<article titulo = "Development of Injuries Prevention Policies in Mexico: A Big Data Approach"
+	pagina_inicio = "1" 
+	pagina_final = "7"
+	año = "2017">
+	<authors>
+		<author nombre = "Croda" email = ""/>
+		<author nombre = "R. M. C." email = ""/>
+		<author nombre = "D. E. G. Romero" email = ""/>
+	</authors>
+	<abstract>
+		Considering that Mexican injuries prevention strategies have been focused on injuries caused by car accidents and gender violence, a whole analysis of the injuries registered are performed in this paper to have a wider overview of those agents that can cause injuries around the country. Taking into account the amount of information from both public and private sources, obtained from dynamic cubes reported by the Minister of Health, Big Data strategies are used with the objective of finding an appropriate extraction such as to identify the real correlations between the different variables registered by the Health Sector. The results of the analysis show areas of opportunity to improve the public policies on the subject, particularly in diminishing wounds at living place, public road (pedestrians) and work.
+	</abstract>
+	<keywordset>
+		Big Data, DSS, Learning
+	</keywordset>
+	<magazine nombre = "Ijimai"
+	 volumenum = "1"/>
+	</article>
+	
+	<article titulo = "Selecting Statistical Characteristics of Brain Signals to Detect Epileptic Seizures using Discrete Wavelet Transform and Perceptron Neural Network"
+	pagina_inicio = "33" 
+	pagina_final = "38"
+	año = "2017">
+	<authors>
+		<author nombre = "Abbasi, R." email = ""/>
+		<author nombre = "M. Esmaeipour" email = ""/>
+	</authors>
+	<abstract>
+		Electroencephalogram signals (EEG) have always been used in medical diagnosis. Evaluation of the statistical characteristics of EEG signals is actually the foundation of all brain signal processing methods. Since the correct prediction of disease status is of utmost importance, the goal is to use those models that have minimum error and maximum reliability. In anautomatic epileptic seizure detection system, we should be able to distinguish between EEG signals before, during and after seizure. Extracting useful characteristics from EEG data can greatly increase the classification accuracy. In this new approach, we first parse EEG signals to sub-bands in different categories with the help of discrete wavelet transform(DWT) and then we derive statistical characteristics such as maximum, minimum, average and standard deviation for each sub-band. A multilayer perceptron (MLP)neural network was used to assess the different scenarios of healthy and seizure among the collected signal sets. In order to assess the success and effectiveness of the proposed method, the confusion matrix was used and its accuracy was achieved98.33 percent. Due to the limitations and obstacles in analyzing EEG signals, the proposed method can greatly help professionals experimentally and visually in the classification and diagnosis of epileptic seizures.
+	</abstract>
+	<keywordset>
+		Accuracy, Discrete Wavelet Transforms, Medicine, Multilayer Perceptron, Neural Network
+	</keywordset>
+	<magazine nombre = "Ijimai"
 	 volumenum = "4"/>
 	</article>
+	
+	<article titulo = "Step Characterization using Sensor Information Fusion and Machine Learning"
+	pagina_inicio = "53" 
+	pagina_final = "60"
+	año = "2015">
+	<authors>
+		<author nombre = "Anacleto, R." email = ""/>
+		<author nombre = "L. Figueiredo" email = ""/>
+		<author nombre = "A. Almeida" email = ""/>
+		<author nombre = "P. Novais" email = ""/>
+		<author nombre = "A. Meireles" email = ""/>
+	</authors>
+	<abstract>
+		A pedestrian inertial navigation system is typically used to suppress the Global Navigation Satellite System limitation to track persons in indoor or in dense environments. However, low- cost inertial systems provide huge location estimation errors due to sensors and pedestrian dead reckoning inherent characteristics. To suppress some of these errors we propose a system that uses two inertial measurement units spread in person’s body, which measurements are aggregated using learning algorithms that learn the gait behaviors. In this work we present our results on using different machine learning algorithms which are used to characterize the step according to its direction and length. This characterization is then used to adapt the navigation algorithm according to the performed classifications.
+	</abstract>
+	<keywordset>
+			Algorithms, Information Fusion, Learning, Localization, Machine Learning
+	</keywordset>
+	<magazine nombre = "Ijimai"
+	 volumenum = "3"/>
+	</article>
+
 </articles>
