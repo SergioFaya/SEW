@@ -146,7 +146,38 @@
 		</tools>
 		
 		<origin>
-			Receta italiana.
+			Receta italiana. 
+		</origin>
+	</recipe>
+	<recipe nombre = "Pollo al ajillo"
+	tipo = "Entrante"
+	dificultad = "media"
+	calorias = "600"
+	tiempo_de_elaboracion = "media hora">
+	
+		<ingredients>
+			<ingredient nombre = "Pollo, ya troceado" cantidad = "500 gramos"/>
+			<ingredient nombre = "Ajo" cantidad = "3 o 4 dientes">
+			<ingredient nombre = "Harina" cantidad = "! paquete, para rebozar">
+		</ingredients>
+		
+		<cooking_steps>
+			<step numero = "1"> Picamos el ajo en rodajas</step>
+			<step numero = "2"> Vertemos el aceite en una sarten y la ponemos a fuego medio</step>
+			<step numero = "3"> Enharinamos el pollo </step>
+			<step numero = "4"> Echamos el ajo y el pollo en la sartén </step>
+			<step numero = "5"> Una vez frito retiramos el ajo y el pollo y lo ponemos en la bandeja cubierta con papel de cocina.</step>
+		</cooking_steps>
+		
+		<tools>
+			<tool nombre = "Sarten"/>
+			<tool nombre = "Papel de Cocina"/>
+			<tool nombre = "Bandeja"/>
+			<tool nombre = "Espumadera"/> 			
+		</tools>
+		
+		<origin>
+			Receta de mi madre.
 		</origin>
 	</recipe>
 </recipes>
