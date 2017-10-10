@@ -200,4 +200,122 @@
 			Receta de mi madre.
 		</origin>
 	</recipe>
+
+	<recipe nombre = "Rissoto de Setas Integral"
+	tipo = "Primer plato"
+	dificultad = "media/alta"
+	calorias = ""
+	tiempo_de_elaboracion = "30 minutos">
+		<ingredients>
+			<ingredient nombre = "Arroz integral" cantidad = "200 gramos"/>
+			<ingredient nombre = "Cebolla" cantidad = "media"/>
+			<ingredient nombre = "setas de tu variedad preferida" cantidad = "75 gramos"/>
+			<ingredient nombre = "vino" cantidad = "medio vaso"/>
+			<ingredient nombre = "caldo de pollo" cantidad = "400 ml"/>
+			<ingredient nombre = "queso sin grasa" cantidad = "50g"/>
+			<ingredient nombre = "albahaca" cantidad = "unas hojas"/>
+			<ingredient nombre = "aceite de oliva" cantidad = ""/>
+			<ingredient nombre = "sal" cantidad = ""/>
+		</ingredients>
+		<cooking_steps>
+			<step numero = "1">Lo primero que vamos a hacer, va a ser en la noche anterior. Vamos a poner el arroz en un cuenco alto y
+			 lo vamos a cubrir con generosa agua. Es algo parecido a cuando pones en remojo unas alubias, antes de ponerlas a cocer.
+			  El motivo es que el arroz integral, es mucho más duro que el blanco y, con ésto, logramos que se hidrate. Así pues,
+			   si lo hidratamos tardará 20 minutos en cocerse. Sin hidratar tardaría el doble. Lo dejamos en remojo toda la noche</step>
+			<step numero = "2">Al día siguiente, en una cazuela alta ponemos un chorrito de aceite de oliva a fuego suave. 
+			Añadimos la cebolla bien picada y las setas u hongos. Echamos una pizquita de sal y removemos con frecuencia,
+			 mientras cocinamos a fuego suave.</step>
+			<step numero = "3">Pasados 5 minutos, con la cebolla ya algo cocinada y las setas que habrán menguado, 
+			añadimos el vino blanco. Que le dará un toque ácido bastante interesante a la receta. Dejamos que recupere el hervor
+			 y que hierva un minuto, para que se evapore el alcohol y añadimos el arroz, ya hidratado de la noche anterior.
+			  Acto seguido removemos, sin parar, hasta que el arroz haya absorbido todo el vino</step>
+			<step numero = "4">Ahora viene el secreto del risotto. En vez de echar todo el caldo de golpe,
+			 añadimos como un cucharón del mismo y comenzamos a remover. Lo vamos a mezclar constantemente,
+			  sin parar. Pasados unos de 3 a 5 minutos, el arroz habrá absorbido todo el caldo. Repetimos la acción,
+			   de echar un cucharón del caldo y de remover constantemente. No olvides echar sal, si el caldo que estés empleando no lo lleva.</step>
+			<step numero = "5">Pasados de 17, a 20 minutos, repitiendo constantemente el paso anterior,
+			 el arroz estará al dente, muy cremoso y nada suelto. Es lo que buscamos. Es el momento de apagar 
+			 el fuego y con el mismo calor del fuego apagado, añadimos al risotto dos o tres cucharadas de aceite
+			  de oliva y el queso rallado. Mezclamos bien y servimos inmediatamente. Este plato es cocinarse y servir!! 
+			  Puedes espolvorear con unas hojas de albahaca, que le vienen como anillo al dedo a esta receta</step>
+		</cooking_steps>
+		<tools>
+			<tool nombre = "cazuela alta"/>
+			<tool nombre = "cucharon"/>
+			<tool nombre = "fuente"/>
+			<tool nombre = "cuchara de madera"/>
+
+		</tools>
+		<origin>
+		Plato tipico italiano, receta obtenida de la web https://www.cocinacaserayfacil.net/risotto-setas-integral/
+		</origin>
+	</recipe>
+
+	<recipe nombre = "Brownie de Chocolate con Nueces"
+	tipo = "Postre"
+	dificultad = "fácil"
+	calorias = ""
+	tiempo_de_elaboracion = "40 minutos">
+		<ingredients>
+			<ingredient nombre = "chocolate de reposteria negro o blanco" cantidad = "200 gramos"/>
+			<ingredient nombre = "mantequilla" cantidad = "200 gr"/>
+			<ingredient nombre = "azúcar" cantidad = "200 gr"/>
+			<ingredient nombre = "huevos" cantidad = "3"/>
+			<ingredient nombre = "harina" cantidad = "80 gr"/>
+			<ingredient nombre = "canela en polvo" cantidad = "1 cucharada(opcional)"/>
+			<ingredient nombre = "nueces trituradas" cantidad = "un puñado (opcional)"/>
+		</ingredients>
+		<cooking_steps>
+			<step numero = "1">Ponemos a cocer agua en un recipiente amplio y, en otro mas pequeño, metemos el chocolate y la mantequilla. Cuando el agua esté hirviendo, ponemos el recipiente del chocolate y la mantequilla encima del agua. A esta forma de cocción,se le llama “Al baño María”. Lo dejamos ahí hasta que se haya derretido todo bien.</step>
+			<step numero = "2">En un bol, mezclamos los huevos y el azúcar. Batimos todo bien con un tenedor</step>
+			<step numero = "3">Echamos el chocolate y la mantequilla fundidas en la mezcla de huevo y azúcar. Agregamos después la harina, las nueces y la canela.</step>
+			<step numero = "4">En un molde bien untado de mantequilla y espolvoreado con harina, para que no se pegue en el horno, echamos esta mezcla.</step>
+			<step numero = "5">Pre-calentamos el horno a unos 150ºC. Metemos nuestra mezcla en la rendija del medio del horno, durante unos 30 minutos. Para saber si está hecho o no, pinchamos con un tenedor y cuando salga seco, ¡significará que el brownie ya está cocinado! . Tened paciencia cuando salga del horno y, dejad que repose un rato porque hasta que no pierda algo de temperatura, no se va a poder desmoldar bien. Se va a deshacer.</step>
+		</cooking_steps>
+		<tools>
+			<tool nombre = "Horno"/>
+			<tool nombre = "Fuente"/>
+			<tool nombre = "Batidora o removedora o a mano"/>
+			<tool nombre = "Molde rectangular"/>
+		</tools>
+		<origin>
+			Receta de un postre americano, se recomienda servir caliente y con helado. Receta de la página https://www.cocinacaserayfacil.net/brownie-de-chocolate/
+		</origin>
+	</recipe>
+
+	<recipe nombre = "Rabo de toro en salsa de vino tinto"
+	tipo = "Segundo"
+	dificultad = "dificil"
+	calorias = ""
+	tiempo_de_elaboracion = "6 horas">
+		<ingredients>
+			<ingredient nombre = "Rabo de toro" cantidad = "1 kg"/>
+			<ingredient nombre = "cebolla grande" cantidad = "1"/>
+			<ingredient nombre = "pimiento rojo" cantidad = "medio"/>
+			<ingredient nombre = "pimiento verde" cantidad = "medio"/>
+			<ingredient nombre = "zanahoria" cantidad = "1"/>
+			<ingredient nombre = "vino tinto" cantidad = "litro y medio"/>
+			<ingredient nombre = "sal" cantidad = "al gusto"/>
+			<ingredient nombre = "pimienta" cantidad = "al gusto"/>
+			<ingredient nombre = "aceite de oliva" cantidad = ""/>
+		</ingredients>
+		<cooking_steps>
+			<step numero = "1">Ponemos el vino en un bol y marinamos en el los trozos de rabo de toro, previamente salpimentados. Es decir, los metemos dentro del vino, que queden bien empapados, y dejamos que reposen en la nevera mínimo 2 horas. Aunque puedes dejarlo una noche entera, para que se empape más del sabor.</step>
+			<step numero = "2">Hecho esto, sacamos los trozos, uno a uno del vino. Los secamos un poco con papel de cocina y los pasamos bien por harina, para secarlos del todo. Freímos los trozos en un buen chorrito de aceite de oliva. De momento, con sellar cada trozo, es suficiente. Es decir, que cojan algo de color por fuera pero, queden crudos en su interior</step>
+			<step numero = "3">Retiramos cada trozo de rabo de trozo del aceite y, en el mismo, añadimos la cebolla, los pimientos y la zanahoria picadas. Salpimentamos y sofreímos, a fuego suave durante unos 5 minutos. Que la verdura se ablande un poco.</step>
+			<step numero = "4">Hecho esto, añadimos el vino donde había estado marinando el rabo. Subimos el fuego, hasta que comience a hervir. Hecho esto, contamos cinco minutos. Tiempo suficiente para que se evapore el alcohol y el vino reduzca un poco. Una vez hecho esto, reincorporamos el rabo de toro a toda esta preparación</step>
+			<step numero = "5">Ahora cocinamos todos los ingredientes. Si tienes olla a presión, cerramos y cuando suba el pitorro, lo dejamos 40 minutos. Si lo haces en una cazuela convencional, tápala y deja cocinar a fuego medio-suave durante 4 horas. El objetivo es que la carne se cocine en la salsa de vino y quede bien tierna.</step>
+			<step numero = "6">Una vez cocinado, hay dos opciones. Si quieres el rabo de toro para el mismo día, simplemente pasa la salsa por un pasapurés y después, devuélvesela al rabo. Con esto obtendremos una salsa un poco tosca pero, igualmente rica. No obstante, si tienes tiempo y quieres dejarlo para el día siguiente (que además estará más rico), una vez que el rabo de toro esté cocinado, tan solo cuela la salsa, retirando todas las verduras. Éstas, ya han dejado sus sabores y además, tendrán mucha grasa, absorbida del rabo. Así que las tiramos. Dejamos enfríar la salsa en la nevera y al día siguiente, retiramos la grasa sobrante. Al estar solidificada, será muy fácil hacerlo con una cuchara. Esta grasa, no tienes porqué tirarla. Puedes añadir una cucharada de la misma a otros guisos. Una vez hecho todo esto, devuelve todo a la olla, a fuego suave. Si el rabo está ya muy hecho, retíralo para que no se deshaga. Cuando la salsa haya reducido y hayas obtenido el espesor deseado, añade de nuevo el rabo de toro y listo. ¡A servir!</step>
+		</cooking_steps>
+		<tools>
+			<tool nombre = "Olla grande o a presion"/>
+			<tool nombre = "Espumadera"/>
+			<tool nombre = "Cucharon"/>
+		</tools>
+		<origin>
+		</origin>
+	</recipe>
+
+
+
 </recipes>
