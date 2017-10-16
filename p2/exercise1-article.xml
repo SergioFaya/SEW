@@ -4,6 +4,7 @@
 <!ELEMENT articles (article*)>
 <!ELEMENT article (authors*, abstract, keywordset, magazine)>
 <!ELEMENT authors (author*)>
+<!ELEMENT author (#PCDATA)>
 <!ELEMENT abstract (#PCDATA)>
 <!ELEMENT keywordset (#PCDATA)>
 <!ELEMENT magazine (#PCDATA)>

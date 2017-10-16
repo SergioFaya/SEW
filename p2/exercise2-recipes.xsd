@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="recipes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="recipe" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="recipe">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ingredients" />
+				<xs:element ref="cooking_steps" />
+				<xs:element ref="tools" />
+				<xs:element ref="origin" />
+			</xs:sequence>
+			<xs:attribute name="nombre" type="xs:string" use="required" />
+			<xs:attribute name="tipo" type="xs:string" use="required" />
+			<xs:attribute name="dificultad" type="xs:string" use="required" />
+			<xs:attribute name="calorias" type="xs:string" use="required" />
+			<xs:attribute name="tiempo_de_elaboracion" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ingredients">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="ingredient" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="cooking_steps">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="step" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="tools">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="tool" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="origin" type="xs:string" />
+</xs:schema>
