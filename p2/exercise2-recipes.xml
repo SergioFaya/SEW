@@ -3,6 +3,7 @@
 <!ELEMENT recipes (recipe*)>
 <!ELEMENT recipe (ingredients, cooking_steps, tools, origin)>
 <!ELEMENT ingredients (ingredient*)>
+<!ELEMENT ingredient (#PCDATA)>
 <!ELEMENT cooking_steps (step*)>
 <!ELEMENT tools (tool*)>
 <!ELEMENT origin (#PCDATA)>
