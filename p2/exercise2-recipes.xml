@@ -7,6 +7,7 @@
 <!ELEMENT cooking_steps (step*)>
 <!ELEMENT step (#PCDATA)>
 <!ELEMENT tools (tool*)>
+<!ELEMENT tool (#PCDATA)>
 <!ELEMENT origin (#PCDATA)>
 <!ATTLIST recipe nombre CDATA #REQUIRED>
 <!ATTLIST recipe tipo CDATA #REQUIRED>
