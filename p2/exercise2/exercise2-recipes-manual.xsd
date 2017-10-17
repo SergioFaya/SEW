@@ -24,7 +24,7 @@
 			<xs:attribute name="tipo" type="xs:string" use="required" />
 			<xs:attribute name="dificultad" type="xs:string" use="required" />
 			<xs:attribute name="calorias" type="xs:string" use="optional" />
-			<xs:attribute name="tiempo_de_elaboracion" type="xs:string" use="required" />
+			<xs:attribute name="tiempo_de_elaboracion" type="xs:duration" use="required" />
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="ingredients">
