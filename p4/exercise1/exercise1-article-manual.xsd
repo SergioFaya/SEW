@@ -25,7 +25,7 @@
             <xs:attribute name="titulo" type="xs:ID" use="required"/>
             <xs:attribute name="pagina_inicio" type="xs:integer" use="required"/>
             <xs:attribute name="pagina_final" type="xs:integer" use="required"/>
-            <xs:attribute name="año" type="xs:int" use="date"/>
+            <xs:attribute name="año" type="xs:integer" use="required"/>
         </xs:complexType>
     </xs:element>
 
@@ -48,7 +48,17 @@
     </xs:element>
 
     <xs:element name="abstract" type="xs:string" />
-	<xs:element name="keywordset" type="xs:string" />
+	
+    <xs:element name="keywordset">
+        <xs:complexType>
+                <xs:sequence>
+                    <xs:element ref = "keyword" minOccurs = "0" maxOccurs = "unbounded"/>
+                </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name = "keyword" type="xs:string"/>
+
 	<xs:element name="magazine">
 		<xs:complexType>
 			<xs:simpleContent>
