@@ -24,7 +24,13 @@ h2 {
       padding: 10px 25px;
       text-align: left;     
 }
-
+h3{
+    background-color:#fff; 
+      color: #FF5733;
+      text-transform: uppercase;
+      padding: 10px 25px;
+      text-align: left; 
+}
 a:link{
       color: cadetblue;
       font-style: italic !important ;  
