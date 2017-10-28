@@ -1,0 +1,6 @@
+Tras haber hecho los 2 ejercicios con sus respectivos xsd (mediante visual studio y a mano),
+he de decir que no hay mayor diferencia entre uno a grosso modo, salvo por una mayor exhaustividad en el 
+documento que realicé a mano. En él defino rangos de inclusion para los elementos y redefino los tipos 
+normalmente strings a otros como ID, int o double cosa que en un documento autogenerado 
+es imposible de realizar, también en los atributos el parametro use lo defino como optional en caso de 
+las calorias.

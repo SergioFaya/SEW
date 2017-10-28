@@ -1,0 +1,72 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xs:schema elementFormDefault="qualified" 
+    xmlns= "http://www.uniovi.es" 
+    targetNamespace= "http://www.uniovi.es" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name = "articles">
+        <xs:complexType>
+            <xs:sequence>
+                <!--Conjunto de elementos que contiene el elemento articles-->
+                <!--minimo de ocurrencias a 1 para que el texto no pueda estar vacio ya que no tendría sentido -->
+                <xs:element ref = "article" minOccurs= "1" maxOccurs= "unbounded"/>
+            </xs:sequence>
+            <!--aqui irian los atributos de el elemento-->
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name = "article">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref = "authors" minOccurs= "1" maxOccurs= "1"/>
+                <xs:element ref = "abstract" minOccurs= "1" maxOccurs= "1"/>
+                <xs:element ref = "keywordset" minOccurs= "1" maxOccurs= "1"/>
+                <xs:element ref = "magazine" minOccurs= "1" maxOccurs= "1"/>
+            </xs:sequence>
+            <xs:attribute name="titulo" type="xs:ID" use="required"/>
+            <xs:attribute name="pagina_inicio" type="xs:integer" use="required"/>
+            <xs:attribute name="pagina_final" type="xs:integer" use="required"/>
+            <xs:attribute name="año" type="xs:integer" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name = "authors">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref = "author" minOccurs= "1" maxOccurs= "unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name = "author">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base = "xs:string">
+                    <xs:attribute name = "nombre" type= "xs:ID" use= "required"/>
+                    <xs:attribute name = "email" type= "xs:string" use= "required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="abstract" type="xs:string" />
+	
+    <xs:element name="keywordset">
+        <xs:complexType>
+                <xs:sequence>
+                    <xs:element ref = "keyword" minOccurs = "0" maxOccurs = "unbounded"/>
+                </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name = "keyword" type="xs:string"/>
+
+	<xs:element name="magazine">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="nombre" type="xs:string" use="required" />
+					<xs:attribute name="volumenum" type="xs:int" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

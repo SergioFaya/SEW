@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!-- <!DOCTYPE articulos SYSTEM "articles.dtd"> -->
 <!DOCTYPE articles [
 <!ELEMENT articles (article*)>
@@ -18,6 +19,9 @@
 <!ATTLIST magazine nombre CDATA #REQUIRED>
 <!ATTLIST magazine volumenum CDATA #REQUIRED>
 ]>
+<!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation ="http://www.uniovi.es exercise1-article-manual.xsd"
+xmlns="http://www.uniovi.es" -->
 <articles>
 	<article titulo = "Driver Fatigue Detection using Mean Intensity, SVM, and SIFT"
 	pagina_inicio = "1" 
