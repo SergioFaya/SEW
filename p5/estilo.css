@@ -46,11 +46,19 @@ p:nth-child(4){
 }
 
 img{
+<<<<<<< HEAD
+  display: block;
+=======
     display: block;
+>>>>>>> 535f9fc0812f1c416ec3ec3ced720981a7809ecc
     margin-left: auto;
     margin-right: auto;
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 535f9fc0812f1c416ec3ec3ced720981a7809ecc
 audio{
   margin-left: auto;
   margin-right: auto;
@@ -58,6 +66,10 @@ audio{
   border-color: red;
   border: 80px;
 }
+<<<<<<< HEAD
+ol{
+  font-weight: bold;
+=======
 
 ol {
   margin: 0 0 1.5em;
@@ -80,6 +92,7 @@ ol > li:before {
   font-weight: bold;
   text-align: right;
   content: counter(item) ".";
+>>>>>>> 535f9fc0812f1c416ec3ec3ced720981a7809ecc
 }
 
 dt{
