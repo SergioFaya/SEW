@@ -2,7 +2,7 @@ body {
       font: 400 15px Tahoma,sans-serif; /*Familia sans-serif;*/
       line-height: 1.8;
       /*background-color: #f6f6f6;*/
-      background-image: url("img/background-dark.jpg");
+      background-image: url("https://unioviedo-my.sharepoint.com/personal/uo251005_uniovi_es/_layouts/15/guestaccess.aspx?docid=088e874a56a684ee984ae3daba04abc11&authkey=AepD0KQDJLKosdJhSvDpk5Y&e=549a1f5500c14379855d81a727d9aecd");
       background-attachment: fixed;
       background-position: initial; 
       background-size: cover;
@@ -15,7 +15,7 @@ body {
       color: white;
   }
 img{
-    background-image: url("img/background-light.png");
+    background-image: url("https://unioviedo-my.sharepoint.com/personal/uo251005_uniovi_es/_layouts/15/guestaccess.aspx?docid=00e904e31a992402f8402094e93aadf05&authkey=AeAOYGlS9b47KdMOZPg1jVQ&e=626ad46497804d3e8d64a60300a08ce0");
     padding: 20px;
     border-radius: 15px;
     display: block;
@@ -43,7 +43,7 @@ h3{
 }
 table {  
   border-radius: 15px;
-  background-image: url("img/background-light.png");
+  background-image: url("https://unioviedo-my.sharepoint.com/personal/uo251005_uniovi_es/_layouts/15/guestaccess.aspx?docid=00e904e31a992402f8402094e93aadf05&authkey=AeAOYGlS9b47KdMOZPg1jVQ&e=626ad46497804d3e8d64a60300a08ce0");
 }
 th{
   color: white;
