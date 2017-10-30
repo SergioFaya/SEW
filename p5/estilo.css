@@ -1,20 +1,21 @@
 body {
       font: 400 15px Tahoma, sans-serif;
       line-height: 1.8;
-      color: #818181;
-      background-color: #fff;
+      color: white;
+      background-image: url("images/background.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
       margin-top: 40px;
       margin-bottom: 100px;
       margin-right: 50px;
       margin-left: 80px;
-      border: 80px;
-      border-color:red;
   }
 h1 {
       background-color:#FF5733; 
       color: #fff;
       text-transform: uppercase;
-      padding: 100px 25px;
+      padding: 50px 25px;
       text-align: center;     
   }
 h2 {
@@ -24,8 +25,8 @@ h2 {
       padding: 10px 25px;
       text-align: left;     
 }
-h3{
-    background-color:#fff; 
+h3{ 
+      background-color: #fff;
       color: #FF5733;
       text-transform: uppercase;
       padding: 10px 25px;
@@ -46,30 +47,16 @@ p:nth-child(4){
 }
 
 img{
-<<<<<<< HEAD
-  display: block;
-=======
     display: block;
->>>>>>> 535f9fc0812f1c416ec3ec3ced720981a7809ecc
     margin-left: auto;
     margin-right: auto;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 535f9fc0812f1c416ec3ec3ced720981a7809ecc
 audio{
   margin-left: auto;
   margin-right: auto;
   display: block;
-  border-color: red;
-  border: 80px;
 }
-<<<<<<< HEAD
-ol{
-  font-weight: bold;
-=======
 
 ol {
   margin: 0 0 1.5em;
@@ -92,15 +79,12 @@ ol > li:before {
   font-weight: bold;
   text-align: right;
   content: counter(item) ".";
->>>>>>> 535f9fc0812f1c416ec3ec3ced720981a7809ecc
 }
 
 dt{
   font-weight: bold;
 }
 
-p {
-      background-color: #fff  ;
-      
+h2+p{
+  font-style: italic;
 }
-h2+p{color:red;}

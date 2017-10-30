@@ -5,6 +5,8 @@ body {
       background-image: url("img/background-dark.jpg");
       background-attachment: fixed;
       background-position: initial; 
+      background-size: cover;
+      background-repeat: no-repeat;
       margin-left: 40px;
       margin-right: 20px;
       margin-top: 30px;
@@ -33,12 +35,11 @@ h2{
   color: #37474F;
   padding: 4px;
   border-radius: 15px;
-  margin-right: 900px;
+  margin-right: 75%;
 }
 h3{
   color: #33FFCC; 
   padding: 15px;
-  
 }
 table {  
   border-radius: 15px;
