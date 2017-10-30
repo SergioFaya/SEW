@@ -14,6 +14,12 @@ body {
 
       color: white;
   }
+img:first-child{
+    height: 20%;
+    width: 20%;
+}
+
+/*https://www.w3schools.com/css/css3_mediaqueries_ex.asp_*/
 img{
     background-image: url("https://unioviedo-my.sharepoint.com/personal/uo251005_uniovi_es/_layouts/15/guestaccess.aspx?docid=00e904e31a992402f8402094e93aadf05&authkey=AeAOYGlS9b47KdMOZPg1jVQ&e=626ad46497804d3e8d64a60300a08ce0");
     padding: 20px;
