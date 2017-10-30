@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="recipes.xsl"?>
 <!DOCTYPE recipes [
 <!ELEMENT recipes (recipe*)>
 <!ELEMENT recipe (ingredients, cooking_steps, tools, origin)>
@@ -181,7 +182,7 @@
 		<ingredients>
 			<ingredient nombre = "Pollo, ya troceado" cantidad = "500 gramos"/>
 			<ingredient nombre = "Ajo" cantidad = "3 o 4 dientes"/>
-			<ingredient nombre = "Harina" cantidad = "! paquete, para rebozar"/>
+			<ingredient nombre = "Harina" cantidad = "1 paquete, para rebozar"/>
 		</ingredients>
 		
 		<cooking_steps>

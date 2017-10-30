@@ -1,20 +1,21 @@
 body {
       font: 400 15px Tahoma, sans-serif;
       line-height: 1.8;
-      color: #818181;
-      background-color: #fff;
+      color: white;
+      background-image: url("images/background.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
       margin-top: 40px;
       margin-bottom: 100px;
       margin-right: 50px;
       margin-left: 80px;
-      border: 80px;
-      border-color:red;
   }
 h1 {
       background-color:#FF5733; 
       color: #fff;
       text-transform: uppercase;
-      padding: 100px 25px;
+      padding: 50px 25px;
       text-align: center;     
   }
 h2 {
@@ -24,8 +25,8 @@ h2 {
       padding: 10px 25px;
       text-align: left;     
 }
-h3{
-    background-color:#fff; 
+h3{ 
+      background-color: #fff;
       color: #FF5733;
       text-transform: uppercase;
       padding: 10px 25px;
@@ -46,30 +47,44 @@ p:nth-child(4){
 }
 
 img{
-  display: block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
 
 audio{
   margin-left: auto;
   margin-right: auto;
   display: block;
-  border-color: red;
-  border: 80px;
 }
 
-ol{
+ol {
+  margin: 0 0 1.5em;
+  padding: 0;
+  counter-reset: item;
+}
+
+ol > li {
+  margin: 0;
+  padding: 0 0 0 2em;
+  text-indent: -2em;
+  list-style-type: none;
+  counter-increment: item;
+}
+
+ol > li:before {
+  display: inline-block;
+  width: 1em;
+  padding-right: 0.5em;
   font-weight: bold;
+  text-align: right;
+  content: counter(item) ".";
 }
 
 dt{
   font-weight: bold;
 }
 
-p {
-      background-color: #fff  ;
-      
+h2+p{
+  font-style: italic;
 }
-h2+p{color:red;}
