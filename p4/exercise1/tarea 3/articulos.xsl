@@ -6,6 +6,7 @@
         <html>
             <head>
                 <title>Articulos de mi practica de laboratorio</title>
+                <link rel = "stylesheet" type="text/css"    href = "estilo.css"/>
             </head>
             <body>
                 <h1>Seleccion de Articulos</h1>
