@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="recipes.xsl"?>
+<!DOCTYPE recipes [
+<!ELEMENT recipes (recipe*)>
+<!ELEMENT recipe (ingredients, cooking_steps, tools, origin)>
+<!ELEMENT ingredients (ingredient*)>
+<!ELEMENT ingredient (#PCDATA)>
+<!ELEMENT cooking_steps (step*)>
+<!ELEMENT step (#PCDATA)>
+<!ELEMENT tools (tool*)>
+<!ELEMENT tool (#PCDATA)>
+<!ELEMENT origin (#PCDATA)>
+<!ATTLIST recipe nombre CDATA #REQUIRED>
+<!ATTLIST recipe tipo CDATA #REQUIRED>
+<!ATTLIST recipe dificultad CDATA #REQUIRED>
+<!ATTLIST recipe calorias CDATA #REQUIRED>
+<!ATTLIST recipe tiempo_de_elaboracion CDATA #REQUIRED>
+<!ATTLIST ingredient nombre CDATA #REQUIRED>
+<!ATTLIST ingredient cantidad CDATA #REQUIRED>
+<!ATTLIST step numero CDATA #REQUIRED>
+<!ATTLIST tool nombre CDATA #REQUIRED>
+]>
+
+<recipes>
+
+	<recipe nombre = "Fabada Asturiana"
+	tipo = "Primer plato"
+	dificultad = "fácil"
+	calorias = "1200 aproximadamente"
+	tiempo_de_elaboracion = "entre 5 y 8 horas">
+	
+		<ingredients>
+			<ingredient nombre = "Fabes de la Granja" cantidad = "500 gramos"/>
+			<ingredient nombre = "Chorizo" cantidad = "1 o 2"/>
+			<ingredient nombre = "Morcilla" cantidad = "1 o 2"/>
+			<ingredient nombre = "Taco de Jamón" cantidad = "1"/>
+			<ingredient nombre = "Agua" cantidad = ""/>
+			<ingredient nombre = "Sal" cantidad = "Al gusto"/>
+			<ingredient nombre = "Azafrán" cantidad = "Unas hebras"/>
+		</ingredients>
+		
+		<cooking_steps>
+			<step numero = "1" > Dejar les fabes en remojo la noche antes de ser cocinadas.</step>
+			<step numero = "2" > A la mañana siguiente escurrir y apartar hasta su elaboración.</step>
+			<step numero = "3" > Añadimos a una cazuela les fabes y las cubrimos con agua. Tienen que quedar un par de dedos por encima.</step>
+			<step numero = "4" > Calentamos a fuego alto hasta que empiece a hervir.</step>
+			<step numero = "5" > Una vez alcanzado el punto de ebullicion, introducimos el compango.</step>
+			<step numero = "6" > Revisamos cada pocos minutos para retirar la espuma del cocido.</step>
+			<step numero = "7" > Tras media hora a fuego alto, lo ponemos a fuego medio, añadimos el azafrán y la sal al gusto.</step>
+			<step numero = "8" > Dejamos que se cocinen lentamente a temperatura baja durante 2 horas. Siempre removiendo de vez en cuando con una cuchara de madera sin romperlas. Durante estas dos horas, añadimos agua fría en dos ocasiones para “asustarlas” (rompe el hervor y ayuda a su perfecta cocción). </step>
+			<step numero = "9" > Probamos tras esas 2 horas, verificando que estan bien de sal y cocción. </step>
+			<step numero = "10"> Apartamos del fuego, dejamos reposar una media hora, y servimos.</step>
+		</cooking_steps>
+		
+		<tools>
+			<tool nombre = "Pota baja y ancha"/>
+			<tool nombre = "Cuchara de madera"/>
+			<tool nombre = "Fuente"/>
+			<tool nombre = "Espumadera"/>
+			<tool nombre = "Garfilla"/>
+			<tool nombre = "Cacillo o cucharón"/>
+		</tools>
+		
+		<origin>
+		Receta popular Asturiana.
+		</origin>
+	</recipe>
+
+	<recipe nombre = "Ensalada de Arroz"
+	tipo = "Entrante"
+	dificultad = "fácil"
+	calorias = "350"
+	tiempo_de_elaboracion = "Media hora">
+	
+		<ingredients>
+			<ingredient nombre = "Arroz Blanco" cantidad = "2 tazas"/>
+			<ingredient nombre = "Lechuga" cantidad = "1"/>
+			<ingredient nombre = "Aceitunas" cantidad = "1 lata"/>
+			<ingredient nombre = "Mahonesa o salsa césar" cantidad = "Al gusto"/>
+			<ingredient nombre = "Queso en tacos" cantidad = "Al gusto"/>
+			<ingredient nombre = "Zanahoria rallada" cantidad = "Al gusto"/>
+		</ingredients>
+		
+		<cooking_steps>
+			<step numero = "1" > Poner el arroz en un cazo con un chorro de aceite y sofreir.</step>
+			<step numero = "2" > Una vez sofrito echar 3 tazas de agua en el cazo y poner a hervir.</step>
+			<step numero = "3" > Una vez comience a hervir, ponemos a fuego lento y esperamos 20 minutos.</step>
+			<step numero = "4" > Dejamos reposar y enfriar</step>
+			<step numero = "5" > Mezclamos en un bol el arroz, la lechuga en tiras, las aceitunas, el queso y la Zanahoria.
+			 Removemos bien mientras se añade la salsa al gusto.</step>
+		</cooking_steps>
+		
+		<tools>
+			<tool nombre = "Cazo o vaporera"/>
+			<tool nombre = "Bol"/>
+			<tool nombre = "Cuchara de madera"/>
+		</tools>
+		
+		<origin>
+		Receta personal.
+		</origin>
+	</recipe>
+	<recipe nombre = "Tarta de queso"
+	tipo = "Postre"
+	dificultad = "fácil"
+	calorias = "1000"
+	tiempo_de_elaboracion = "1 hora">
+	
+		<ingredients>
+			<ingredient nombre = "Queso Philadelphia" cantidad = "350 gramos"/>
+			<ingredient nombre = "Mantequilla" cantidad = "125 gramos"/>
+			<ingredient nombre = "Nata de repostería" cantidad = "500 mililitros"/>
+			<ingredient nombre = "Azúcar" cantidad = "100 gramos"/>
+			<ingredient nombre = "Gelatina" cantidad = "4 láminas"/>
+			<ingredient nombre = "Mermelada" cantidad = "1 tarro "/>
+		</ingredients>
+		
+		<cooking_steps>
+			<step numero = "1" > Moler la galleta y mezclarla con la mantequilla derretida hasta crear una pasta.
+			 Cubrir con la pasta la base del molde</step>
+			<step numero = "2" > Dejar enfriar el molde mientras preparamos la mezcla </step>
+			<step numero = "3" > Introducimos la gelatina en agua tibia para que se ablande</step>
+			<step numero = "4"> Ponemos a fuego medio el azucar, la nata y el queso. Removemos hasta que este uniforme y añadimos la gelatina hidratada.</step>
+			<step numero = "5" > Una vez este ligado perfectamente y sin grumos dejamos reposar.</step>
+			<step numero = "6"> Añadimos la mezcla al molde y metemos en la nevera para que enfríe.</step>
+			<step numero = "7"> Añadimos la mermelada por encima de la tarta una vez este cuajada. Desmoldamos y servimos. </step>
+			
+		</cooking_steps>
+		
+		<tools>
+			<tool nombre = "Cazo"/>
+			<tool nombre = "Molde desmontable"/>
+			<tool nombre = "Fuente"/>
+		</tools>
+		
+		<origin>
+			Receta del libro de repostería para principiantes.
+		</origin>
+	</recipe>
+
+	<recipe nombre = "Pasta arrabiata"
+	tipo = "Primer o segundo plato"
+	dificultad = "fácil"
+	calorias = "800"
+	tiempo_de_elaboracion = "media hora">
+	
+		<ingredients>
+			<ingredient nombre = "Pasta" cantidad = "400 gramos"/>
+			<ingredient nombre = "Salsa de tomate" cantidad = "250 gramos"/>
+			<ingredient nombre = "Especias picantes arrabiata" cantidad = "50 gramos"/>
+			<ingredient nombre = "Cebolla blanca" cantidad = "media"/>
+		</ingredients>
+		
+		<cooking_steps>
+			<step numero = "1"> Ponemos agua a hervir y le echamos un puñado de sal.</step>
+			<step numero = "2"> Una vez rompa a hervir echamos la pasta.</step>
+			<step numero = "3" > Mientras hierve, picamos en cuadraditos la cebolla</step>
+			<step numero = "4" > Sofreimos en una sarten la cebolla. Una vez dorada añadimos la salsa de tomate y esperamos a que hierva.</step>
+			<step numero = "5" > Cuando la salsa este hirviendo añadimos las especias, removemos y bajamos a fuego medio. </step>
+			<step numero = "6" > Revisamos la pasta, una vez hervida retiramos del fuego y colamos bien</step>
+			<step numero = "7" > Añadimos la pasta recudida a la sarten y lo mezclamos todo.</step>
+		</cooking_steps>
+		
+		<tools>
+			<tool nombre = "Sarten"/>
+			<tool nombre = "Olla"/>
+			<tool nombre = "Fuente"/>
+			<tool nombre = "Escurridor"/>
+			<tool nombre = "Cuchara"/> 			
+		</tools>
+		
+		<origin>
+			Receta italiana. 
+		</origin>
+	</recipe>
+	<recipe nombre = "Pollo al ajillo"
+	tipo = "Entrante"
+	dificultad = "media"
+	calorias = "600"
+	tiempo_de_elaboracion = "media hora">
+	
+		<ingredients>
+			<ingredient nombre = "Pollo, ya troceado" cantidad = "500 gramos"/>
+			<ingredient nombre = "Ajo" cantidad = "3 o 4 dientes"/>
+			<ingredient nombre = "Harina" cantidad = "1 paquete, para rebozar"/>
+		</ingredients>
+		
+		<cooking_steps>
+			<step numero = "1"> Picamos el ajo en rodajas</step>
+			<step numero = "2"> Vertemos el aceite en una sarten y la ponemos a fuego medio</step>
+			<step numero = "3"> Enharinamos el pollo </step>
+			<step numero = "4"> Echamos el ajo y el pollo en la sartén </step>
+			<step numero = "5"> Una vez frito retiramos el ajo y el pollo y lo ponemos en la bandeja cubierta con papel de cocina.</step>
+		</cooking_steps>
+		
+		<tools>
+			<tool nombre = "Sarten"/>
+			<tool nombre = "Papel de Cocina"/>
+			<tool nombre = "Bandeja"/>
+			<tool nombre = "Espumadera"/> 			
+		</tools>
+		
+		<origin>
+			Receta de mi madre.
+		</origin>
+	</recipe>
+
+	<recipe nombre = "Rissoto de Setas Integral"
+	tipo = "Primer plato"
+	dificultad = "media/alta"
+	calorias = ""
+	tiempo_de_elaboracion = "30 minutos">
+		<ingredients>
+			<ingredient nombre = "Arroz integral" cantidad = "200 gramos"/>
+			<ingredient nombre = "Cebolla" cantidad = "media"/>
+			<ingredient nombre = "setas de tu variedad preferida" cantidad = "75 gramos"/>
+			<ingredient nombre = "vino" cantidad = "medio vaso"/>
+			<ingredient nombre = "caldo de pollo" cantidad = "400 ml"/>
+			<ingredient nombre = "queso sin grasa" cantidad = "50g"/>
+			<ingredient nombre = "albahaca" cantidad = "unas hojas"/>
+			<ingredient nombre = "aceite de oliva" cantidad = ""/>
+			<ingredient nombre = "sal" cantidad = ""/>
+		</ingredients>
+		<cooking_steps>
+			<step numero = "1">Lo primero que vamos a hacer, va a ser en la noche anterior. Vamos a poner el arroz en un cuenco alto y
+			 lo vamos a cubrir con generosa agua. Es algo parecido a cuando pones en remojo unas alubias, antes de ponerlas a cocer.
+			  El motivo es que el arroz integral, es mucho más duro que el blanco y, con ésto, logramos que se hidrate. Así pues,
+			   si lo hidratamos tardará 20 minutos en cocerse. Sin hidratar tardaría el doble. Lo dejamos en remojo toda la noche</step>
+			<step numero = "2">Al día siguiente, en una cazuela alta ponemos un chorrito de aceite de oliva a fuego suave. 
+			Añadimos la cebolla bien picada y las setas u hongos. Echamos una pizquita de sal y removemos con frecuencia,
+			 mientras cocinamos a fuego suave.</step>
+			<step numero = "3">Pasados 5 minutos, con la cebolla ya algo cocinada y las setas que habrán menguado, 
+			añadimos el vino blanco. Que le dará un toque ácido bastante interesante a la receta. Dejamos que recupere el hervor
+			 y que hierva un minuto, para que se evapore el alcohol y añadimos el arroz, ya hidratado de la noche anterior.
+			  Acto seguido removemos, sin parar, hasta que el arroz haya absorbido todo el vino</step>
+			<step numero = "4">Ahora viene el secreto del risotto. En vez de echar todo el caldo de golpe,
+			 añadimos como un cucharón del mismo y comenzamos a remover. Lo vamos a mezclar constantemente,
+			  sin parar. Pasados unos de 3 a 5 minutos, el arroz habrá absorbido todo el caldo. Repetimos la acción,
+			   de echar un cucharón del caldo y de remover constantemente. No olvides echar sal, si el caldo que estés empleando no lo lleva.</step>
+			<step numero = "5">Pasados de 17, a 20 minutos, repitiendo constantemente el paso anterior,
+			 el arroz estará al dente, muy cremoso y nada suelto. Es lo que buscamos. Es el momento de apagar 
+			 el fuego y con el mismo calor del fuego apagado, añadimos al risotto dos o tres cucharadas de aceite
+			  de oliva y el queso rallado. Mezclamos bien y servimos inmediatamente. Este plato es cocinarse y servir!! 
+			  Puedes espolvorear con unas hojas de albahaca, que le vienen como anillo al dedo a esta receta</step>
+		</cooking_steps>
+		<tools>
+			<tool nombre = "cazuela alta"/>
+			<tool nombre = "cucharon"/>
+			<tool nombre = "fuente"/>
+			<tool nombre = "cuchara de madera"/>
+
+		</tools>
+		<origin>
+		Plato tipico italiano, receta obtenida de la web https://www.cocinacaserayfacil.net/risotto-setas-integral/
+		</origin>
+	</recipe>
+
+	<recipe nombre = "Brownie de Chocolate con Nueces"
+	tipo = "Postre"
+	dificultad = "fácil"
+	calorias = ""
+	tiempo_de_elaboracion = "40 minutos">
+		<ingredients>
+			<ingredient nombre = "chocolate de reposteria negro o blanco" cantidad = "200 gramos"/>
+			<ingredient nombre = "mantequilla" cantidad = "200 gr"/>
+			<ingredient nombre = "azúcar" cantidad = "200 gr"/>
+			<ingredient nombre = "huevos" cantidad = "3"/>
+			<ingredient nombre = "harina" cantidad = "80 gr"/>
+			<ingredient nombre = "canela en polvo" cantidad = "1 cucharada(opcional)"/>
+			<ingredient nombre = "nueces trituradas" cantidad = "un puñado (opcional)"/>
+		</ingredients>
+		<cooking_steps>
+			<step numero = "1">Ponemos a cocer agua en un recipiente amplio y, en otro mas pequeño, metemos el chocolate y la mantequilla. Cuando el agua esté hirviendo, ponemos el recipiente del chocolate y la mantequilla encima del agua. A esta forma de cocción,se le llama “Al baño María”. Lo dejamos ahí hasta que se haya derretido todo bien.</step>
+			<step numero = "2">En un bol, mezclamos los huevos y el azúcar. Batimos todo bien con un tenedor</step>
+			<step numero = "3">Echamos el chocolate y la mantequilla fundidas en la mezcla de huevo y azúcar. Agregamos después la harina, las nueces y la canela.</step>
+			<step numero = "4">En un molde bien untado de mantequilla y espolvoreado con harina, para que no se pegue en el horno, echamos esta mezcla.</step>
+			<step numero = "5">Pre-calentamos el horno a unos 150ºC. Metemos nuestra mezcla en la rendija del medio del horno, durante unos 30 minutos. Para saber si está hecho o no, pinchamos con un tenedor y cuando salga seco, ¡significará que el brownie ya está cocinado! . Tened paciencia cuando salga del horno y, dejad que repose un rato porque hasta que no pierda algo de temperatura, no se va a poder desmoldar bien. Se va a deshacer.</step>
+		</cooking_steps>
+		<tools>
+			<tool nombre = "Horno"/>
+			<tool nombre = "Fuente"/>
+			<tool nombre = "Batidora o removedora o a mano"/>
+			<tool nombre = "Molde rectangular"/>
+		</tools>
+		<origin>
+			Receta de un postre americano, se recomienda servir caliente y con helado. Receta de la página https://www.cocinacaserayfacil.net/brownie-de-chocolate/
+		</origin>
+	</recipe>
+
+	<recipe nombre = "Rabo de toro en salsa de vino tinto"
+	tipo = "Segundo"
+	dificultad = "dificil"
+	calorias = ""
+	tiempo_de_elaboracion = "6 horas">
+		<ingredients>
+			<ingredient nombre = "Rabo de toro" cantidad = "1 kg"/>
+			<ingredient nombre = "cebolla grande" cantidad = "1"/>
+			<ingredient nombre = "pimiento rojo" cantidad = "medio"/>
+			<ingredient nombre = "pimiento verde" cantidad = "medio"/>
+			<ingredient nombre = "zanahoria" cantidad = "1"/>
+			<ingredient nombre = "vino tinto" cantidad = "litro y medio"/>
+			<ingredient nombre = "sal" cantidad = "al gusto"/>
+			<ingredient nombre = "pimienta" cantidad = "al gusto"/>
+			<ingredient nombre = "aceite de oliva" cantidad = ""/>
+		</ingredients>
+		<cooking_steps>
+			<step numero = "1">Ponemos el vino en un bol y marinamos en el los trozos de rabo de toro, previamente salpimentados. Es decir, los metemos dentro del vino, que queden bien empapados, y dejamos que reposen en la nevera mínimo 2 horas. Aunque puedes dejarlo una noche entera, para que se empape más del sabor.</step>
+			<step numero = "2">Hecho esto, sacamos los trozos, uno a uno del vino. Los secamos un poco con papel de cocina y los pasamos bien por harina, para secarlos del todo. Freímos los trozos en un buen chorrito de aceite de oliva. De momento, con sellar cada trozo, es suficiente. Es decir, que cojan algo de color por fuera pero, queden crudos en su interior</step>
+			<step numero = "3">Retiramos cada trozo de rabo de trozo del aceite y, en el mismo, añadimos la cebolla, los pimientos y la zanahoria picadas. Salpimentamos y sofreímos, a fuego suave durante unos 5 minutos. Que la verdura se ablande un poco.</step>
+			<step numero = "4">Hecho esto, añadimos el vino donde había estado marinando el rabo. Subimos el fuego, hasta que comience a hervir. Hecho esto, contamos cinco minutos. Tiempo suficiente para que se evapore el alcohol y el vino reduzca un poco. Una vez hecho esto, reincorporamos el rabo de toro a toda esta preparación</step>
+			<step numero = "5">Ahora cocinamos todos los ingredientes. Si tienes olla a presión, cerramos y cuando suba el pitorro, lo dejamos 40 minutos. Si lo haces en una cazuela convencional, tápala y deja cocinar a fuego medio-suave durante 4 horas. El objetivo es que la carne se cocine en la salsa de vino y quede bien tierna.</step>
+			<step numero = "6">Una vez cocinado, hay dos opciones. Si quieres el rabo de toro para el mismo día, simplemente pasa la salsa por un pasapurés y después, devuélvesela al rabo. Con esto obtendremos una salsa un poco tosca pero, igualmente rica. No obstante, si tienes tiempo y quieres dejarlo para el día siguiente (que además estará más rico), una vez que el rabo de toro esté cocinado, tan solo cuela la salsa, retirando todas las verduras. Éstas, ya han dejado sus sabores y además, tendrán mucha grasa, absorbida del rabo. Así que las tiramos. Dejamos enfríar la salsa en la nevera y al día siguiente, retiramos la grasa sobrante. Al estar solidificada, será muy fácil hacerlo con una cuchara. Esta grasa, no tienes porqué tirarla. Puedes añadir una cucharada de la misma a otros guisos. Una vez hecho todo esto, devuelve todo a la olla, a fuego suave. Si el rabo está ya muy hecho, retíralo para que no se deshaga. Cuando la salsa haya reducido y hayas obtenido el espesor deseado, añade de nuevo el rabo de toro y listo. ¡A servir!</step>
+		</cooking_steps>
+		<tools>
+			<tool nombre = "Olla grande o a presion"/>
+			<tool nombre = "Espumadera"/>
+			<tool nombre = "Cucharon"/>
+		</tools>
+		<origin>
+		</origin>
+	</recipe>
+
+
+
+</recipes>
