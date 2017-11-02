@@ -1,10 +1,9 @@
-	
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="articulos.xsl"?>
-<!-- 
+<!--
 <!DOCTYPE articulos SYSTEM "articles.dtd"> -->
 <!DOCTYPE articles [
-	
+
 <!ELEMENT articles (article+)>
 <!ELEMENT article (authors, abstract, keywordset, magazine)>
 <!ELEMENT authors (author+)>
@@ -22,10 +21,10 @@
 <!ATTLIST author nombre CDATA #REQUIRED>
 <!ATTLIST magazine nombre CDATA #REQUIRED>
 <!ATTLIST magazine volumenum CDATA #REQUIRED>
-	]>
+]>
 <articles>
 	<article titulo = "Driver Fatigue Detection using Mean Intensity, SVM, and SIFT"
-		pagina_inicio = "1" 		pagina_final = " 8"
+		pagina_inicio = "1" pagina_final = "8"
 		año = "2017">
 		<authors>
 			<author nombre = "Naz S" email = ""/>

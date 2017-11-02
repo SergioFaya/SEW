@@ -14,7 +14,7 @@ body {
 h1 {
       background-color:#FF5733; 
       color: #fff;
-      text-transform: uppercase;
+      text-transform: uppercase ;
       padding: 50px 25px;
       text-align: center;     
   }
@@ -28,7 +28,7 @@ h2 {
 h3{ 
       background-color: #fff;
       color: #FF5733;
-      text-transform: uppercase;
+      font-style: italic;
       padding: 10px 25px;
       text-align: left; 
 }
@@ -46,10 +46,30 @@ p:nth-child(4){
       font-style: italic !important ;  
 }
 
+h1 +img {
+  border-radius: 0px;
+  box-shadow: 10px 10px;
+  color:#FF5733;
+  border: 5px solid #00633A;
+}
+
+audio{
+  padding: 5px;
+  border: 10px solid;
+  border-color: #FF5733;
+  box-shadow: 10px 10px green;
+}
+
+img:hover{
+  opacity: .8;
+  background-color: white;
+}
+
 img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 45px;
 }
 
 audio{
@@ -67,13 +87,14 @@ ol {
 ol > li {
   margin: 0;
   padding: 0 0 0 2em;
-  text-indent: -2em;
+  text-indent: -2em; /*quito la indentacion*/
   list-style-type: none;
   counter-increment: item;
 }
 
 ol > li:before {
   display: inline-block;
+  color: red;
   width: 1em;
   padding-right: 0.5em;
   font-weight: bold;
@@ -87,4 +108,37 @@ dt{
 
 h2+p{
   font-style: italic;
+}
+
+table, td, th {
+  border: 2px double #FF5733;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #00633A; 
+  width: 85%;
+}
+
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+
+footer{
+  text-align: center;
+  background-color: #00633A;
+}
+
+footer>a>img{
+   border-radius: 0px;
+   display: initial;
+   margin-left: 0px;
+   margin-right: 0px;
+}
+
+footer::after{
+  /*Salto de line y introduccion de texto en footer */
+  content: "\A Copyright @Sergio Faya";
+  white-space: pre;
 }
