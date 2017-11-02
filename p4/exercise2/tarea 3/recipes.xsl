@@ -5,13 +5,13 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>Recetas de cocina</title>
+                <title>Recetas de cocina con Pollo</title>
                 <link rel = "stylesheet" type="text/css"    href = "estilo.css"/>
             </head>
             <body>
                 <h1>Mis mejores Recetas con Pollo</h1>
                 <xsl:for-each select="recipes/recipe">
-                    <xsl:if test = "ingredients/ingredient/@nombre = Pollo">
+                    <xsl:if test = "ingredients/ingredient/@nombre = 'Pollo'">
                         <h2>
                             <xsl:value-of select= "@nombre"/>
                         </h2>

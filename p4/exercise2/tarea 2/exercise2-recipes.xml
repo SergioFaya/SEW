@@ -107,7 +107,7 @@
 	tiempo_de_elaboracion = "1 hora">
 	
 		<ingredients>
-			<ingredient nombre = "Queso Philadelphia" cantidad = "350 gramos"/>
+			<ingredient nombre = "Queso" cantidad = " Philadelphia 350 gramos"/>
 			<ingredient nombre = "Mantequilla" cantidad = "125 gramos"/>
 			<ingredient nombre = "Nata de repostería" cantidad = "500 mililitros"/>
 			<ingredient nombre = "Azúcar" cantidad = "100 gramos"/>
@@ -180,7 +180,7 @@
 	tiempo_de_elaboracion = "media hora">
 	
 		<ingredients>
-			<ingredient nombre = "Pollo, ya troceado" cantidad = "500 gramos"/>
+			<ingredient nombre = "Pollo" cantidad = "500 gramos"/>
 			<ingredient nombre = "Ajo" cantidad = "3 o 4 dientes"/>
 			<ingredient nombre = "Harina" cantidad = "1 paquete, para rebozar"/>
 		</ingredients>
@@ -213,13 +213,13 @@
 		<ingredients>
 			<ingredient nombre = "Arroz integral" cantidad = "200 gramos"/>
 			<ingredient nombre = "Cebolla" cantidad = "media"/>
-			<ingredient nombre = "setas de tu variedad preferida" cantidad = "75 gramos"/>
-			<ingredient nombre = "vino" cantidad = "medio vaso"/>
-			<ingredient nombre = "caldo de pollo" cantidad = "400 ml"/>
-			<ingredient nombre = "queso sin grasa" cantidad = "50g"/>
-			<ingredient nombre = "albahaca" cantidad = "unas hojas"/>
-			<ingredient nombre = "aceite de oliva" cantidad = ""/>
-			<ingredient nombre = "sal" cantidad = ""/>
+			<ingredient nombre = "Setas de tu variedad preferida" cantidad = "75 gramos"/>
+			<ingredient nombre = "Vino" cantidad = "medio vaso"/>
+			<ingredient nombre = "Caldo de pollo" cantidad = "400 ml"/>
+			<ingredient nombre = "Queso" cantidad = "50g"/>
+			<ingredient nombre = "Albahaca" cantidad = "unas hojas"/>
+			<ingredient nombre = "Aceite de oliva" cantidad = ""/>
+			<ingredient nombre = "Sal" cantidad = ""/>
 		</ingredients>
 		<cooking_steps>
 			<step numero = "1">Lo primero que vamos a hacer, va a ser en la noche anterior. Vamos a poner el arroz en un cuenco alto y
@@ -244,10 +244,10 @@
 			  Puedes espolvorear con unas hojas de albahaca, que le vienen como anillo al dedo a esta receta</step>
 		</cooking_steps>
 		<tools>
-			<tool nombre = "cazuela alta"/>
-			<tool nombre = "cucharon"/>
-			<tool nombre = "fuente"/>
-			<tool nombre = "cuchara de madera"/>
+			<tool nombre = "Cazuela alta"/>
+			<tool nombre = "Cucharon"/>
+			<tool nombre = "Fuente"/>
+			<tool nombre = "Cuchara de madera"/>
 
 		</tools>
 		<origin>
@@ -261,13 +261,14 @@
 	calorias = ""
 	tiempo_de_elaboracion = "40 minutos">
 		<ingredients>
-			<ingredient nombre = "chocolate de reposteria negro o blanco" cantidad = "200 gramos"/>
-			<ingredient nombre = "mantequilla" cantidad = "200 gr"/>
-			<ingredient nombre = "azúcar" cantidad = "200 gr"/>
-			<ingredient nombre = "huevos" cantidad = "3"/>
-			<ingredient nombre = "harina" cantidad = "80 gr"/>
-			<ingredient nombre = "canela en polvo" cantidad = "1 cucharada(opcional)"/>
-			<ingredient nombre = "nueces trituradas" cantidad = "un puñado (opcional)"/>
+			<ingredient nombre = "Chocolate de reposteria negro o blanco" cantidad = "200 gramos"/>
+			<ingredient nombre = "Mantequilla" cantidad = "200 gr"/>
+			<ingredient nombre = "Azúcar" cantidad = "200 gr"/>
+			<ingredient nombre = "Huevos" cantidad = "3"/>
+			<ingredient nombre = "Harina" cantidad = "80 gr"/>
+			<ingredient nombre = "Leche" cantidad = "1 vaso"/>
+			<ingredient nombre = "Canela en polvo" cantidad = "1 cucharada(opcional)"/>
+			<ingredient nombre = "Nueces trituradas" cantidad = "un puñado (opcional)"/>
 		</ingredients>
 		<cooking_steps>
 			<step numero = "1">Ponemos a cocer agua en un recipiente amplio y, en otro mas pequeño, metemos el chocolate y la mantequilla. Cuando el agua esté hirviendo, ponemos el recipiente del chocolate y la mantequilla encima del agua. A esta forma de cocción,se le llama “Al baño María”. Lo dejamos ahí hasta que se haya derretido todo bien.</step>
@@ -294,14 +295,14 @@
 	tiempo_de_elaboracion = "6 horas">
 		<ingredients>
 			<ingredient nombre = "Rabo de toro" cantidad = "1 kg"/>
-			<ingredient nombre = "cebolla grande" cantidad = "1"/>
-			<ingredient nombre = "pimiento rojo" cantidad = "medio"/>
-			<ingredient nombre = "pimiento verde" cantidad = "medio"/>
-			<ingredient nombre = "zanahoria" cantidad = "1"/>
-			<ingredient nombre = "vino tinto" cantidad = "litro y medio"/>
-			<ingredient nombre = "sal" cantidad = "al gusto"/>
-			<ingredient nombre = "pimienta" cantidad = "al gusto"/>
-			<ingredient nombre = "aceite de oliva" cantidad = ""/>
+			<ingredient nombre = "Cebolla grande" cantidad = "1"/>
+			<ingredient nombre = "Pimiento rojo" cantidad = "medio"/>
+			<ingredient nombre = "Pimiento verde" cantidad = "medio"/>
+			<ingredient nombre = "Zanahoria" cantidad = "1"/>
+			<ingredient nombre = "Vino tinto" cantidad = "litro y medio"/>
+			<ingredient nombre = "Sal" cantidad = "al gusto"/>
+			<ingredient nombre = "Pimienta" cantidad = "al gusto"/>
+			<ingredient nombre = "Aceite de oliva" cantidad = ""/>
 		</ingredients>
 		<cooking_steps>
 			<step numero = "1">Ponemos el vino en un bol y marinamos en el los trozos de rabo de toro, previamente salpimentados. Es decir, los metemos dentro del vino, que queden bien empapados, y dejamos que reposen en la nevera mínimo 2 horas. Aunque puedes dejarlo una noche entera, para que se empape más del sabor.</step>

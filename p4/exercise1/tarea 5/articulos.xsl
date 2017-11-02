@@ -5,7 +5,7 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>Articulos de mi practica de laboratorio</title>
+                <title>Articulos de mi practica de laboratorio del autor Croda</title>
                 <link rel = "stylesheet" type="text/css"    href = "estilo.css"/>
             </head>
             <body>
@@ -13,7 +13,7 @@
                 <xsl:for-each select="articles/article">
                     <xsl:sort select="@año" order="ascending"/>
                     <xsl:choose>
-                        <xsl:when test= "authors/*/@nombre = Croda">
+                        <xsl:when test= "authors/*/@nombre = 'Croda'">
                             <h2>
                                 <xsl:value-of select = "@titulo"/>
                             </h2>
@@ -56,9 +56,6 @@
                                 <xsl:value-of select = "magazine/@volumenum"/>
                             </p>
                         </xsl:when>
-                        <xsl:otherwise>
-                        <p>CAGADA</p>
-                        </xsl:otherwise>
                     </xsl:choose>
                 </xsl:for-each>
             </body>

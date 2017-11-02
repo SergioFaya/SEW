@@ -5,7 +5,7 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>Articulos de mi practica de laboratorio</title>
+                <title>Articulos de mi practica de laboratorio desde el 2012</title>
                 <link rel = "stylesheet" type="text/css"    href = "estilo.css"/>
             </head>
             <body>
