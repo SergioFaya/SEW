@@ -1,3 +1,4 @@
+/*a=0 b=0 c=1 -> Epecidifidad = 1 */
 body {
       font: 400 15px Tahoma,sans-serif; /*Familia sans-serif;*/
       line-height: 1.8;
@@ -13,7 +14,7 @@ body {
       margin-bottom: 30px;
       color: white;
   }
-
+/*a=0 b=1 c=1 -> Especificidad = 11*/
 h2+img{
   height: 15%;
   width: 15%;
@@ -21,12 +22,14 @@ h2+img{
 }
 /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp_*/
 
+/*a=0 b=0 c=1 Especifidad = 1*/
  table {
    width: 500px;
   border: 3px solid #33FFCC;
-  border-radius: 50px;
+  border-radius: 15px;
+  background-image: url("https://unioviedo-my.sharepoint.com/personal/uo251005_uniovi_es/_layouts/15/guestaccess.aspx?docid=00e904e31a992402f8402094e93aadf05&authkey=AeAOYGlS9b47KdMOZPg1jVQ&e=626ad46497804d3e8d64a60300a08ce0");
 }
-
+/*a=0 b=0 c=1 Especifidad = 1*/
 img{
     background-image: url("https://unioviedo-my.sharepoint.com/personal/uo251005_uniovi_es/_layouts/15/guestaccess.aspx?docid=00e904e31a992402f8402094e93aadf05&authkey=AeAOYGlS9b47KdMOZPg1jVQ&e=626ad46497804d3e8d64a60300a08ce0");
     padding: 20px;
@@ -35,8 +38,8 @@ img{
     margin-left: auto;
     margin-right: auto;
 }
-
-h1 {
+/*a=0 b=0 c=1 Especifidad = 1*/
+h1  {
       background-color:#33FFCC; 
       color: #37474F;
       text-transform: uppercase;
@@ -44,43 +47,45 @@ h1 {
       text-align: center;
       border-radius: 35px;
   }
+
+/*a=0 b=0 c=1 Especifidad = 1*/
 h2{
   background-color:#33FFCC; 
   color: #37474F;
   padding: 4px;
   border-radius: 15px;
 }
+/*a=0 b=0 c=1 Especifidad = 1*/
 h3{
   color: #33FFCC; 
   padding: 15px;
 }
-table {  
-  border-radius: 15px;
-  background-image: url("https://unioviedo-my.sharepoint.com/personal/uo251005_uniovi_es/_layouts/15/guestaccess.aspx?docid=00e904e31a992402f8402094e93aadf05&authkey=AeAOYGlS9b47KdMOZPg1jVQ&e=626ad46497804d3e8d64a60300a08ce0");
-}
+/*a=0 b=0 c=1 Especifidad = 1*/
 th{
   color: white;
   text-transform: uppercase;
 }
+/*a=0 b=1 c=1 Especifidad = 11*/
 a:link{
   color: #33FFCC;
 }
+/*a=0 b=1 c=2 Especifidad = 12*/
 p a:visited{
   color: white;
 }
-
+/*a=0 b=1 c=2 Especifidad = 12*/
 table a:visited{
   color: white;
 }
-
+/*a=0 b=1 c=2 Especifidad = 12*/
 dl a:visited{
   color: white;
 }
-
+/*a=0 b=4 c=5 Especifidad = 45*/
 h2+ul>li>a:visited{
     color: white;
 }
-
+/*a=0 b= c=2 Especifidad = 2*/
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -90,45 +95,46 @@ nav ul {
   color: #37474F;
   border-radius: 35px;
 }
-
+/*a=0 b=0 c=2 Especifidad = 2*/
 nav li {
   color: #37474F;
   float: left;
 }
-
+/*a=0 b=0 c=3 Especifidad = 3*/
 nav li a {
   color: #37474F;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-
+/*a=0 b=1 c=3 Especifidad = 13*/
 nav li a:hover{
   background-color: #37474F;;
   color: #33FFCC;
 }
-
+/*a=0 b=0 c=2 Especifidad = 2*/
 li img {
   border-radius: 0px;
 }
-
+/*a=0 b=1 c=1 Especifidad = 11*/
 nav .active {
   background-color: #37474F;;
   color: #33FFCC;
 }
-
+/*a=0 b=0 c=1 Especifidad = 1*/
 footer {
   list-style-type: none;
   margin-top: 50px;
   text-align: center;
 }
 
-
+/*a=0 b=1 c=2 Especifidad = 12*/
 footer::after{
   content: "\A Copyright @Sergio Faya";
   white-space: pre;
   
 }
+/*a=0 b=1 c=3 Especifidad = 13*/
 footer a>img{
   overflow: hidden;
   background-image: none;
