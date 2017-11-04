@@ -33,12 +33,12 @@ h3{
       text-align: left; 
 }
 a:link{
-      color: cadetblue;
+      color: #FF5733;
       font-style: italic !important ;  
 }
 
 a:visited {
-    color: purple;
+    color: #fff; 
     font-style: italic !important ;  
 }
 
@@ -46,7 +46,7 @@ p:nth-child(4){
       font-style: italic !important ;  
 }
 
-h1 +img {
+h1 +nav+img {
   border-radius: 0px;
   box-shadow: 10px 10px;
   color:#FF5733;
@@ -57,7 +57,7 @@ audio{
   padding: 5px;
   border: 10px solid;
   border-color: #FF5733;
-  box-shadow: 10px 10px green;
+  box-shadow: 10px 10px #00633A;
 }
 
 img:hover{
