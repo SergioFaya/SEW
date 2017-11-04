@@ -1,5 +1,6 @@
 body {
-      font: 400 15px Tahoma,sans-serif; /*Familia sans-serif;*/
+      /*font: 400 15px Tahoma,sans-serif; Familia sans-serif;*/
+      font: 400 15px Verdana, Geneva, sans-serif;
       line-height: 1.8;
       /*background-color: #f6f6f6;*/
       background-image: url("https://unioviedo-my.sharepoint.com/personal/uo251005_uniovi_es/_layouts/15/guestaccess.aspx?docid=088e874a56a684ee984ae3daba04abc11&authkey=AepD0KQDJLKosdJhSvDpk5Y&e=549a1f5500c14379855d81a727d9aecd");
@@ -49,6 +50,7 @@ h2{
   color: #37474F;
   padding: 4px;
   border-radius: 15px;
+  margin-right: 25%;
 }
 h3{
   color: #33FFCC; 
