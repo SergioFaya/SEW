@@ -15,7 +15,7 @@ body {
       margin-bottom: 30px;
       color: white;
   }
-/*a=0 b=1 c=1 -> Especificidad = 11*/
+/*a=0 b=0 c=2 -> Especificidad = 2*/
 h2+img{
   height: 15%;
   width: 15%;
@@ -24,11 +24,16 @@ h2+img{
 /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp_*/
 
 /*a=0 b=0 c=1 Especifidad = 1*/
- table {
-   width: 500px;
+ table{
+   width: 600px;
   border: 3px solid #33FFCC;
-  border-radius: 15px;
+  border-radius: 10px;
   background-image: url("https://unioviedo-my.sharepoint.com/personal/uo251005_uniovi_es/_layouts/15/guestaccess.aspx?docid=00e904e31a992402f8402094e93aadf05&authkey=AeAOYGlS9b47KdMOZPg1jVQ&e=626ad46497804d3e8d64a60300a08ce0");
+}
+/*a=0 b=0 c=2 Especifidad = 2*/
+tr td{
+  border: 1px solid #33FFCC;
+  border-radius: 5px;
 }
 /*a=0 b=0 c=1 Especifidad = 1*/
 img{
@@ -83,7 +88,7 @@ table a:visited{
 dl a:visited{
   color: white;
 }
-/*a=0 b=4 c=5 Especifidad = 45*/
+/*a=0 b=1 c=4 Especifidad = 14*/
 h2+ul>li>a:visited{
     color: white;
 }
@@ -129,17 +134,15 @@ footer {
   margin-top: 50px;
   text-align: center;
 }
-
-/*a=0 b=1 c=2 Especifidad = 12*/
-footer::after{
-  content: "\A Copyright @Sergio Faya";
-  white-space: pre;
-  
-}
-/*a=0 b=1 c=3 Especifidad = 13*/
+/*a=0 b=0 c=3 Especifidad = 3*/
 footer a>img{
   overflow: hidden;
   background-image: none;
   display: initial;
   border-radius: 0px;
+}
+/*a=0 b=0 c=3 Especifidad = 3*/
+dt{
+  border-left: 5px solid #33FFCC;
+  padding-left: 6px;
 }

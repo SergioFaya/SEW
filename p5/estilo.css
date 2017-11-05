@@ -1,3 +1,4 @@
+/*a=0 b=0 c=1 Especifidad = 1*/
 body {
       font: 400 15px Tahoma, sans-serif;
       line-height: 1.8;
@@ -11,6 +12,7 @@ body {
       margin-right: 50px;
       margin-left: 80px;
   }
+  /*a=0 b=0 c=1 Especifidad = 1*/
 h1 {
       background-color:#FF5733; 
       color: #fff;
@@ -18,6 +20,7 @@ h1 {
       padding: 50px 25px;
       text-align: center;     
   }
+  /*a=0 b=0 c=1 Especifidad = 1*/
 h2 {
       background-color:#FF5733; 
       color: #fff;
@@ -25,6 +28,7 @@ h2 {
       padding: 10px 25px;
       text-align: left;     
 }
+/*a=0 b=0 c=1 Especifidad = 1*/
 h3{ 
       background-color: #fff;
       color: #FF5733;
@@ -32,58 +36,59 @@ h3{
       padding: 10px 25px;
       text-align: left; 
 }
+/*a=0 b=1 c=1 Especifidad = 11*/
 a:link{
       color: #FF5733;
       font-style: italic !important ;  
 }
-
+  /*a=0 b=1 c=1 Especifidad = 11*/
 a:visited {
     color: #fff; 
     font-style: italic !important ;  
 }
-
+  /*a=0 b=1 c=1 Especifidad = 11*/
 p:nth-child(4){
       font-style: italic !important ;  
 }
-
+/*a=0 b=0 c=3 Especifidad = 3*/
 h1 +nav+img {
   border-radius: 0px;
   box-shadow: 10px 10px;
   color:#FF5733;
   border: 5px solid #00633A;
 }
-
+/*a=0 b=0 c=1 Especifidad = 1*/
 audio{
   padding: 5px;
   border: 10px solid;
   border-color: #FF5733;
   box-shadow: 10px 10px #00633A;
 }
-
+/*a=0 b=1 c=1 Especifidad = 11*/
 img:hover{
   opacity: .8;
   background-color: white;
 }
-
+/*a=0 b=0 c=1 Especifidad = 1*/
 img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 45px;
 }
-
+/*a=0 b=0 c=1 Especifidad = 1*/
 audio{
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-
+/*a=0 b=0 c=1 Especifidad = 1*/
 ol {
   margin: 0 0 1.5em;
   padding: 0;
   counter-reset: item;
 }
-
+/*a=0 b=0 c=2 Especifidad = 2*/
 ol > li {
   margin: 0;
   padding: 0 0 0 2em;
@@ -91,7 +96,7 @@ ol > li {
   list-style-type: none;
   counter-increment: item;
 }
-
+/*a=0 b=0 c=3 Especifidad = 3*/
 ol > li:before {
   display: inline-block;
   color: red;
@@ -101,42 +106,42 @@ ol > li:before {
   text-align: right;
   content: counter(item) ".";
 }
-
+/*a=0 b=0 c=1 Especifidad = 1*/
 dt{
   font-weight: bold;
 }
-
+/*a=0 b=0 c=2 Especifidad = 2*/
 h2+p{
   font-style: italic;
 }
-
+/*a=0 b=0 c=1 Especifidad = 1*/
 table, td, th {
   border: 2px double #FF5733;
 }
-
+/*a=0 b=0 c=1 Especifidad = 1*/
 table {
   border-collapse: collapse;
   background-color: #00633A; 
   width: 85%;
 }
-
+/*a=0 b=0 c=1 Especifidad = 1*/
 td {
   height: 50px;
   vertical-align: bottom;
 }
-
+/*a=0 b=0 c=1 Especifidad = 1*/
 footer{
   text-align: center;
   background-color: #00633A;
 }
-
+/*a=0 b=0 c=3 Especifidad = 3*/
 footer>a>img{
    border-radius: 0px;
    display: initial;
    margin-left: 0px;
    margin-right: 0px;
 }
-
+/*a=0 b=0 c=2 Especifidad = 2*/
 footer::after{
   /*Salto de line y introduccion de texto en footer */
   content: "\A Copyright @Sergio Faya";
