@@ -22,6 +22,7 @@
 ]>
 
 <recipes>
+
 	<recipe nombre = "Fabada Asturiana"
 	tipo = "Primer plato"
 	dificultad = "fácil"
@@ -319,7 +320,145 @@
 		<origin>
 		</origin>
 	</recipe>
-
-
+  <recipe nombre="Ensaladilla de Bulgur" tipo="Entrante" dificultad="Fácil" calorias="250" tiempo_de_elaboracion="30 minutos">
+    <ingredients>
+      <ingredient nombre="Tomate" cantidad="1" />
+      <ingredient nombre=" Cebolla" cantidad="1" />
+      <ingredient nombre=" Pimiento Rojo" cantidad="1" />
+      <ingredient nombre=" Pimiento Verde" cantidad="1" />
+      <ingredient nombre=" Zanahoria" cantidad="1" />
+      <ingredient nombre=" Aceite de Oliva" cantidad="2 cucharadas" />
+      <ingredient nombre=" Vinagre de manzana" cantidad="1 cucharada" />
+      <ingredient nombre=" Bulgur Grueso" cantidad=" 1 vaso" />
+      <ingredient nombre=" Agua" cantidad=" 2 vasos" />
+      <ingredient nombre=" sal" cantidad="una pizca" />
+    </ingredients>
+    <cooking_steps>
+      <step numero="1">Cocemos el bulgur como si fuera arroz</step>
+      <step numero="2">Una vez cocido lo pasamos por el colador</step>
+      <step numero="3">Mientras se cuece el bulgur lavamos y pelamos las hortalizas y aliñamos con sal, aceite de oliva virgen extra y vinagre</step>
+      <step numero="4">Cuando esté listo el bulgur y lo hayamos refrescado completamente, lo añadimos sobre la vinagreta, mezclamos bien, rectificamos de sal si fuese necesario y servimos.</step>
+    </cooking_steps>
+    <tools>
+      <tool nombre="Fuente" />
+      <tool nombre=" olla" />
+      <tool nombre=" cucharon" />
+    </tools>
+    <origin>Ensalada obtenida de la página: http://cocinillas.elespanol.com/2016/01/ensaladilla-de-bulgur-facil/</origin>
+  </recipe>
+  <recipe nombre="Gazpacho" tipo="Entrante" dificultad="Fácil" calorias="200" tiempo_de_elaboracion="25 minutos">
+    <ingredients>
+      <ingredient nombre="Tomates" cantidad="1 kg" />
+      <ingredient nombre=" Pimiento Rojo" cantidad="1" />
+      <ingredient nombre=" Pimiento Verde" cantidad="1" />
+      <ingredient nombre=" Pepino" cantidad="1" />
+      <ingredient nombre=" Cebolla" cantidad="1/2" />
+      <ingredient nombre=" Ajo" cantidad="1" />
+      <ingredient nombre=" Aceite de Oliva" cantidad="4 cucharadas" />
+      <ingredient nombre=" Vinagre" cantidad="2 cucharadas" />
+      <ingredient nombre=" Sal" cantidad="1 cucharada" />
+    </ingredients>
+    <cooking_steps>
+      <step numero="1">En primer lugar rallaremos todas las verduras con un rallador, y las pasaremos luego por un pasapurés.</step>
+      <step numero="2"> Tras esto le añadimos 2 cucharadas soperas de vinagre, 4 de aceite de oliva y una de sal.</step>
+      <step numero="3">Removemos bien y le añadimos unos pocos cubitos de hielo. Lo metemos en la nevera para que esté aún más fresquito y ya está.</step>
+    </cooking_steps>
+    <tools>
+      <tool nombre="Rallador" />
+      <tool nombre=" Fuente" />
+    </tools>
+    <origin>Receta típica andaluza</origin>
+  </recipe>
+  <recipe nombre="Arroz frito" tipo="Primero" dificultad="Medio" calorias="350" tiempo_de_elaboracion="20 minutos">
+    <ingredients>
+      <ingredient nombre="Arroz" cantidad="150 g" />
+      <ingredient nombre=" Agua" cantidad="350ml" />
+      <ingredient nombre=" Aceite de Oliva" cantidad="4 cucharadas" />
+      <ingredient nombre=" Sal" cantidad="1 pizca" />
+      <ingredient nombre=" Zanahoria" cantidad="1" />
+      <ingredient nombre="Cebolla" cantidad="1" />
+      <ingredient nombre="Puerro" cantidad="10 cm de parte blanca" />
+      <ingredient nombre=" Salsa de soja" cantidad="3 cucharadas" />
+    </ingredients>
+    <cooking_steps>
+      <step numero="1">En un bol apto para microondas ponemos a calentar el agua con una cucharada de aceite de oliva virgen extra y una pizca de sal, sin pasarnos porque luego la salsa de soja lo salará más. Programaremos 90 segundos a 800 W.</step>
+      <step numero="2">Sacamos con cuidado de no quemarnos, echamos el arroz y cocinamos en el microondas durante 10 minutos a 800 W sin tapar.</step>
+      <step numero="3">Mientras se cocina el arroz, pelamos la zanahoria, la cebolla y las troceamos finamente junto con el puerro.</step>
+      <step numero="4">En una sartén de fondo grueso o un wok ponemos a calentar dos cucharadas de aceite de oliva virgen extra a fuego fuerte, añadimos las verduras troceadas y salteamos durante un par de minutos a fuego alto, no es necesario añadir sal porque luego pondremos la salsa de soja y no importa si se chamuscan un poco porque al no llevar ajo no hay problema de que amargue. Eso sí, si vemos que se empiezan a chamuscar y que aún le falta un poco al arroz bajamos el fuego.</step>
+      <step numero="5">Cuando esté listo el arroz, añadimos la salsa de soja al sofrito, fuego fuerte, añadimos el arroz cocido y salteamos durante un par de minutos meneando la sartén o el wok para que se fría el arroz.</step>
+    </cooking_steps>
+    <tools>
+      <tool nombre="Microondas" />
+      <tool nombre=" Bol" />
+      <tool nombre=" Wok" />
+    </tools>
+    <origin>Receta de arroz frito del chino</origin>
+  </recipe>
+  <recipe nombre="Focaccia de Aceituna Negra y Tomates Cherry" tipo="Primero" dificultad="Medio" calorias="350" tiempo_de_elaboracion="30 minutos">
+    <ingredients>
+      <ingredient nombre="Masa de Pizza" cantidad="400gr" />
+      <ingredient nombre=" Aceitunas negras sin hueso" cantidad=" 75 g" />
+      <ingredient nombre="Tomates cherry" cantidad="10" />
+      <ingredient nombre="Aceite de Oliva" cantidad="1 cucharada" />
+      <ingredient nombre="Tomillo y Perejil" cantidad="al gusto" />
+      <ingredient nombre="Sal" cantidad="al gusto" />
+    </ingredients>
+    <cooking_steps>
+      <step numero="1">Precalentamos el horno a 225ºC con calor arriba y abajo sin ventilador.</step>
+      <step numero="2">Estiramos la masa sobre bandeja metálica con una lámina de papel de horno aplastándola con las manos o ayudándonos de un rodillo hasta dejar una lámina de aproximadamente 1 cm de grosor. Debe ser algo más gruesa que para hacer pizza.</step>
+      <step numero="3">Colocamos las aceitunas negras y los tomates en mitades presionando para que se hundan un poco en la masa y no se caigan cuando esta crezca en el horno.</step>
+      <step numero="4">Regamos con la cucharada de aceite de oliva virgen extra que dejaremos caer en forma de hilo para repartirlo bien.</step>
+      <step numero="5">Espolvoreamos con unas arenitas de sal sobre los tomates cherry y con algunas especias secas al gusto sobre toda la superficie.</step>
+      <step numero="6">Horneamos a media altura en horno precalentado a 225ºC durante unos 20 minutos. Si no queremos que se tueste demasiado la superficie, cuando veamos que está dorada a nuestro gusto podemos taparla con un papel de aluminio durante el resto de la cocción.</step>
+    </cooking_steps>
+    <tools>
+      <tool nombre="Horno" />
+      <tool nombre=" Bandeja de Horno Metalica" />
+      <tool nombre=" Papel de Aluminio" />
+    </tools>
+    <origin>Receta Italiana, es una receta vegana de la página http://cocinillas.elespanol.com/2015/01/focaccia-facil-de-aceitunas-negras-y-tomates-cherry/</origin>
+  </recipe>
+  <recipe nombre="Macedonia" tipo="Postre" dificultad="Fácil" calorias="150" tiempo_de_elaboracion="5 minutos">
+    <ingredients>
+      <ingredient nombre="Fruta" cantidad="la que quieras 350 g" />
+      <ingredient nombre=" Almibar" cantidad=" una taza" />
+    </ingredients>
+    <cooking_steps>
+      <step numero="1">Cortaremos la fruta al gusto y en la cantidad que se quiera</step>
+      <step numero="2"> Mezclamos la fruta con el almibar en una fuente o bol</step>
+      <step numero="3"> Lo dejamos reposar un rato en la nevera y ya estaría</step>
+      <step numero="4">
+      </step>
+    </cooking_steps>
+    <tools>
+      <tool nombre="Fuente" />
+      <tool nombre=" Nevera" />
+    </tools>
+    <origin>Macedonia de toda la vida</origin>
+  </recipe>
+	<recipe nombre="Pollo Cahun" tipo="Entrante" dificultad="Fácil" calorias="350" tiempo_de_elaboracion="30 mins">
+    <ingredients>
+      <ingredient nombre="Pollo" cantidad="1/2 kilo" />
+      <ingredient nombre=" Pimenton picante" cantidad="al gusto" />
+      <ingredient nombre="Pimenton dulce" cantidad="al gusto Sal" />
+      <ingredient nombre=" Romero" cantidad="al gusto" />
+      <ingredient nombre=" Tomillo" cantidad="al gusto" />
+      <ingredient nombre=" Salsa de soja" cantidad=" un chorrito" />
+      <ingredient nombre=" Harina" cantidad="para rebozar" />
+    </ingredients>
+    <cooking_steps>
+      <step numero="1">Trocear el pollo en tiras y sazonar con las especias y rociar con la salsa de soja</step>
+      <step numero="2"> Macerar durante una noche</step>
+      <step numero="3"> Al dia siguiente sacar del macerado y en harinar</step>
+      <step numero="4"> Freir una vez enharinado</step>
+      <step numero="5"> Sacar a un papel de cocina y servir</step>
+    </cooking_steps>
+    <tools>
+      <tool nombre="Freidora" />
+      <tool nombre=" Espumadera" />
+      <tool nombre=" Fuente" />
+    </tools>
+    <origin>Receta del KFC</origin>
+  </recipe>
 
 </recipes>
