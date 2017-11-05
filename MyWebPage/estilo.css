@@ -17,8 +17,8 @@ body {
   }
 /*a=0 b=0 c=2 -> Especificidad = 2*/
 h2+img{
-  height: 15%;
-  width: 15%;
+  height: 11%;
+  width: 11%;
   border: 3px solid #33FFCC;
 }
 /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp_*/
