@@ -9,7 +9,7 @@
                 <link rel = "stylesheet" type="text/css"    href = "estilo.css"/>
             </head>
             <body>
-                <h1>Mis mejores Recetas con Pollo</h1>
+                <h1>Mis mejores Recetas Veganas</h1>
                 <xsl:for-each select="recipes/recipe">
                     <xsl:if test = "not(ingredients/ingredient/@nombre = 'Leche')">
                         <xsl:if test = "not(ingredients/ingredient/@nombre = 'Queso')">
