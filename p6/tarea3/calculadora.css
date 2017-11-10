@@ -6,11 +6,9 @@ body{
     margin-right: 25%;
 }
 table {
-    
+    background-color: gray;
     height: 350px;
     width: 350px;    
-    border-radius: 5px ;
-    border: 100px;
 }
 /* = con eval
 memoria en un atributo
@@ -25,10 +23,24 @@ input {
     margin-right: auto;
     border-radius: 15px; 
 }
+table tr:last-child>td:last-child>input{
+    background-color: green;
+}
+
 table tr>td:last-child>input{
     background-color: red;
 }
 
+table tr:first-child > td:nth-child(1)>input{
+    background-color: lightskyblue;
+}
+
+table tr:first-child > td:nth-child(2)>input{
+    background-color: lightskyblue;
+}
+table tr:first-child > td:nth-child(3)>input{
+    background-color: lightskyblue;
+}
 textarea{
     background-color: lightgreen;
 }
@@ -36,6 +48,8 @@ h1{
     background-color : white; 
 }
 p{
+    width: 350px;
+    height: 50px;
     background-color: grey; 
 }
 
