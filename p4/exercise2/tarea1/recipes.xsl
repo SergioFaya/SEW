@@ -6,7 +6,7 @@
         <html>
             <head>
                 <title>Recetas de cocina</title>
-                <link rel = "stylesheet" type="text/css"    href = "estilo.css"/>
+                <link rel = "stylesheet" type="text/css" href = "estilo.css"/>
             </head>
             <body>
                 <h1>Mis mejores Recetas</h1>

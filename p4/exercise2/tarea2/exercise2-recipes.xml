@@ -1,32 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="recipes.xsl"?>
-<!DOCTYPE recipes [
-
-<!ELEMENT recipes (recipe*)>
-<!ELEMENT recipe (ingredients, cooking_steps, tools, origin)>
-<!ELEMENT ingredients (ingredient*)>
-<!ELEMENT ingredient (#PCDATA)>
-<!ELEMENT cooking_steps (step*)>
-<!ELEMENT step (#PCDATA)>
-<!ELEMENT tools (tool*)>
-<!ELEMENT tool (#PCDATA)>
-<!ELEMENT origin (#PCDATA)>
-<!ATTLIST recipe nombre CDATA #REQUIRED>
-<!ATTLIST recipe tipo CDATA #REQUIRED>
-<!ATTLIST recipe dificultad CDATA #REQUIRED>
-<!ATTLIST recipe calorias CDATA #REQUIRED>
-<!ATTLIST recipe tiempo_de_elaboracion CDATA #REQUIRED>
-<!ATTLIST ingredient nombre CDATA #REQUIRED>
-<!ATTLIST ingredient cantidad CDATA #REQUIRED>
-<!ATTLIST step numero CDATA #REQUIRED>
-<!ATTLIST tool nombre CDATA #REQUIRED>
-]>
 <recipes>
 	<recipe nombre = "Fabada Asturiana"
 	tipo = "Primer plato"
 	dificultad = "fácil"
-	calorias = "1200 aproximadamente"
-	tiempo_de_elaboracion = "entre 5 y 8 horas">
+	calorias = "1200"
+	tiempo_de_elaboracion = "PT6H">
 		<ingredients>
 			<ingredient nombre = "Fabes de la Granja" cantidad = "500 gramos"/>
 			<ingredient nombre = "Chorizo" cantidad = "1 o 2"/>
@@ -64,13 +43,13 @@
 	tipo = "Entrante"
 	dificultad = "fácil"
 	calorias = "350"
-	tiempo_de_elaboracion = "Media hora">
+	tiempo_de_elaboracion = "PT30M">
 		<ingredients>
 			<ingredient nombre = "Arroz Blanco" cantidad = "2 tazas"/>
 			<ingredient nombre = "Lechuga" cantidad = "1"/>
 			<ingredient nombre = "Aceitunas" cantidad = "1 lata"/>
 			<ingredient nombre = "Mahonesa o salsa césar" cantidad = "Al gusto"/>
-			<ingredient nombre = "Queso en tacos" cantidad = "Al gusto"/>
+			<ingredient nombre = "Queso" cantidad = "Al gusto"/>
 			<ingredient nombre = "Zanahoria rallada" cantidad = "Al gusto"/>
 		</ingredients>
 		<cooking_steps>
@@ -94,9 +73,9 @@
 	tipo = "Postre"
 	dificultad = "fácil"
 	calorias = "1000"
-	tiempo_de_elaboracion = "1 hora">
+	tiempo_de_elaboracion = "PT1H">
 		<ingredients>
-			<ingredient nombre = "Queso" cantidad = " Philadelphia 350 gramos"/>
+			<ingredient nombre = "Queso" cantidad = "350 gramos"/>
 			<ingredient nombre = "Mantequilla" cantidad = "125 gramos"/>
 			<ingredient nombre = "Nata de repostería" cantidad = "500 mililitros"/>
 			<ingredient nombre = "Azúcar" cantidad = "100 gramos"/>
@@ -108,7 +87,7 @@
 			 Cubrir con la pasta la base del molde</step>
 			<step numero = "2"> Dejar enfriar el molde mientras preparamos la mezcla </step>
 			<step numero = "3"> Introducimos la gelatina en agua tibia para que se ablande</step>
-			<step numero = "4"> Ponemos a fuego medio el azucar, la nata y el queso. Removemos hasta que este uniforme y añadimos la gelatina hidratada.</step>
+			<step numero = "4"> Ponemos a fuego medio el azucar, la nata y el queso philadelphia. Removemos hasta que este uniforme y añadimos la gelatina hidratada.</step>
 			<step numero = "5"> Una vez este ligado perfectamente y sin grumos dejamos reposar.</step>
 			<step numero = "6"> Añadimos la mezcla al molde y metemos en la nevera para que enfríe.</step>
 			<step numero = "7"> Añadimos la mermelada por encima de la tarta una vez este cuajada. Desmoldamos y servimos. </step>
@@ -126,7 +105,7 @@
 	tipo = "Primer o segundo plato"
 	dificultad = "fácil"
 	calorias = "800"
-	tiempo_de_elaboracion = "media hora">
+	tiempo_de_elaboracion = "PT30M">
 		<ingredients>
 			<ingredient nombre = "Pasta" cantidad = "400 gramos"/>
 			<ingredient nombre = "Salsa de tomate" cantidad = "250 gramos"/>
@@ -156,11 +135,11 @@
 	tipo = "Entrante"
 	dificultad = "media"
 	calorias = "600"
-	tiempo_de_elaboracion = "media hora">
+	tiempo_de_elaboracion = "PT20M">
 		<ingredients>
 			<ingredient nombre = "Pollo" cantidad = "500 gramos"/>
 			<ingredient nombre = "Ajo" cantidad = "3 o 4 dientes"/>
-			<ingredient nombre = "Harina" cantidad = "1 paquete, para rebozar"/>
+			<ingredient nombre = "Harina" cantidad = "! paquete, para rebozar"/>
 		</ingredients>
 		<cooking_steps>
 			<step numero = "1"> Picamos el ajo en rodajas</step>
@@ -182,8 +161,8 @@
 	<recipe nombre = "Rissoto de Setas Integral"
 	tipo = "Primer plato"
 	dificultad = "media/alta"
-	calorias = ""
-	tiempo_de_elaboracion = "30 minutos">
+	calorias = "350"
+	tiempo_de_elaboracion = "PT30M">
 		<ingredients>
 			<ingredient nombre = "Arroz integral" cantidad = "200 gramos"/>
 			<ingredient nombre = "Cebolla" cantidad = "media"/>
@@ -214,10 +193,10 @@
 			  de oliva y el queso rallado. Mezclamos bien y servimos inmediatamente. Este plato es cocinarse y servir!! 			  Puedes espolvorear con unas hojas de albahaca, que le vienen como anillo al dedo a esta receta</step>
 		</cooking_steps>
 		<tools>
-			<tool nombre = "Cazuela alta"/>
-			<tool nombre = "Cucharon"/>
-			<tool nombre = "Fuente"/>
-			<tool nombre = "Cuchara de madera"/>
+			<tool nombre = "cazuela alta"/>
+			<tool nombre = "cucharon"/>
+			<tool nombre = "fuente"/>
+			<tool nombre = "cuchara de madera"/>
 		</tools>
 		<origin>
 		Plato tipico italiano, receta obtenida de la web https://www.cocinacaserayfacil.net/risotto-setas-integral/
@@ -226,17 +205,16 @@
 	<recipe nombre = "Brownie de Chocolate con Nueces"
 	tipo = "Postre"
 	dificultad = "fácil"
-	calorias = ""
-	tiempo_de_elaboracion = "40 minutos">
+	calorias = "450"
+	tiempo_de_elaboracion = "PT40M">
 		<ingredients>
-			<ingredient nombre = "Chocolate de reposteria negro o blanco" cantidad = "200 gramos"/>
-			<ingredient nombre = "Mantequilla" cantidad = "200 gr"/>
-			<ingredient nombre = "Azúcar" cantidad = "200 gr"/>
-			<ingredient nombre = "Huevos" cantidad = "3"/>
-			<ingredient nombre = "Harina" cantidad = "80 gr"/>
-			<ingredient nombre = "Leche" cantidad = "1 vaso"/>
-			<ingredient nombre = "Canela en polvo" cantidad = "1 cucharada(opcional)"/>
-			<ingredient nombre = "Nueces trituradas" cantidad = "un puñado (opcional)"/>
+			<ingredient nombre = "chocolate de reposteria negro o blanco" cantidad = "200 gramos"/>
+			<ingredient nombre = "mantequilla" cantidad = "200 gr"/>
+			<ingredient nombre = "azúcar" cantidad = "200 gr"/>
+			<ingredient nombre = "huevos" cantidad = "3"/>
+			<ingredient nombre = "harina" cantidad = "80 gr"/>
+			<ingredient nombre = "canela en polvo" cantidad = "1 cucharada(opcional)"/>
+			<ingredient nombre = "nueces trituradas" cantidad = "un puñado (opcional)"/>
 		</ingredients>
 		<cooking_steps>
 			<step numero = "1">Ponemos a cocer agua en un recipiente amplio y, en otro mas pequeño, metemos el chocolate y la mantequilla. Cuando el agua esté hirviendo, ponemos el recipiente del chocolate y la mantequilla encima del agua. A esta forma de cocción,se le llama “Al baño María”. Lo dejamos ahí hasta que se haya derretido todo bien.</step>
@@ -258,18 +236,18 @@
 	<recipe nombre = "Rabo de toro en salsa de vino tinto"
 	tipo = "Segundo"
 	dificultad = "dificil"
-	calorias = ""
-	tiempo_de_elaboracion = "6 horas">
+	calorias = "435"
+	tiempo_de_elaboracion = "PT6H">
 		<ingredients>
 			<ingredient nombre = "Rabo de toro" cantidad = "1 kg"/>
-			<ingredient nombre = "Cebolla grande" cantidad = "1"/>
-			<ingredient nombre = "Pimiento rojo" cantidad = "medio"/>
-			<ingredient nombre = "Pimiento verde" cantidad = "medio"/>
-			<ingredient nombre = "Zanahoria" cantidad = "1"/>
-			<ingredient nombre = "Vino tinto" cantidad = "litro y medio"/>
-			<ingredient nombre = "Sal" cantidad = "al gusto"/>
-			<ingredient nombre = "Pimienta" cantidad = "al gusto"/>
-			<ingredient nombre = "Aceite de oliva" cantidad = ""/>
+			<ingredient nombre = "cebolla grande" cantidad = "1"/>
+			<ingredient nombre = "pimiento rojo" cantidad = "medio"/>
+			<ingredient nombre = "pimiento verde" cantidad = "medio"/>
+			<ingredient nombre = "zanahoria" cantidad = "1"/>
+			<ingredient nombre = "vino tinto" cantidad = "litro y medio"/>
+			<ingredient nombre = "sal" cantidad = "al gusto"/>
+			<ingredient nombre = "pimienta" cantidad = "al gusto"/>
+			<ingredient nombre = "aceite de oliva" cantidad = ""/>
 		</ingredients>
 		<cooking_steps>
 			<step numero = "1">Ponemos el vino en un bol y marinamos en el los trozos de rabo de toro, previamente salpimentados. Es decir, los metemos dentro del vino, que queden bien empapados, y dejamos que reposen en la nevera mínimo 2 horas. Aunque puedes dejarlo una noche entera, para que se empape más del sabor.</step>
@@ -286,7 +264,8 @@
 		</tools>
 		<origin></origin>
 	</recipe>
-	<recipe nombre="Ensaladilla de Bulgur" tipo="Entrante" dificultad="Fácil" calorias="250" tiempo_de_elaboracion="30 minutos">
+	<recipe nombre="Ensaladilla de Bulgur" tipo="Entrante" 
+	dificultad="Fácil" calorias="250" tiempo_de_elaboracion="PT30M">
 		<ingredients>
 			<ingredient nombre="Tomate" cantidad="1" />
 			<ingredient nombre=" Cebolla" cantidad="1" />
@@ -307,12 +286,12 @@
 		</cooking_steps>
 		<tools>
 			<tool nombre="Fuente" />
-			<tool nombre=" olla" />
-			<tool nombre=" cucharon" />
+			<tool nombre="olla" />
+			<tool nombre="cucharon" />
 		</tools>
 		<origin>Ensalada obtenida de la página: http://cocinillas.elespanol.com/2016/01/ensaladilla-de-bulgur-facil/</origin>
 	</recipe>
-	<recipe nombre="Gazpacho" tipo="Entrante" dificultad="Fácil" calorias="200" tiempo_de_elaboracion="25 minutos">
+	<recipe nombre="Gazpacho" tipo="Entrante" dificultad="Fácil" calorias="200" tiempo_de_elaboracion="PT25M">
 		<ingredients>
 			<ingredient nombre="Tomates" cantidad="1 kg" />
 			<ingredient nombre=" Pimiento Rojo" cantidad="1" />
@@ -335,7 +314,7 @@
 		</tools>
 		<origin>Receta típica andaluza</origin>
 	</recipe>
-	<recipe nombre="Arroz frito" tipo="Primero" dificultad="Medio" calorias="350" tiempo_de_elaboracion="20 minutos">
+	<recipe nombre="Arroz frito" tipo="Primero" dificultad="Medio" calorias="350" tiempo_de_elaboracion="PT20M">
 		<ingredients>
 			<ingredient nombre="Arroz" cantidad="150 g" />
 			<ingredient nombre=" Agua" cantidad="350ml" />
@@ -360,7 +339,7 @@
 		</tools>
 		<origin>Receta de arroz frito del chino</origin>
 	</recipe>
-	<recipe nombre="Focaccia de Aceituna Negra y Tomates Cherry" tipo="Primero" dificultad="Medio" calorias="350" tiempo_de_elaboracion="30 minutos">
+	<recipe nombre="Focaccia de Aceituna Negra y Tomates Cherry" tipo="Primero" dificultad="Medio" calorias="350" tiempo_de_elaboracion="PT30M">
 		<ingredients>
 			<ingredient nombre="Masa de Pizza" cantidad="400gr" />
 			<ingredient nombre=" Aceitunas negras sin hueso" cantidad=" 75 g" />
@@ -384,7 +363,7 @@
 		</tools>
 		<origin>Receta Italiana, es una receta vegana de la página http://cocinillas.elespanol.com/2015/01/focaccia-facil-de-aceitunas-negras-y-tomates-cherry/</origin>
 	</recipe>
-	<recipe nombre="Macedonia" tipo="Postre" dificultad="Fácil" calorias="150" tiempo_de_elaboracion="5 minutos">
+	<recipe nombre="Macedonia" tipo="Postre" dificultad="Fácil" calorias="150" tiempo_de_elaboracion="PT5M">
 		<ingredients>
 			<ingredient nombre="Fruta" cantidad="la que quieras 350 g" />
 			<ingredient nombre=" Almibar" cantidad=" una taza" />
@@ -401,7 +380,7 @@
 		</tools>
 		<origin>Macedonia de toda la vida</origin>
 	</recipe>
-	<recipe nombre="Pollo Cahun" tipo="Entrante" dificultad="Fácil" calorias="350" tiempo_de_elaboracion="30 mins">
+	<recipe nombre="Pollo Cahun" tipo="Entrante" dificultad="Fácil" calorias="350" tiempo_de_elaboracion="PT30M">
 		<ingredients>
 			<ingredient nombre="Pollo" cantidad="1/2 kilo" />
 			<ingredient nombre=" Pimenton picante" cantidad="al gusto" />
@@ -425,7 +404,7 @@
 		</tools>
 		<origin>Receta del KFC</origin>
 	</recipe>
-	<recipe nombre="Leche de coco" tipo="Postre" dificultad="Medio" calorias="250" tiempo_de_elaboracion="1 hora">
+	<recipe nombre="Leche de coco" tipo="Postre" dificultad="Medio" calorias="250" tiempo_de_elaboracion="PT1H">
 		<ingredients>
 			<ingredient nombre="Agua" cantidad="350ml" />
 			<ingredient nombre="Coco Rallado" cantidad="120g" />
@@ -445,7 +424,7 @@
 		</tools>
 		<origin>Receta de la pagina web cocinillas.</origin>
 	</recipe>
-	<recipe nombre="Leche de Almendra" tipo="Postre" dificultad="Medio" calorias="250" tiempo_de_elaboracion="1 hora">
+	<recipe nombre="Leche de Almendra" tipo="Postre" dificultad="Medio" calorias="250" tiempo_de_elaboracion="PT1H">
 		<ingredients>
 			<ingredient nombre="Almendra Cruda" cantidad=" 1 taza" />
 			<ingredient nombre=" Agua" cantidad=" 2 tazas" />
@@ -465,7 +444,7 @@
 		</tools>
 		<origin>Pagina web cocinillas </origin>
 	</recipe>
-	<recipe nombre="Batido verde de espinacas" tipo="Postre" dificultad="Fácil" calorias="100 " tiempo_de_elaboracion="5 min">
+	<recipe nombre="Batido verde de espinacas" tipo="Postre" dificultad="Fácil" calorias="100 " tiempo_de_elaboracion="PT5M">
 		<ingredients>
 			<ingredient nombre="Espinacas frescas" cantidad=" 50g" />
 			<ingredient nombre=" Plátano" cantidad=" 1/2" />
@@ -486,7 +465,7 @@
 		</tools>
 		<origin>Receta de la pagina web cocinillas.</origin>
 	</recipe>
-	<recipe nombre="Tarta de uvas" tipo="Postre" dificultad="Medio" calorias="450" tiempo_de_elaboracion="1 hora">
+	<recipe nombre="Tarta de uvas" tipo="Postre" dificultad="Medio" calorias="450" tiempo_de_elaboracion="PT1H">
 		<ingredients>
 			<ingredient nombre="Harina de trigo" cantidad=" 2 tazas" />
 			<ingredient nombre=" Margarina vegetal" cantidad=" 1 1/2 tazas" />

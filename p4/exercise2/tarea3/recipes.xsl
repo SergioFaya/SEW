@@ -11,7 +11,7 @@
             <body>
                 <h1>Mis mejores Recetas con Pollo</h1>
                 <xsl:for-each select="recipes/recipe">
-                    <xsl:if test = "ingredients/ingredient/@nombre = 'Pollo'">
+                    <xsl:if test = "contains(ingredients/ingredient/@nombre, 'Pollo')">
                         <h2>
                             <xsl:value-of select= "@nombre"/>
                         </h2>

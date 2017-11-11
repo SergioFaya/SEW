@@ -5,11 +5,11 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>Recetas de cocina sin leche ni huevos</title>
+                <title>Recetas de cocina sin leche ni queso</title>
                 <link rel = "stylesheet" type="text/css"    href = "estilo.css"/>
             </head>
             <body>
-                <h1>Mis recetas sin leche ni huevos</h1>
+                <h1>Mis recetas sin leche ni queso</h1>
                 <xsl:for-each select="recipes/recipe">
                     <xsl:if test = "not(ingredients/ingredient/@nombre = 'Leche')">
                         <xsl:if test = "not(ingredients/ingredient/@nombre = 'Queso')">
