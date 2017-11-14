@@ -2,25 +2,29 @@
 body{
     background-color: navajowhite;
     display: block;
-    margin-left: 25%;
-    margin-right: 25%;
 }
 table {
-    background-color: gray;
     height: 350px;
-    width: 350px;    
+    width: 350px; 
+    margin-left: 20px;
+    margin-right: 0px;
+    
 }
-/* = con eval
-memoria en un atributo
-m+
-m-
-mr muestra*/
+
+form{
+    padding-top: 45px;
+    border: 1px solid ;
+    border-radius: 15px;
+    border-color: 3px; 
+    margin: auto;
+    background-color: gray;
+    height: 425px;
+    width: 350px;    
+    border: 15px;
+}
 input {
-    width: 50px;
-    height: 50px; 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 45px;
+    height: 45px; 
     border-radius: 15px; 
 }
 table tr:last-child>td:last-child>input{
@@ -42,15 +46,18 @@ table tr:first-child > td:nth-child(3)>input{
     background-color: lightskyblue;
 }
 textarea{
+    font-size: 35px;
+    resize: none;
     background-color: lightgreen;
+    height: 45px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: right;
 }
+
 h1{
     background-color : white; 
 }
-p{
-    width: 350px;
-    height: 50px;
-    background-color: grey; 
-}
-
 

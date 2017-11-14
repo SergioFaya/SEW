@@ -2,88 +2,89 @@
 <html>
 
 <head>
-
+    <title>Mi calculadora</title>
     <link rel="stylesheet" href="calculadora.css">
+    <script src="calculadora.js"> 
+    </script>
 </head>
 
 <body>
     <h1>La mejor calculadora del mundo</h1>
-    <!--<p><input type="text" disabled = "disabled" id = "resultado"/></p>-->
-    <p>
-    <textarea name="" id="" cols="30" rows="1"></textarea>
-    <table>
+    <form>
+    <textarea name="" disabled="disabled" id="text" cols="30" rows="1"></textarea>
+    <table >
         <tr>
             <td>
-                <input type="button" onclick="" value="mrc">
+                <input type="button" onclick="calculadora.mrc()" value="mrc">
             </td>
             <td>
-                <input type="button" onclick="" value="m-">
+                <input type="button" onclick="calculadora.mMinus()" value="m-">
             </td>
             <td>
-                <input type="button" onclick="" value="m+" >
+                <input type="button" onclick="calculadora.mPlus()" value="m+" >
             </td>
             <td>
-                <input type="button" onclick="" value="/">
+                <input type="button" onclick="calculadora.append(value)" value="/">
             </td>
         </tr>
         <tr>
             <td>
-                <input type="button" onclick="" value="7">
+                <input type="button" onclick="calculadora.append(value)" value="7">
             </td>
             <td>
-                <input type="button" onclick="" value="8">
+                <input type="button" onclick="calculadora.append(value)" value="8">
             </td>
             <td>
-                <input type="button" onclick="" value="9">
+                <input type="button" onclick="calculadora.append(value)" value="9">
             </td>
             <td>
-                <input type="button" onclick="" value="*">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="button" onclick="" value="4">
-            </td>
-            <td>
-                <input type="button" onclick="" value="5">
-            </td>
-            <td>
-                <input type="button" onclick="" value="6">
-            </td>
-            <td>
-                <input type="button" onclick="" value="-">
+                <input type="button" onclick="calculadora.append(value)" value="*">
             </td>
         </tr>
         <tr>
             <td>
-                <input type="button" onclick="" value="1">
+                <input type="button" onclick="calculadora.append(value)" value="4">
             </td>
             <td>
-                <input type="button" onclick="" value="2">
+                <input type="button" onclick="calculadora.append(value)" value="5">
             </td>
             <td>
-                <input type="button" onclick="" value="3">
+                <input type="button" onclick="calculadora.append(value)" value="6">
             </td>
             <td>
-                <input type="button" onclick="" value="+">
+                <input type="button" onclick="calculadora.append(value)" value="-">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="calculadora.append(value)" value="1">
+            </td>
+            <td>
+                <input type="button" onclick="calculadora.append(value)" value="2">
+            </td>
+            <td>
+                <input type="button" onclick="calculadora.append(value)" value="3">
+            </td>
+            <td>
+                <input type="button" onclick="calculadora.append(value)" value="+">
             </td>
         </tr>
         <tr>
                 <td>
-                    <input type="button" onclick="" value="0">
+                    <input type="button" onclick="calculadora.append(value)" value="0">
                 </td>
                 <td>
-                    <input type="button" onclick="" value=".">
+                    <input type="button" onclick="calculadora.append(value)" value=".">
                 </td>
                 <td>
-                    <input type="button" onclick="" value="C">
+                    <input type="button" onclick="calculadora.clearField()" value="C">
                 </td>
                 <td>
-                    <input type="button" onclick="" value="=">
+                    <input type="button" onclick="calculadora.equals()" value="=">
                 </td>
             </tr>
     </table>
-</p>
+</form>
 </body>
 
 </html>
