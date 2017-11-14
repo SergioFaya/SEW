@@ -1,22 +1,32 @@
 
+html{
+    background-color: rgb(31, 69, 102);
+}
+
 body{
     background-color: navajowhite;
-    display: block;
+    margin-top: 50px;
+    padding-bottom: 15%;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
-table {
 
+table {
     height: 350px;
     width: 350px; 
     margin-left: 20px;
-    margin-right: 0px;
+    
     
 }
 
 form{
     padding-top: 45px;
-    border: 1px solid ;
-    border-radius: 15px;
-    border-color: 3px; 
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px; 
+    
     margin: auto;
     background-color: gray;
     height: 425px;
@@ -25,19 +35,27 @@ form{
 }
 
 input {
+    outline: none;
+    font-size: 25px;
     width: 45px;
     height: 45px; 
-    border-radius: 15px; 
+    border-radius: 10px;
 }
+input:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
 table tr:last-child>td:last-child>input{
-    background-color: green;
+    background-color: lightgreen;
 }
 
 table tr>td:last-child>input{
-    background-color: red;
+    background-color: lightcoral;
 }
 
 table tr:first-child > td:nth-child(1)>input{
+    font-size: 15px;
     background-color: lightskyblue;
 }
 
@@ -48,19 +66,37 @@ table tr:first-child > td:nth-child(3)>input{
     background-color: lightskyblue;
 }
 textarea{
-
+    
+    padding-right: 15px;
+    padding-left: 15px;
+    border-top: 5px inset lightgreen;
+    border-bottom: 5px inset grey;
+    border-right: 5px inset grey;
+    border-left: 5px inset lightgreen;
+    font-family: fuenteCalculadora;
     font-size: 35px;
+    text-align: right;
     resize: none;
     background-color: lightgreen;
     height: 45px;
-    width: 300px;
+    width: 275px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    text-align: right;
+    
 }
 
 h1{
-    background-color : white; 
+    color: rgb(31, 69, 102);
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color : navajowhite;
+}
+
+@font-face{
+    font-family: fuenteCalculadora;
+    src: url(display/digital-7.ttf);
 }
 
