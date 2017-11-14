@@ -1,0 +1,101 @@
+
+html{
+    background-color: rgb(31, 69, 102);
+}
+
+body{
+    background-color: navajowhite;
+    margin-top: 50px;
+    padding-bottom: 15%;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+table {
+    height: 450px;
+    width: 450px; 
+    margin-left: 20px;
+    
+    
+}
+
+form{
+    padding-top: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px; 
+    
+    margin: auto;
+    background-color: gray;
+    height: 525px;
+    width: 475px;    
+    border: 15px;
+}
+
+input {
+    outline: none;
+    font-size: 25px;
+    width: 75px;
+    height: 45px; 
+    border-radius: 10px;
+}
+input:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+table tr:last-child>td:last-child>input{
+    background-color: lightgreen;
+}
+
+table tr>td:last-child>input{
+    background-color: lightcoral;
+}
+
+table tr:first-child > td:nth-child(1)>input{
+    font-size: 15px;
+    background-color: lightskyblue;
+}
+
+table tr:first-child > td:nth-child(2)>input{
+    background-color: lightskyblue;
+}
+table tr:first-child > td:nth-child(3)>input{
+    background-color: lightskyblue;
+}
+textarea{
+    padding-right: 15px;
+    padding-left: 15px;
+    border-top: 5px inset lightgreen;
+    border-bottom: 5px inset grey;
+    border-right: 5px inset grey;
+    border-left: 5px inset lightgreen;
+    font-family: fuenteCalculadora;
+    font-size: 35px;
+    text-align: right;
+    resize: none;
+    background-color: lightgreen;
+    height: 45px;
+    width: 325px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+
+h1{
+    color: rgb(31, 69, 102);
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color : navajowhite;
+}
+
+@font-face{
+    font-family: fuenteCalculadora;
+    src: url(display/digital-7.ttf);
+}
+
