@@ -1,0 +1,66 @@
+
+body{
+    background-color: navajowhite;
+    display: block;
+}
+table {
+
+    height: 350px;
+    width: 350px; 
+    margin-left: 20px;
+    margin-right: 0px;
+    
+}
+
+form{
+    padding-top: 45px;
+    border: 1px solid ;
+    border-radius: 15px;
+    border-color: 3px; 
+    margin: auto;
+    background-color: gray;
+    height: 425px;
+    width: 350px;    
+    border: 15px;
+}
+
+input {
+    width: 45px;
+    height: 45px; 
+    border-radius: 15px; 
+}
+table tr:last-child>td:last-child>input{
+    background-color: green;
+}
+
+table tr>td:last-child>input{
+    background-color: red;
+}
+
+table tr:first-child > td:nth-child(1)>input{
+    background-color: lightskyblue;
+}
+
+table tr:first-child > td:nth-child(2)>input{
+    background-color: lightskyblue;
+}
+table tr:first-child > td:nth-child(3)>input{
+    background-color: lightskyblue;
+}
+textarea{
+
+    font-size: 35px;
+    resize: none;
+    background-color: lightgreen;
+    height: 45px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: right;
+}
+
+h1{
+    background-color : white; 
+}
+
