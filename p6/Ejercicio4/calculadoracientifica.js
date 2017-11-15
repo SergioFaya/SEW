@@ -91,8 +91,9 @@ class CalculadoraCientifica extends Calculadora {
         this.text = "";
         document.getElementById("text").value = "0";
         this.estado();
-
     }
+
+    
 }
 CalculadoraCientifica.prototype = new Calculadora();
 
