@@ -4,7 +4,7 @@
 <head>
     <title>Mi calculadora</title>
     <link rel="stylesheet" href="calculadora.css">
-    </script>
+    <script src="calculadora.js"></script>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <table>
             <tr>
                 <td>
-                    <input type="button" onclick="calculadora.mrc()" value="MC">
+                    <input type="button" onclick="calculadora.smashMemory()" value="MC">
                 </td>
                 <td>
                     <input type="button" onclick="calculadora" value="MR">
@@ -26,15 +26,15 @@
                     <input type="button" onclick="calculadora.mMinus()" value="M-">
                 </td>
                 <td>
-                    <input type="button" onclick="calculadora" value="MS">
+                    <input type="button" onclick="calculadora.mrc()" value="MS">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="button" onclick="calculadora" value="x^2">
+                    <input type="button" onclick="calculadora.append('^2')" value="x^2">
                 </td>
                 <td>
-                    <input type="button" onclick="calculadora" value="x^y">
+                    <input type="button" onclick="calculadora.append('^')" value="x^y">
                 </td>
                 <td>
                     <input type="button" onclick="calculadora" value="sin">
@@ -69,11 +69,11 @@
                     <input type="button" onclick="calculadora.clearAll()" value="CE">
                 </td>
                 <td>
-                        <input type="button" onclick="calculadora.clearField()" value="C">
-                    </td>
-                    <td colspan="2">
-                            <input type="button" onclick="calculadora.return()" value="<[x]">
-                        </td>
+                    <input type="button" onclick="calculadora.clearField()" value="C">
+                </td>
+                <td colspan="2">
+                    <input type="button" onclick="calculadora.return()" value="<[x]">
+                </td>
                 <td>
                     <input type="button" onclick="calculadora.append(value)" value="/">
                 </td>
@@ -117,7 +117,7 @@
             <tr>
 
                 <td>
-                    <input type="button" onclick="calculadora" value="(">
+                    <input type="button" onclick="calculadora.invert()" value="±">
                 </td>
                 <td>
                     <input type="button" onclick="calculadora.append(value)" value="1">
@@ -134,15 +134,17 @@
             </tr>
             <tr>
                 <td>
-                    <input type="button" onclick="calculadora" value="(">
+                    <input type="button" onclick="calculadora.append(value)" value="(">
                 </td>
                 <td>
-                    <input type="button" onclick="calculadora.append(value)" value="0">
+                    <input type="button" onclick="calculadora.append(value)" value=")">
                 </td>
                 <td>
                     <input type="button" onclick="calculadora.append(value)" value=".">
                 </td>
-                
+                <td>
+                    <input type="button" onclick="calculadora.append(value)" value="0">
+                </td>
                 <td>
                     <input type="button" onclick="calculadora.equals()" value="=">
                 </td>

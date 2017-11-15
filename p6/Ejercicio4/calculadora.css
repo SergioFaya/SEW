@@ -16,8 +16,6 @@ table {
     height: 450px;
     width: 450px; 
     margin-left: 20px;
-    
-    
 }
 
 form{
@@ -26,7 +24,7 @@ form{
     padding-right: 5px;
     padding-bottom: 5px;
     border-radius: 15px; 
-    
+
     margin: auto;
     background-color: gray;
     height: 525px;
@@ -50,24 +48,39 @@ table tr:last-child>td:last-child>input{
     background-color: lightgreen;
 }
 
+table tr:nth-child(5)>td:first-child>input{
+    background-color: yellow;
+}
+
 table tr>td:last-child>input{
     background-color: lightcoral;
 }
 
+table tr:nth-child(4)>td:first-child>input{
+    background-color: lightcoral;
+}
+
+table tr:nth-child(4)>td:nth-child(2)>input{
+    background-color: lightcoral;
+}
+table tr:nth-child(4)>td:nth-child(3)>input{
+    background-color: lightcoral;
+}
+
 table tr:nth-child(4) > td:nth-child(3)>input{
-    width: 150px;
+    width: 165px;
 }
 
-table tr:first-child > td:nth-child(1)>input{
+table tr:first-child > td>input{
+    background-color: lightskyblue;
+}
+table tr:nth-child(2) > td>input{
+    background-color: lightskyblue;
+}
+table tr:nth-child(3) > td>input{
     background-color: lightskyblue;
 }
 
-table tr:first-child > td:nth-child(2)>input{
-    background-color: lightskyblue;
-}
-table tr:first-child > td:nth-child(3)>input{
-    background-color: lightskyblue;
-}
 textarea{
     padding-right: 15px;
     padding-left: 15px;
