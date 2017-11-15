@@ -95,6 +95,5 @@ class CalculadoraCientifica extends Calculadora {
 
     
 }
-CalculadoraCientifica.prototype = new Calculadora();
 
 var calculadora = new CalculadoraCientifica();
