@@ -124,36 +124,36 @@ class CalculadoraCientifica extends Calculadora {
         if(operation.indexOf("^") > -1){ 
             this.splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("^")));
             this.splitB = this.recursiveSplit(operation.substring(operation.indexOf("^")+1,operation.length));
-            return this.pow(eval(this.splitA),eval(this.splitB));
+            return this.pow(this.splitA,this.splitB);
         }
         if(operation.indexOf("*") > -1){ 
             this.splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("*")));
             this.splitB = this.recursiveSplit(operation.substring(operation.indexOf("*")+1,operation.length));
-            return eval(this.splitA)+"*"+eval(this.splitB);
+            return this.splitA+"*"+this.splitB
         }
         if(operation.indexOf("/") > -1){ 
             this.splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("/")));
             this.splitB = this.recursiveSplit(operation.substring(operation.indexOf("/")+1,operation.length));
-            return eval(this.splitA)+"/"+eval(this.splitB);
+            return this.splitA+"/"+this.splitB;
         }
         if(operation.indexOf("+") > -1){ 
             this.splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("+")));
             this.splitB = this.recursiveSplit(operation.substring(operation.indexOf("+")+1,operation.length));
-            return eval(this.splitA)+"+"+eval(this.splitB);
+            return this.splitA+"+"+this.splitB;
         }
         if(operation.indexOf("-") > -1){ 
             this.splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("-")));
             this.splitB = this.recursiveSplit(operation.substring(operation.indexOf("-")+1,operation.length));
-            return eval(this.splitA)+"-"+eval(this.splitB);
+            return this.splitA+"-"+this.splitB;
         }
         console.log("Izquierda:" +this.splitA);
         console.log(operation);
 
-        return operation;
+        return eval(operation);
     }
     
     equals(){
-        this.value = eval(this.recursiveSplit(this.text));
+        this.value = this.recursiveSplit(this.text);
         this.text = this.value;
         document.getElementById("text").value = this.text;
     }
@@ -181,3 +181,5 @@ class CalculadoraCientifica extends Calculadora {
 }
 
 var calculadora = new CalculadoraCientifica();
+calculadora.text = "3*5+10";
+calculadora.equals();
