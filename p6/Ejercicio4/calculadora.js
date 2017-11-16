@@ -10,27 +10,35 @@ class Calculadora {
         console.log("Texto:  " + this.text);
     }
 
+    setValueOnDisplay(str) {
+        document.getElementById("text").value = str;
+    }
+
+    getValueOnDisplay() {
+        return document.getElementById("text").value;
+    }
+
     clearField() {
         this.text = "";
-        document.getElementById("text").value = "0";
+        this.setValueOnDisplay("0");
         this.estado();
     }
 
     append(a) {
-        if (document.getElementById("text").value == "0") {
-            document.getElementById("text").value = a;
+        if (this.getValueOnDisplay() == "0") {
+            this.setValueOnDisplay(a);
         } else {
-            document.getElementById("text").value = this.text + a;
+            this.setValueOnDisplay(this.text + a);
         }
-        this.text = document.getElementById("text").value;
+        this.text = getValueOnDisplay();
         this.estado();
     }
 
     mrc() {
         if (this.memoria == "") {
-            document.getElementById("text").value = "0";
+            this.setValueOnDisplay("0");
         } else {
-            document.getElementById("text").value = this.memoria;
+            this.setValueOnDisplay(this.memoria);
             this.text = this.memoria;
             this.estado();
         }
@@ -39,14 +47,14 @@ class Calculadora {
     mMinus() {
         if (this.text != "") {
             if (this.text != "SYNTAX ERROR") {
-                var str = this.memoria + "-" + document.getElementById("text").value;
+                var str = this.memoria + "-" + this.getValueOnDisplay();
                 try {
                     this.text = eval(str);
-                    document.getElementById("text").value = this.text;
+                    this.setValueOnDisplay(this.text);
                     this.memoria = this.text;
                 } catch (err) {
                     this.text = "SYNTAX ERROR";
-                    document.getElementById("text").value = this.text;
+                    this.setValueOnDisplay(this.text);
                 }
                 this.estado();
             }
@@ -56,14 +64,14 @@ class Calculadora {
     mPlus() {
         if (this.text != "") {
             if (this.text != "SYNTAX ERROR") {
-                var str = this.memoria + "+" + document.getElementById("text").value;
+                var str = this.memoria + "+" + this.getValueOnDisplay();
                 try {
                     this.text = eval(str);
-                    document.getElementById("text").value = this.text;
+                    this.setValueOnDisplay(this.text);
                     this.memoria = this.text;
                 } catch (err) {
                     this.text = "SYNTAX ERROR";
-                    document.getElementById("text").value = this.text;
+                    this.setValueOnDisplay(this.text);
                 }
                 this.estado();
             }
@@ -71,11 +79,11 @@ class Calculadora {
     }
     equals() {
         try {
-            document.getElementById("text").value = eval(this.text);
-            this.text = document.getElementById("text").value;
+            this.setValueOnDisplay(eval(this.text));
+            this.text = this.getValueOnDisplay();
         } catch (err) {
             this.text = "SYNTAX ERROR";
-            document.getElementById("text").value = this.text;
+            this.setValueOnDisplay(this.text);
         }
         this.estado();
     }
@@ -86,98 +94,106 @@ class CalculadoraCientifica extends Calculadora {
         super();
     }
 
+    setValueOnDisplay(str) {
+        document.getElementById("text").value = str;
+    }
+
+    getValueOnDisplay() {
+        return document.getElementById("text").value;
+    }
+    
     clearAll() {
         this.memoria = "";
-        this.text = "";
-        document.getElementById("text").value = "0";
-        this.estado();
+        this.clearField();
     }
 
     smashMemory(mem) {
         this.memoria = mem;
         this.text = this.memoria;
-        document.getElementById("text").value = this.text;
+        this.setValueOnDisplay(this.text);
     }
     invert() {
-        
-        if (eval(this.text) >0 ) {
+
+        if (eval(this.text) > 0) {
             this.text = "-" + this.text;
-        }else if (eval(this.text) < 0) {
+        } else if (eval(this.text) < 0) {
             this.text = this.text.substring(1);
         }
-        document.getElementById("text").value = this.text;
+        this.setValueOnDisplay(this.text);
         this.estado();
     }
 
-    return(){
-        this.text = this.text.substring(0,this.text.length-1);
-        document.getElementById("text").value = this.text;
-        if(this.text == ""){
-            document.getElementById("text").value = "0";
+    returnKey() {
+        this.text = this.text.substring(0, this.text.length - 1);
+        this.setValueOnDisplay(this.text);
+        if (this.text == "") {
+            this.setValueOnDisplay("0");
         }
     }
 
+    /*
     recursiveSplit(operation){
-        this.splitA;
-        this.splitB;
+        var splitA;
+        var splitB;
         console.log(operation);
         if(operation.indexOf("^") > -1){ 
-            this.splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("^")));
-            this.splitB = this.recursiveSplit(operation.substring(operation.indexOf("^")+1,operation.length));
-            return this.pow(eval(this.splitA),eval(this.splitB));
+            splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("^")));
+            splitB = this.recursiveSplit(operation.substring(operation.indexOf("^")+1,operation.length));
+            return this.pow(eval(splitA),eval(splitB));
         }
         if(operation.indexOf("*") > -1){ 
-            this.splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("*")));
-            this.splitB = this.recursiveSplit(operation.substring(operation.indexOf("*")+1,operation.length));
-            return eval(this.splitA)+"*"+eval(this.splitB);
+            splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("*")));
+            splitB = this.recursiveSplit(operation.substring(operation.indexOf("*")+1,operation.length));
+            return eval(splitA)+"*"+eval(splitB);
         }
         if(operation.indexOf("/") > -1){ 
-            this.splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("/")));
-            this.splitB = this.recursiveSplit(operation.substring(operation.indexOf("/")+1,operation.length));
-            return eval(this.splitA)+"/"+eval(this.splitB);
+            splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("/")));
+            splitB = this.recursiveSplit(operation.substring(operation.indexOf("/")+1,operation.length));
+            return eval(splitA)+"/"+eval(splitB);
         }
         if(operation.indexOf("+") > -1){ 
-            this.splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("+")));
-            this.splitB = this.recursiveSplit(operation.substring(operation.indexOf("+")+1,operation.length));
-            return eval(this.splitA)+"+"+eval(this.splitB);
+            splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("+")));
+            splitB = this.recursiveSplit(operation.substring(operation.indexOf("+")+1,operation.length));
+            return eval(splitA)+"+"+eval(splitB);
         }
         if(operation.indexOf("-") > -1){ 
-            this.splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("-")));
-            this.splitB = this.recursiveSplit(operation.substring(operation.indexOf("-")+1,operation.length));
-            return eval(this.splitA)+"-"+eval(this.splitB);
+            splitA = this.recursiveSplit(operation.substring(0,operation.indexOf("-")));
+            splitB = this.recursiveSplit(operation.substring(operation.indexOf("-")+1,operation.length));
+            return eval(splitA)+"-"+eval(splitB);
         }
-        console.log("Izquierda:" +this.splitA);
+        console.log("Izquierda:" +splitA);
         console.log(operation);
 
         return operation;
     }
+    
     
     equals(){
         this.value = eval(this.recursiveSplit(this.text));
         this.text = this.value;
         document.getElementById("text").value = this.text;
     }
+    */
 
-    
-
-    pow(x,y){
-       return Math.pow(x,y);
+    pow(x, y) {
+        return Math.pow(x, y);
     }
 
-    sqrt(x){
+    sqrt(x) {
         return Math.sqrt(x);
     }
 
-    sin(x){
+    sin(x) {
         return Math.sin(x);
     }
 
-    cos(x){
+    cos(x) {
         return Math.cos(x);
     }
-    tan(x){
+    tan(x) {
         return Math.tan(x);
     }
 }
 
 var calculadora = new CalculadoraCientifica();
+calculadora.append("9");
