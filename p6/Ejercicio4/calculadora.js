@@ -14,10 +14,6 @@ class Calculadora {
         document.getElementById("text").value = str;
     }
 
-    getValueOnDisplay() {
-        return document.getElementById("text").value;
-    }
-
     clearField() {
         this.text = "";
         this.setValueOnDisplay("0");
@@ -25,12 +21,12 @@ class Calculadora {
     }
 
     append(a) {
-        if (this.getValueOnDisplay() == "0") {
+        if (document.getElementById("text").value == "0") {
             this.setValueOnDisplay(a);
         } else {
             this.setValueOnDisplay(this.text + a);
         }
-        this.text = getValueOnDisplay();
+        this.text = document.getElementById("text").value;
         this.estado();
     }
 
@@ -47,7 +43,7 @@ class Calculadora {
     mMinus() {
         if (this.text != "") {
             if (this.text != "SYNTAX ERROR") {
-                var str = this.memoria + "-" + this.getValueOnDisplay();
+                var str = this.memoria + "-" + this.document.getElementById("text").value;
                 try {
                     this.text = eval(str);
                     this.setValueOnDisplay(this.text);
@@ -64,7 +60,7 @@ class Calculadora {
     mPlus() {
         if (this.text != "") {
             if (this.text != "SYNTAX ERROR") {
-                var str = this.memoria + "+" + this.getValueOnDisplay();
+                var str = this.memoria + "+" + document.getElementById("text").value;
                 try {
                     this.text = eval(str);
                     this.setValueOnDisplay(this.text);
@@ -80,7 +76,7 @@ class Calculadora {
     equals() {
         try {
             this.setValueOnDisplay(eval(this.text));
-            this.text = this.getValueOnDisplay();
+            this.text = document.getElementById("text").value;
         } catch (err) {
             this.text = "SYNTAX ERROR";
             this.setValueOnDisplay(this.text);
@@ -94,14 +90,6 @@ class CalculadoraCientifica extends Calculadora {
         super();
     }
 
-    setValueOnDisplay(str) {
-        document.getElementById("text").value = str;
-    }
-
-    getValueOnDisplay() {
-        return document.getElementById("text").value;
-    }
-    
     clearAll() {
         this.memoria = "";
         this.clearField();
@@ -175,30 +163,57 @@ class CalculadoraCientifica extends Calculadora {
     }
     */
 
-    pow(x, y) {
-        return Math.pow(x, y);
+    twoPow() {
+
+        this.text = Math.pow(this.text, 2);
+        this.setValueOnDisplay(this.text);
     }
 
-    sqrt(x) {
-        return Math.sqrt(x);
+    threePow() {
+        this.text = Math.pow(this.text, 3);
+        this.setValueOnDisplay(this.text);
     }
 
-    sin(x) {
-        return Math.sin(x);
+    tenPow(){
+        this.text = Math.pow(10,this.text);
+        this.setValueOnDisplay(this.text);
+    }
+    sin() {
+        this.text = Math.sin(this.text);
+        this.setValueOnDisplay(this.text);
     }
 
-    cos(x) {
-        return Math.cos(x);
+    cos() {
+        this.text = Math.cos(this.text);
+        this.setValueOnDisplay(this.text);
     }
-    tan(x) {
-        return Math.tan(x);
+
+    tan() {
+        this.text = Math.tan(this.text);
+        this.setValueOnDisplay(this.text);
+    }
+
+    sqrt() {
+        this.text = Math.sqrt(this.text);
+        this.setValueOnDisplay(this.text);
+    }
+
+    exp() {
+        this.text = Math.exp(this.text);
+        this.setValueOnDisplay(this.text);
+    }
+
+    log() {
+        this.text = Math.log(this.text);
+        this.setValueOnDisplay(this.text);
+    }
+
+    pi(){
+        this.append(Math.PI);
+    }
+
+    e(){
+        this.append(Math.E);
     }
 }
-
-var calculadora = new CalculadoraCientifica();
-<<<<<<< HEAD
-calculadora.append("9");
-=======
-calculadora.text = "3*5+10";
-calculadora.equals();
->>>>>>> fa7bf52a187970807591020eea93654cb777ce89
+var calculadora = new CalculadoraCientifica
