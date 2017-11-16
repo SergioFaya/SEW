@@ -164,12 +164,12 @@ class CalculadoraCientifica extends Calculadora {
         console.log("Izquierda:" +splitA);
         console.log(operation);
 
-        return operation;
+        return eval(operation);
     }
     
     
     equals(){
-        this.value = eval(this.recursiveSplit(this.text));
+        this.value = this.recursiveSplit(this.text);
         this.text = this.value;
         document.getElementById("text").value = this.text;
     }
@@ -196,4 +196,9 @@ class CalculadoraCientifica extends Calculadora {
 }
 
 var calculadora = new CalculadoraCientifica();
+<<<<<<< HEAD
 calculadora.append("9");
+=======
+calculadora.text = "3*5+10";
+calculadora.equals();
+>>>>>>> fa7bf52a187970807591020eea93654cb777ce89
