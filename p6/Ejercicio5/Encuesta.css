@@ -1,0 +1,47 @@
+table tr td{
+    padding-right: 25px;
+}
+
+form{
+    padding-bottom: 20px;
+}
+
+form table{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+form table tr>td:first-child{
+    color: red;
+}
+
+form textarea{
+    resize: none;
+}
+
+form p{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+html{
+    background-color: rgb(31, 69, 102);
+}
+
+body{
+    background-color: navajowhite;
+    margin-top: 50px;
+    padding-bottom: 15%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1{
+    color: rgb(31, 69, 102);
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    background-color : navajowhite;
+}

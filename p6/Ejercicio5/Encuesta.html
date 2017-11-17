@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Encuesta sobre el uso de la calculadora cientifica</title>
+    <link rel="stylesheet" href="Encuesta.css" />
+    <script src="Encuesta.js"></script>
+</head>
+
+<body>
+    <h1>Encuesta de calidad de la calculadora</h1>
+    <form>
+        <table>
+            <tr>
+                <td>Como calificarias la funcionalidad de la aplicacion?</td>
+                <td>
+                    <input type="radio" name="a" id="btnFunctBaja">Baja</td>
+                <td>
+                    <input type="radio" name="a" id="btnFunctMedia">Media</td>
+                <td>
+                    <input type="radio" name="a" id="btnFunctAlta">Alta</td>
+            </tr>
+            <tr>
+                <td>Como calificarias la usabilidad de la aplicacion?</td>
+                <td>
+                    <input type="radio" name="b" id="btnUsabBaja">Baja</td>
+                <td>
+                    <input type="radio" name="b" id="btnUsabMedia">Media</td>
+                <td>
+                    <input type="radio" name="b" id="btnUsabAlta">Alta</td>
+            </tr>
+            <tr>
+                <td>Comentarios de recomendacion de la calculadora:</td>
+                <td colspan="3">
+                    <textarea name="area" id="textComment" cols="60" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>De los siguientes cual crees que es el mejor aspecto de la calculadora:</td>
+                <td colspan="3">
+                    <select id="cbAspects">
+                        <option value="utilidad">Utilidad</option>
+                        <option value="originalidad">Originalidad</option>
+                        <option value="estilo">Estilo</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Aceptas que se recojan tus datos como parte de la encuesta de uniovi?</td>
+                <td colspan="3">
+                    <input type="checkbox" name="aceptas" id="chboxAcceptTerms" onclick="encuesta.onClick()">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <form>
+        <table id="tableuser">
+        </table>
+    </form>
+</body>
+
+</html>

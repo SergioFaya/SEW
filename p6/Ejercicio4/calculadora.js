@@ -164,13 +164,12 @@ class CalculadoraCientifica extends Calculadora {
     */
 
     twoPow() {
-
-        this.text = Math.pow(this.text, 2);
+        this.text = Math.pow(this.text,2);
         this.setValueOnDisplay(this.text);
     }
 
     threePow() {
-        this.text = Math.pow(this.text, 3);
+        this.text = Math.pow(this.text,3);
         this.setValueOnDisplay(this.text);
     }
 
