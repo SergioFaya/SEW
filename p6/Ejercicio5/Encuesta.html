@@ -10,21 +10,21 @@
 
 <body>
     <h1>Encuesta de calidad de la calculadora</h1>
-    <form>
+    <form action="mailto:UO251005@uniovi.es" method="post" onsubmit="encuesta.sendMail()">
         <table>
             <tr>
                 <td>Como calificarias la funcionalidad de la aplicacion?</td>
                 <td>
-                    <input type="radio" name="a" id="btnFunctBaja">Baja</td>
+                    <input type="radio" name="functionality" id="btnFunctBaja" checked ="checked">Baja</td>
                 <td>
-                    <input type="radio" name="a" id="btnFunctMedia">Media</td>
+                    <input type="radio" name="functionality" id="btnFunctMedia">Media</td>
                 <td>
-                    <input type="radio" name="a" id="btnFunctAlta">Alta</td>
+                    <input type="radio" name="functionality" id="btnFunctAlta">Alta</td>
             </tr>
             <tr>
                 <td>Como calificarias la usabilidad de la aplicacion?</td>
                 <td>
-                    <input type="radio" name="b" id="btnUsabBaja">Baja</td>
+                    <input type="radio" name="b" id="btnUsabBaja" checked ="checked">Baja</td>
                 <td>
                     <input type="radio" name="b" id="btnUsabMedia">Media</td>
                 <td>
@@ -75,7 +75,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Comentarios de recomendacion de la calculadora:</td>
+                <td>Comentarios de recomendacion de la calculadora(opcional):</td>
                 <td colspan="3">
                     <textarea name="area" id="textComment" cols="60" rows="5"></textarea>
                 </td>
@@ -83,12 +83,10 @@
             <tr>
                 <td>Aceptas que se recojan tus datos como parte de la encuesta de uniovi?</td>
                 <td colspan="3">
-                    <input type="checkbox" name="aceptas" id="chboxAcceptTerms" onclick="encuesta.onClick()">
+                    <input type="checkbox" name="aceptas" id="chboxAcceptTerms" onclick="encuesta.clickTerms()">
                 </td>
             </tr>
         </table>
-    </form>
-    <form>
         <table id="tableuser">
         </table>
 

@@ -1,15 +1,15 @@
 
-class Encuesta{
+class Encuesta {
     //nombre apellidos sexo edad y email
-    showDataForm(){
-        this.insertRow(0,"UO:","textUO","text");
-        this.insertRow(1,"Nombre:","textNombre","text");
-        this.insertRow(2,"Edad:","textUO","text");
-        this.insertRow(3,"email:","textEmail","text");
-        this.insertRowComboBoxGenre(4,"Sexo:");
+    showDataForm() {
+        this.insertRow(0, "UO:", "textUO", "text");
+        this.insertRow(1, "Nombre:", "textNombre", "text");
+        this.insertRow(2, "Edad:", "textEdad", "text");
+        this.insertRow(3, "email:", "textEmail", "text");
+        this.insertRowComboBoxGenre(4, "Sexo:");
     }
 
-    insertRowComboBoxGenre(pos,textLabel){
+    insertRowComboBoxGenre(pos, textLabel) {
         var table = document.getElementById("tableuser");
         var row = table.insertRow(pos);
         var cellLabel = row.insertCell(0);
@@ -25,33 +25,17 @@ class Encuesta{
         female.text = "Femenino";
         female.value = "Femenino";
         var other = document.createElement("option");
-        other.text = "LGBTQIA";
-        other.value = "LGBTQIA";
-        var negros = document.createElement("option");
-        negros.text = "negros";
-        negros.value = "negros";
-        var moros = document.createElement("option");
-        moros.text = "moros";
-        moros.value = "moros";
-        var panchitos = document.createElement("option");
-        panchitos.text = "panchitos";
-        panchitos.value = "panchitos";
-        var rumanos = document.createElement("option");
-        rumanos.text = "rumanos";
-        rumanos.value = "rumanos";
+        other.text = "Prefiero no posicionarme ya que el sexo no es algo que determine a la persona sino sus intenciones";
+        other.value = "Prefiero no posicionarme ya que el sexo no es algo que determine a la persona sino sus intenciones";
         select.appendChild(male);
         select.appendChild(female);
         select.appendChild(other);
-        select.appendChild(negros);
-        select.appendChild(moros);
-        select.appendChild(panchitos);
-        select.appendChild(rumanos);
         cellText.appendChild(select);
-        
-        
+
+
     }
 
-    insertRow(pos,textLabel,inputID,type){
+    insertRow(pos, textLabel, inputID, type) {
         var table = document.getElementById("tableuser");
         var row = table.insertRow(pos);
         var cellLabel = row.insertCell(0);
@@ -66,30 +50,39 @@ class Encuesta{
         cellText.appendChild(input);
     }
 
-    hideDataForm(){
+    hideDataForm() {
         var table = document.getElementById("tableuser");
         var lenght = table.getElementsByTagName("tr").length;
-        while(lenght >0){
-            lenght--; 
+        while (lenght > 0) {
+            lenght--;
             table.deleteRow(lenght);
-        }   
+        }
     }
 
-    sendMail(){
-
-    }
-
-    onClick(){
+    clickTerms() {
         var checkbox = document.getElementById("chboxAcceptTerms");
-        if(checkbox.checked){
+        if (checkbox.checked) {
             this.showDataForm();
         }
-        else{
+        else {
             this.hideDataForm();
         }
     }
 
-    checkEmptyness(){}
+    sendMail() {
+        var checkAccept = document.getElementById("chboxAcceptTerms").checked;
+        if (!checkAccept) {
+            alert("Debes aceptar la politica de datos de la encuesta para poder enviar");
+        } else {
+            var uo = document.getElementById("textUO").value.trim();
+            var nombre = document.getElementById("textNombre").value.trim();
+            var edad = document.getElementById("textEdad").value.trim();
+            var email = document.getElementById("textEmail").value.trim();
+            if (uo == "" || nombre == "" || edad == "" || email == "") {
+                alert("Los campos de informacion del usuario son obligatorios")
+            }
+        }
+    }
 }
 
 var encuesta = new Encuesta();

@@ -7,8 +7,8 @@ form{
 }
 
 form table{
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 form table tr>td:first-child{
@@ -17,6 +17,9 @@ form table tr>td:first-child{
 
 form textarea{
     resize: none;
+}
+input[type=text]{
+    width: 250px;
 }
 
 form p{
@@ -28,13 +31,24 @@ html{
     background-color: rgb(31, 69, 102);
 }
 
+button{
+    margin: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 25px; 
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 body{
     background-color: navajowhite;
     margin-top: 50px;
     padding-bottom: 15%;
     margin-bottom: 10%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 h1{
