@@ -76,7 +76,7 @@ class Encuesta{
     }
 
     sendMail(){
-        
+
     }
 
     onClick(){
@@ -88,6 +88,8 @@ class Encuesta{
             this.hideDataForm();
         }
     }
+
+    checkEmptyness(){}
 }
 
 var encuesta = new Encuesta();
