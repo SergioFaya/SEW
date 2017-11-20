@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery, JSON y archivos</title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+
+<body>
+ <h1> jQuery carga el siguiente archivo en formato JSON</h1> 
+ <div id="ficha"></div>
+ <script>
+  $.getJSON('oviedo.json', function(datos) {
+        var output="<ul>";
+         output+= "Ciudad: " ;output+=datos.name;    
+         output+="</ul>";
+         output+="<ul>"; 
+            output+= "Temperatura: " ;  output+=datos.main.temp;
+
+        output+="</ul>";
+        document.getElementById("ficha").innerHTML=output;
+  });
+/* 
+Archivo en formato JSON denominado datos.json
+{
+    "coord": {
+        "lon": -5.84,
+        "lat": 43.36
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "cielo claro",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 13,
+        "pressure": 1022,
+        "humidity": 54,
+        "temp_min": 13,
+        "temp_max": 13
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.1,
+        "deg": 220
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1511172000,
+    "sys": {
+        "type": 1,
+        "id": 5466,
+        "message": 0.0204,
+        "country": "ES",
+        "sunrise": 1511162617,
+        "sunset": 1511196854
+    },
+    "id": 3114711,
+    "name": "Oviedo",
+    "cod": 200
+}
+*/
+</script>
+<footer>
+<p></p>
+<a href="http://validator.w3.org/check/referer" hreflang="en-us"> <img src="valid-html5-button.png" alt="¡HTML5  válido!" height="31" width="88" /></a>
+</footer>
+</body>
+</html>

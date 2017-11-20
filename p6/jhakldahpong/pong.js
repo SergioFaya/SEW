@@ -1,9 +1,9 @@
-/*script>
+/*<script>
     const PADDLE_HEIGHT = 100;
     const PADDLE_WIDTH = 10;
 
     var canvas;
-    var canvasContext;
+    var canvasContext;.
 
     var ballX = 400;
     var ballY = 300;
@@ -103,13 +103,13 @@
 */
 "no strict"
 class Pong{
-    
+    static self = this;
     constructor(){
         const PADDLE_HEIGHT = 100;
         const PADDLE_WIDTH = 10;
-        this.canvas;
-        this.canvasContext;
-    
+        var canvas = document.getElementById("gameCanvas");
+        var canvasContext = this.canvas.getContext("2d");
+     
         this.ballX = 400;
         this.ballY = 300;
         this.ballSpeedX = 7;
@@ -123,11 +123,9 @@ class Pong{
         this.paddleRightX = 800 - this.PADDLE_WIDTH - this.paddleLeftX;
     }
 
-    onLoad() {
-        this.canvas = document.getElementById('gameCanvas');
-        this.canvasContext = this.canvas.getContext('2d');
-        //setInterval(this.callAll(), 1000 / this.framesPerSecond);
-        
+
+    defineInterval(){
+        setInterval(this.callAll(), 1000 / this.framesPerSecond);
     }
 
     callAll() {
@@ -145,8 +143,7 @@ class Pong{
             this.paddleLeftY = this.paddleLeftY - 10;
         } else if (key == "83") {
             this.paddleLeftY = this.paddleLeftY + 10;
-        }     
-        
+        }             
     }   
 
     drawEverything() {
