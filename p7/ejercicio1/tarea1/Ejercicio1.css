@@ -1,0 +1,30 @@
+body{
+    background-color: burlywood;
+    text-align: center;
+}
+h1{
+    color: red;
+}
+
+h2{
+    color: blue;
+}
+
+h3{
+    color:green;
+}
+
+h3+p{
+    text-align: justify;
+    color: fuchsia;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer{
+    text-align: justify;
+    padding-top: 50px;
+}

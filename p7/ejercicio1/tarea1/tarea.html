@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ocultar y mostrar imágenes</title>
+    <link rel="stylesheet" href="Ejercicio1.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="Ejercicio1.js"></script>
+</head>
+
+<body>
+    <h1 id="h1">Soy h1</h1>
+    <h2 id="h2">Soy h2</h2>
+    <h3 id="h3">Soy h3</h3>
+    <p id="p">Soy un p</p>
+    <table id="tabla">
+        <tr>
+            <td>Fila 1 de la tabla</td>
+        </tr>
+        <tr>
+            <td>Fila 2 de la tabla</td>
+        </tr>
+        <tr>
+            <td>Fila 3 de la tabla</td>
+        </tr>
+    </table>
+
+    <p>Mostrar todo:</p>
+    <button id = "showAll">Mostrar todos los ocultos</button>
+    <p>Ocultar todo:</p>
+    <button id= "hideAll">Ocultar todos los visibles</button>
+    <p>Selecciona un elemento para ocultarlo o mostrarlo:</p>
+    <select id="combobox">
+        <option value="h1">Soy h1</option>
+        <option value="h2">Soy h2</option>
+        <option value="h3">Soy h3</option>
+        <option value="p">Soy un p</option>
+        <option value="tabla">Tabla</option>
+    </select>
+    <button id="showHide"> Mostrar u ocultar </button>
+    <p>Añadir filas a la tabla:</p>
+    <input id = "textRow" type="text"/>
+    <button id = "addRows">Añadir</button>
+    <p>Introduce el texto del componente que quieras modificar:</p>
+    <input id = "textValueEditable" type="text"/>
+    <button id = "editH1">Edita h1</button>    
+    <button id = "editH2">Edita h2</button>
+    <button id = "editH3">Edita h3</button>
+    <button id = "editP">Edita el parrafo rosa</button>
+</body>
+
+</html>
