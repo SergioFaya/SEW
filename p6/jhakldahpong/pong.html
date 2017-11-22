@@ -1,7 +1,168 @@
 <!DOCTYPE html>
 <html>
-<script src="pong.js"></script>
-<canvas id="gameCanvas" width="800" height="600" onkeydown="pong.keyDown()"></canvas>
 
+<head>
+    <script src="pong.js"></script>
+    <link rel="stylesheet" href="pong.css">
+</head>
+
+<body>
+    <h1>EL PONGGGGG</h1>
+    <p>Disfruta de este mitico juego de maquinas de arcade</p>
+    <ul>
+        <li>Modo versus (jugador contra jugador)</li>
+        <li>Modo individual, juega contra la IA</li>
+    </ul>
+    <p>
+        <canvas id="gameCanvas" width="800" height="600" onkeydown="pong.keyDown()"></canvas>
+    </p>
+
+    <button id="1p">Modo individual</button>
+    <button id="2p">Modo versus</button>
+
+    <script>
+        const PADDLE_HEIGHT = 100;
+        const PADDLE_WIDTH = 10;
+
+        var canvas = document.getElementById('gameCanvas');
+        var canvasContext = canvas.getContext('2d');
+
+        var ballX = canvas.width / 2;;
+        var ballY = canvas.height / 2;;
+        var ballSpeedX = 7;
+        var ballSpeedY = 3;
+        var ballDirectionX = 1;
+        var ballDirectionY = 1;
+        var ballRadius = 10;
+
+        var framesPerSecond = 30;
+
+        var ticks = 0;
+        var paddleSpeed = 15;
+        var paddleLeftY = 150;
+        var paddleLeftX = 0;
+        var paddleRightY = 150;
+        var paddleRightX = canvas.width - PADDLE_WIDTH - paddleLeftX;
+
+
+        function calculateMousePos(evt) {
+            var rect = canvas.getBoundingClientRect();
+            var root = document.documentElement;
+            var mouseX = evt.clientX - rect.left - root.scrollLeft;
+            var mouseY = evt.clientY - rect.top - root.scrollTop;
+            return {
+                x: mouseX,
+                y: mouseY
+            };
+        }
+
+        window.onload = function () {
+
+            setInterval(callAll, 1000 / framesPerSecond);
+
+
+            document.addEventListener("keydown", function (evt) {
+                var key = event.which || event.keyCode;
+                if (key == "38") {
+                    if (paddleRightY >= paddleSpeed) {
+                        paddleRightY = paddleRightY - paddleSpeed;
+                    }
+                } else if (key == "40") {
+                    if (paddleRightY <= canvas.height - PADDLE_HEIGHT - paddleSpeed) {
+                        paddleRightY = paddleRightY + paddleSpeed;
+                    }
+                } else if (key == "87") {
+                    if (paddleLeftY >= paddleSpeed) {
+                        paddleLeftY = paddleLeftY - paddleSpeed;
+                    }
+                } else if (key == "83") {
+                    if (paddleLeftY <= canvas.height - PADDLE_HEIGHT - paddleSpeed) {
+                        paddleLeftY = paddleLeftY + paddleSpeed;
+                    }
+                }
+
+            })
+        }
+
+        function callAll() {
+            moveEverything();
+            drawEverything();
+        }
+
+        function ballReset() {
+            ticks = 0;
+            ballSpeedX = 7 * ballDirectionX;
+            ballSpeedY = 3 * ballDirectionY;
+            ballX = canvas.width / 2;
+            ballY = canvas.height / 2;
+        }
+
+        function moveEverything() {
+            ballX += ballSpeedX * ballDirectionX;
+            ballY += ballSpeedY * ballDirectionY;
+            ticks++;
+            increaseSpeed();
+            if (ballX - ballRadius <= 0) {
+                if (ballY + ballRadius >= paddleLeftY && ballY - ballRadius <= paddleLeftY + PADDLE_HEIGHT) {
+                    ballDirectionX = -ballDirectionX;
+                } else {
+                    ballReset();
+                }
+            }
+
+            if (ballX + ballRadius >= canvas.width) {
+                if (ballY + ballRadius >= paddleRightY && ballY - ballRadius <= paddleRightY + PADDLE_HEIGHT) {
+                    ballDirectionX = -ballDirectionX;
+                } else {
+                    ballReset();
+                }
+            }
+
+            if (ballY <= 0 || ballY >= canvas.height) {
+                ballDirectionY = -ballDirectionY;
+            }
+        }
+
+        function drawNumber() {
+            canvasContext.font = "30px Arial";
+            canvasContext.fillText("Hello World", 10, 50);
+        }
+
+        function initialDraw() {
+            canvasContext.fillStyle = 'black';
+            canvasContext.fillRect(0, 0, canvas.width, canvas.height);
+            canvasContext.beginPath();
+            canvasContext.setLineDash([5, 15]);
+            canvasContext.moveTo(canvas.width / 2, canvas.height);
+            canvasContext.lineTo(canvas.width / 2, 0);
+            canvasContext.strokeStyle = '#a0a0a0';
+            canvasContext.stroke();
+        }
+
+        function drawEverything() {
+            initialDraw();
+            canvasContext.fillStyle = 'white';
+            canvasContext.beginPath();
+            canvasContext.arc(ballX, ballY, ballRadius, ballRadius, Math.PI, true);
+            canvasContext.fill();
+            //        canvasContext.fillRect(ballX, ballY, 10, 10);
+            canvasContext.fillStyle = 'white';
+            canvasContext.fillRect(paddleLeftX, paddleLeftY, PADDLE_WIDTH, PADDLE_HEIGHT);
+            canvasContext.fillStyle = 'white';
+            canvasContext.fillRect(paddleRightX, paddleRightY, PADDLE_WIDTH, PADDLE_HEIGHT);
+        }
+
+        function increaseSpeed() {
+            console.log(ticks);
+            console.log(ballSpeedX);
+            if (ticks > 500) {
+                if (ballDirectionX > 0) {
+                    ballSpeedX++;
+                }
+                ticks = 0;
+            }
+        }
+    </script>
+</body>
 
 </html>

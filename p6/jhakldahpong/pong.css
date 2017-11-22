@@ -1,0 +1,44 @@
+
+
+html{
+    background-color: gray;
+    font-family: pixelFont;
+}
+
+body{
+    text-align: center;
+}
+
+button{
+    background-color: gray;
+    font-family: pixelFont;
+
+}
+h1{
+    padding: 15px;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+p canvas {
+    border :15px outset greenyellow;
+}
+
+button {
+    margin-left: auto;
+    margin-right: auto; 
+}
+canvas{
+    width: 800;
+    height: 600;
+}
+
+
+@font-face{
+    border: 1px solid red;
+    font-family: pixelFont;
+    src: url(pixelfont/PressStart2P.ttf);
+}
