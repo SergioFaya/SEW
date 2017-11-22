@@ -11,7 +11,7 @@
     var ballSpeedY = 3;
     var paddleSpeed = 5;
     var framesPerSecond = 30;
-
+    var ticks = 0;
     var paddleLeftY = 150;
     var paddleLeftX = 5;
     var paddleRightY = 150;
@@ -83,6 +83,10 @@
 
         if (ballY <= 0 || ballY >= canvas.height) {
             ballSpeedY = -ballSpeedY;
+        }
+
+        if(ticks%100000 == 0){
+            ballSpeedX++;
         }
     }
 

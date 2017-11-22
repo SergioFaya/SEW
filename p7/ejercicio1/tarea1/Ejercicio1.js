@@ -38,4 +38,16 @@ $(document).ready(function () {
         var txt = $("#textValueEditable").val();
         $("#p").text(txt);
     });
+
+    $("#delete").click(function(){
+        var combo = document.getElementById("combobox");
+        var selectedItem = combo.options[combo.selectedIndex].value;
+        $("#"+selectedItem).remove();   
+    });
+
+    $("#recorrerPadre").click(function(){
+        $("body").each(function(){
+            console.log($(this).parent().text())
+        });
+    });
 });
