@@ -8,18 +8,14 @@
 
 <body>
     <h1>EL PONGGGGG</h1>
-    <p>Disfruta de este mitico juego de maquinas de arcade</p>
-    <ul>
-        <li>Modo versus (jugador contra jugador)</li>
-        <li>Modo individual, juega contra la IA</li>
-    </ul>
+ <!--   <p>Disfruta de este mitico juego de maquinas de arcade</p> -->
     <p>
         <canvas id="gameCanvas" width="800" height="600" onkeydown="pong.keyDown()"></canvas>
     </p>
-
+<!-- 
     <button id="1p">Modo individual</button>
     <button id="2p">Modo versus</button>
-
+-->
     <script>
         const PADDLE_HEIGHT = 100;
         const PADDLE_WIDTH = 10;
@@ -125,7 +121,7 @@
 
         function drawNumber() {
             canvasContext.font = "30px Arial";
-            canvasContext.fillText("Hello World", 10, 50);
+            canvasContext.fillText("0", 10, 50);
         }
 
         function initialDraw() {
@@ -141,6 +137,7 @@
 
         function drawEverything() {
             initialDraw();
+            drawNumber();
             canvasContext.fillStyle = 'white';
             canvasContext.beginPath();
             canvasContext.arc(ballX, ballY, ballRadius, ballRadius, Math.PI, true);

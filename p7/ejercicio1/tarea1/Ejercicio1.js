@@ -46,8 +46,8 @@ $(document).ready(function () {
     });
 
     $("#recorrerPadre").click(function(){
-        $("body").each(function(){
-            console.log($(this).parent().text())
+        $("body").s
+            //console.log($(this).parent().text())
         });
     });
 });
