@@ -53,7 +53,6 @@
             <p>Puntua del 1 al 10 como de utiles son las funciones propuestas en la calculadora cientifica</p>
             <div id="divCbFunctionStyle">
                 <select id="cbFunctionStyle">
-
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -69,13 +68,14 @@
             <p>Comentarios de recomendacion de la calculadora(opcional):</p>
             <textarea name="area" id="textComment" cols="60" rows="5"></textarea>
             <p>Aceptas que se recojan tus datos como parte de la encuesta de uniovi?</p>
-            <div id = "checkBox">
-                    <input type="checkbox" name="aceptas" id="chboxAcceptTerms" onclick="encuesta.clickTerms()">
+            <div id = "checkBox" onclick="encuesta.validate()">
+                    <input type="checkbox" name="checkAcept" id="chboxAcceptTerms" onclick="encuesta.clickTerms()">
+            </div>
+            <div id = "button"> 
+                <button id = "btnSend" onclick="encuesta.showMean()">Confirmar y Enviar</button>
+                <textarea name="txtMeanResult" id="txtMean" cols="10" rows="1"></textarea>
             </div>
         </div>
-
-
-       
     </form>
 </body>
 
