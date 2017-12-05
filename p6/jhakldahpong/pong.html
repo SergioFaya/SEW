@@ -8,11 +8,11 @@
 
 <body>
     <h1>EL PONGGGGG</h1>
- <!--   <p>Disfruta de este mitico juego de maquinas de arcade</p> -->
+    <p>Disfruta de este mitico juego de maquinas de arcade</p>
     <p>
-        <canvas id="gameCanvas" width="800" height="600" onkeydown="pong.keyDown()"></canvas>
+        <canvas id="gameCanvas" width="800" height="600" tabindex="1"></canvas>
     </p>
-<!-- 
+    <!-- 
     <button id="1p">Modo individual</button>
     <button id="2p">Modo versus</button>
 -->
@@ -35,11 +35,14 @@
 
         var ticks = 0;
         var paddleSpeed = 15;
-        var paddleLeftY = 150;
+        var paddleLeftY = canvas.height/2 -PADDLE_HEIGHT/2; 
         var paddleLeftX = 0;
-        var paddleRightY = 150;
+        var paddleRightY = canvas.height/2 -PADDLE_HEIGHT/2;
         var paddleRightX = canvas.width - PADDLE_WIDTH - paddleLeftX;
 
+        var leftPoints = 0;
+        var rightPoints = 0;
+        var started = 0;
 
         function calculateMousePos(evt) {
             var rect = canvas.getBoundingClientRect();
@@ -53,36 +56,53 @@
         }
 
         window.onload = function () {
-
+            initialDraw();
+            drawStartMessage();
             setInterval(callAll, 1000 / framesPerSecond);
-
-
+            //meter eventos con jquery y API fullscreen
             document.addEventListener("keydown", function (evt) {
                 var key = event.which || event.keyCode;
-                if (key == "38") {
-                    if (paddleRightY >= paddleSpeed) {
-                        paddleRightY = paddleRightY - paddleSpeed;
-                    }
-                } else if (key == "40") {
-                    if (paddleRightY <= canvas.height - PADDLE_HEIGHT - paddleSpeed) {
-                        paddleRightY = paddleRightY + paddleSpeed;
-                    }
-                } else if (key == "87") {
-                    if (paddleLeftY >= paddleSpeed) {
-                        paddleLeftY = paddleLeftY - paddleSpeed;
-                    }
-                } else if (key == "83") {
-                    if (paddleLeftY <= canvas.height - PADDLE_HEIGHT - paddleSpeed) {
-                        paddleLeftY = paddleLeftY + paddleSpeed;
-                    }
+                if (started == 1) {
+                    if (key == "38") {
+                        if (paddleRightY >= paddleSpeed) {
+                            paddleRightY = paddleRightY - paddleSpeed;
+                        }
+                    } else if (key == "40") {
+                        if (paddleRightY <= canvas.height - PADDLE_HEIGHT - paddleSpeed) {
+                            paddleRightY = paddleRightY + paddleSpeed;
+                        }
+                    } else if (key == "87") {
+                        if (paddleLeftY >= paddleSpeed) {
+                            paddleLeftY = paddleLeftY - paddleSpeed;
+                        }
+                    } else if (key == "83") {
+                        if (paddleLeftY <= canvas.height - PADDLE_HEIGHT - paddleSpeed) {
+                            paddleLeftY = paddleLeftY + paddleSpeed;
+                        }
+                    } 
                 }
-
+                if (key == "32") {
+                        start();
+                    }
             })
         }
 
+        function start() {
+            started = 1;
+        }
+
+        function drawStartMessage() {
+            canvasContext.font = "10px pixelFont";
+            canvasContext.fillStyle = "yellow";
+            canvasContext.textAlign = "center";
+            canvasContext.fillText("Pulsa espacio para empezar", canvas.width / 2, canvas.height / 2);
+        }
+
         function callAll() {
-            moveEverything();
-            drawEverything();
+            if (started == 1) {
+                moveEverything();
+                drawEverything();
+            }
         }
 
         function ballReset() {
@@ -91,6 +111,11 @@
             ballSpeedY = 3 * ballDirectionY;
             ballX = canvas.width / 2;
             ballY = canvas.height / 2;
+        }
+
+        function paddleReset(){
+            paddleRightY = canvas.height/2 -PADDLE_HEIGHT/2; 
+            paddleLeftY = canvas.height/2 -PADDLE_HEIGHT/2; 
         }
 
         function moveEverything() {
@@ -102,7 +127,10 @@
                 if (ballY + ballRadius >= paddleLeftY && ballY - ballRadius <= paddleLeftY + PADDLE_HEIGHT) {
                     ballDirectionX = -ballDirectionX;
                 } else {
+                    rightPoints++;
+                    started = 0;
                     ballReset();
+                    paddleReset();
                 }
             }
 
@@ -110,7 +138,10 @@
                 if (ballY + ballRadius >= paddleRightY && ballY - ballRadius <= paddleRightY + PADDLE_HEIGHT) {
                     ballDirectionX = -ballDirectionX;
                 } else {
+                    leftPoints++;
+                    started = 0;
                     ballReset();
+                    paddleReset();
                 }
             }
 
@@ -119,9 +150,12 @@
             }
         }
 
-        function drawNumber() {
+        function drawPointsNumber(left, right) {
             canvasContext.font = "30px Arial";
-            canvasContext.fillText("0", 10, 50);
+            canvasContext.fillStyle = "red";
+            canvasContext.textAlign = "center";
+            canvasContext.fillText(left, canvas.width - canvas.width * 2 / 3, canvas.height - canvas.height * 9 / 10);
+            canvasContext.fillText(right, canvas.width - canvas.width / 3, canvas.height - canvas.height * 9 / 10);
         }
 
         function initialDraw() {
@@ -137,12 +171,11 @@
 
         function drawEverything() {
             initialDraw();
-            drawNumber();
+            drawPointsNumber(leftPoints, rightPoints);
             canvasContext.fillStyle = 'white';
             canvasContext.beginPath();
             canvasContext.arc(ballX, ballY, ballRadius, ballRadius, Math.PI, true);
             canvasContext.fill();
-            //        canvasContext.fillRect(ballX, ballY, 10, 10);
             canvasContext.fillStyle = 'white';
             canvasContext.fillRect(paddleLeftX, paddleLeftY, PADDLE_WIDTH, PADDLE_HEIGHT);
             canvasContext.fillStyle = 'white';

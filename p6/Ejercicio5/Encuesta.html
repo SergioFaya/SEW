@@ -11,86 +11,71 @@
 <body>
     <h1>Encuesta de calidad de la calculadora</h1>
     <form action="mailto:UO251005@uniovi.es" method="post" onsubmit="encuesta.sendMail()">
-        <table>
-            <tr>
-                <td>Como calificarias la funcionalidad de la aplicacion?</td>
-                <td>
-                    <input type="radio" name="functionality" id="btnFunctBaja" checked ="checked">Baja</td>
-                <td>
-                    <input type="radio" name="functionality" id="btnFunctMedia">Media</td>
-                <td>
-                    <input type="radio" name="functionality" id="btnFunctAlta">Alta</td>
-            </tr>
-            <tr>
-                <td>Como calificarias la usabilidad de la aplicacion?</td>
-                <td>
-                    <input type="radio" name="b" id="btnUsabBaja" checked ="checked">Baja</td>
-                <td>
-                    <input type="radio" name="b" id="btnUsabMedia">Media</td>
-                <td>
-                    <input type="radio" name="b" id="btnUsabAlta">Alta</td>
-            </tr>
-            <tr>
-                <td>De los siguientes cual crees que es el mejor aspecto de la calculadora:</td>
-                <td colspan="3">
-                    <select id="cbAspects">
-                        <option value="utilidad">Utilidad</option>
-                        <option value="originalidad">Originalidad</option>
-                        <option value="estilo">Estilo</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Puntua del 1 al 10 el estilo de la aplicacion</td>
-                <td colspan="3">
-                    <select id="cbRatingStyle">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Puntua del 1 al 10 como de utiles son las funciones propuestas en la calculadora cientifica</td>
-                <td colspan="3">
-                    <select id="cbFunctionStyle">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Comentarios de recomendacion de la calculadora(opcional):</td>
-                <td colspan="3">
-                    <textarea name="area" id="textComment" cols="60" rows="5"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>Aceptas que se recojan tus datos como parte de la encuesta de uniovi?</td>
-                <td colspan="3">
-                    <input type="checkbox" name="aceptas" id="chboxAcceptTerms" onclick="encuesta.clickTerms()">
-                </td>
-            </tr>
-        </table>
-        <table id="tableuser">
-        </table>
+        <!-- utilizariamos un post en casos reales -->
+        <div class="encuesta">
+            <p>Como calificarias la funcionalidad de la aplicacion?</p>
+            <div id="funcionalidad">
+                <input type="radio" name="functionality" id="btnFunctBaja" checked="checked">Baja</input>
+                <input type="radio" name="functionality" id="btnFunctMedia">Media</input>
+                <input type="radio" name="functionality" id="btnFunctAlta">Alta</input>
+            </div>
+            <p>Como calificarias la usabilidad de la aplicacion?</p>
+            <div id="usabilidad">
+                <input type="radio" name="b" id="btnUsabBaja">Alta</input>
+                <input type="radio" name="b" id="btnUsabMedia">Media</input>
+                <input type="radio" name="b" id="btnUsabAlta">Alta</input>
+            </div>
+            <p>De los siguientes cual crees que es el mejor aspecto de la calculadora:</p>
+            <div id="divCbAspects">
+                <select id="cbAspects">
 
-        <button onclick="encuesta.sendMail()">Enviar</button>
+                    <option value="utilidad">Utilidad</option>
+                    <option value="originalidad">Originalidad</option>
+                    <option value="estilo">Estilo</option>
+                </select>
+            </div>
+            <p>Puntua del 1 al 10 el estilo de la aplicacion</p>
+            <div id="divCbRatingStyle">
+                <select id="cbRatingStyle">
+
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <p>Puntua del 1 al 10 como de utiles son las funciones propuestas en la calculadora cientifica</p>
+            <div id="divCbFunctionStyle">
+                <select id="cbFunctionStyle">
+
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <p>Comentarios de recomendacion de la calculadora(opcional):</p>
+            <textarea name="area" id="textComment" cols="60" rows="5"></textarea>
+            <p>Aceptas que se recojan tus datos como parte de la encuesta de uniovi?</p>
+            <div id = "checkBox">
+                    <input type="checkbox" name="aceptas" id="chboxAcceptTerms" onclick="encuesta.clickTerms()">
+            </div>
+        </div>
+
+
+       
     </form>
 </body>
 

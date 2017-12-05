@@ -45,9 +45,13 @@ $(document).ready(function () {
         $("#"+selectedItem).remove();   
     });
 
-    $("#recorrerPadre").click(function(){
+   /* $("#recorrerPadre").click(function(){
         $("body").s
             //console.log($(this).parent().text())
         });
     });
+
+
+    añadir un minibuscador que pinte si encuentra el texto
+    */
 });

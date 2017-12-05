@@ -10,80 +10,102 @@
 
 <body>
     <h1>La mejor calculadora del mundo</h1>
-    <form>
-    <textarea name="" disabled="disabled" id="text" cols="30" rows="1"></textarea>
-    <table >
-        <tr>
-            <td>
+
+
+
+    <div id="calculadora">
+        <div id="textArea">
+            <textarea name="" disabled="disabled" id="text" cols="30" rows="1"></textarea>
+        </div>
+        <div class="fila">
+            <div id="mrc">
                 <input type="button" onclick="calculadora.mrc()" value="mrc">
-            </td>
-            <td>
+            </div>
+            <div class="divisor"> </div>
+            <div id="m-">
                 <input type="button" onclick="calculadora.mMinus()" value="m-">
-            </td>
-            <td>
-                <input type="button" onclick="calculadora.mPlus()" value="m+" >
-            </td>
-            <td>
+            </div>
+            <div class="divisor"> </div>
+            <div id="m+">
+                <input type="button" onclick="calculadora.mPlus()" value="m+">
+            </div>
+            <div class="divisor"> </div>
+            <div id="/">
                 <input type="button" onclick="calculadora.append(value)" value="/">
-            </td>
-        </tr>
-        <tr>
-            <td>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div id="7">
                 <input type="button" onclick="calculadora.append(value)" value="7">
-            </td>
-            <td>
+            </div>
+            <div class="divisor"> </div>
+            <div id="8">
                 <input type="button" onclick="calculadora.append(value)" value="8">
-            </td>
-            <td>
+            </div>
+            <div class="divisor"> </div>
+            <div id="9">
                 <input type="button" onclick="calculadora.append(value)" value="9">
-            </td>
-            <td>
+            </div>
+            <div class="divisor"> </div>
+            <div id="*">
                 <input type="button" onclick="calculadora.append(value)" value="*">
-            </td>
-        </tr>
-        <tr>
-            <td>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div id="4">
                 <input type="button" onclick="calculadora.append(value)" value="4">
-            </td>
-            <td>
+            </div>
+            <div class="divisor"> </div>
+            <div id="5">
                 <input type="button" onclick="calculadora.append(value)" value="5">
-            </td>
-            <td>
+            </div>
+            <div class="divisor"> </div>
+            <div id="6">
                 <input type="button" onclick="calculadora.append(value)" value="6">
-            </td>
-            <td>
+            </div>
+            <div class="divisor"> </div>
+            <div id="-">
                 <input type="button" onclick="calculadora.append(value)" value="-">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="button" onclick="calculadora.append(value)" value="1">
-            </td>
-            <td>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div id="1">
+                <input type="button" onclick="calculadora.append(value)" value="1"> </div>
+            <div class="divisor"> </div>
+            <div id="2">
                 <input type="button" onclick="calculadora.append(value)" value="2">
-            </td>
-            <td>
+            </div>
+            <div class="divisor"> </div>
+            <div id="3">
                 <input type="button" onclick="calculadora.append(value)" value="3">
-            </td>
-            <td>
+            </div>
+            <div class="divisor"> </div>
+            <div id="+">
                 <input type="button" onclick="calculadora.append(value)" value="+">
-            </td>
-        </tr>
-        <tr>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="0">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value=".">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.clearField()" value="C">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.equals()" value="=">
-                </td>
-            </tr>
-    </table>
-</form>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div id="0">
+                <input type="button" onclick="calculadora.append(value)" value="0"> </div>
+            <div class="divisor"> </div>
+            <div id=".">
+                <input type="button" onclick="calculadora.append(value)" value=".">
+            </div>
+            <div class="divisor"> </div>
+            <div id="C">
+                <input type="button" onclick="calculadora.clearField()" value="C">
+            </div>
+            <div class="divisor"> </div>
+            <div id="=">
+                <input type="button" onclick="calculadora.equals()" value="=">
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>

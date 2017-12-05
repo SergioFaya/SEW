@@ -9,148 +9,148 @@
 
 <body>
     <h1>Calculadora 100Tifica</h1>
-    <form>
-        <textarea name="" disabled="disabled" id="text" cols="30" rows="1"></textarea>
-        <table>
-            <tr>
-                <td>
-                    <input type="button" onclick="calculadora.smashMemory()" value="MC">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora" value="MR">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.mPlus()" value="M+">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.mMinus()" value="M-">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.mrc()" value="MS">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" onclick="calculadora.twoPow()" value="x^2">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.threePow()" value="x^3">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.sin()" value="sin">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.cos()" value="cos">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.tan()" value="tan">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" onclick="calculadora.sqrt()" value="sqrt">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.tenPow()" value="10^x">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.log()" value="log">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.exp()" value="exp">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.mod()" value="mod">
-                </td>
-            </tr>
+    <div id="calculadora">
 
-            <tr>
-                <td>
-                    <input type="button" onclick="calculadora.clearAll()" value="CE">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.clearField()" value="C">
-                </td>
-                <td colspan="2">
-                    <input type="button" onclick="calculadora.return()" value="<[x]">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="/">
-                </td>
-            </tr>
-            <tr>
+        <div id="textArea">
+            <textarea name="" disabled="disabled" id="text" cols="30" rows="1"></textarea>
+        </div>
+        <div class="fila">
+            <div id="MC">
+                <input type="button" onclick="calculadora.smashMemory()" value="MC">
+            </div>
+            <div id="MR">
+                <input type="button" onclick="calculadora" value="MR">
+            </div>
+            <div="M+">
+                <input type="button" onclick="calculadora.mPlus()" value="M+">
+        </div>
+        <div id="M-">
+            <input type="button" onclick="calculadora.mMinus()" value="M-"> </div>
+        <div id="MS">
+            <input type="button" onclick="calculadora.mrc()" value="MS">
+        </div>
 
-                <td>
-                    <input type="button" onclick="calculadora.pi()" value="PI">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="7">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="8">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="9">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="*">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" onclick="calculadora.e()" value="e">
-                </td>
+        <div class="fila">
+            <div id="x2">
+                <input type="button" onclick="calculadora.twoPow()" value="x^2">
+            </div>
+            <div id="x3">
+                <input type="button" onclick="calculadora.threePow()" value="x^3">
+            </div>
+            <div id="sin">
+                <input type="button" onclick="calculadora.sin()" value="sin">
+            </div>
+            <div id="cos">
+                <input type="button" onclick="calculadora.cos()" value="cos">
+            </div>
+            <div id="tan">
+                <input type="button" onclick="calculadora.tan()" value="tan">
+            </div>
+        </div>
 
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="4">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="5">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="6">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="-">
-                </td>
-            </tr>
-            <tr>
+        <div class="fila">
+            <div id="sqrt">
+                <input type="button" onclick="calculadora.sqrt()" value="sqrt">
+            </div>
+            <div id="10x">
+                <input type="button" onclick="calculadora.tenPow()" value="10^x">
+            </div>
+            <div id="log">
+                <input type="button" onclick="calculadora.log()" value="log">
+            </div>
+            <div id="exp">
+                <input type="button" onclick="calculadora.exp()" value="exp">
+            </div>
+            <div id="mod">
+                <input type="button" onclick="calculadora.mod()" value="mod">
+            </div>
+        </div>
 
-                <td>
-                    <input type="button" onclick="calculadora.invert()" value="±">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="1">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="2">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="3">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="+">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="(">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value=")">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value=".">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.append(value)" value="0">
-                </td>
-                <td>
-                    <input type="button" onclick="calculadora.equals()" value="=">
-                </td>
-            </tr>
-        </table>
-    </form>
+        <div class="fila">
+            <div id="CE">
+                <input type="button" onclick="calculadora.clearAll()" value="CE">
+            </div>
+            <div id="C">
+                <input type="button" onclick="calculadora.clearField()" value="C">
+            </div>
+            <div id="ret">
+                <input type="button" onclick="calculadora.return()" value="Ret">
+            </div>
+            <div id="division">
+                <input type="button" onclick="calculadora.append(value)" value="/">
+            </div>
+        </div>
+
+        <div class="fila">
+            <div id="PI">
+                <input type="button" onclick="calculadora.pi()" value="PI">
+            </div>
+            <div id="7">
+                <input type="button" onclick="calculadora.append(value)" value="7"> </div>
+            <div id="8">
+                <input type="button" onclick="calculadora.append(value)" value="8">
+            </div>
+            <div id="9">
+                <input type="button" onclick="calculadora.append(value)" value="9">
+            </div>
+            <div id="plus">
+                <input type="button" onclick="calculadora.append(value)" value="*">
+            </div>
+        </div>
+        <div class="fila">
+            <div id="e">
+                <input type="button" onclick="calculadora.e()" value="e">
+            </div>
+            <div id="4">
+                <input type="button" onclick="calculadora.append(value)" value="4">
+            </div>
+            <div id="5">
+                <input type="button" onclick="calculadora.append(value)" value="5">
+            </div>
+            <div id="6">
+                <input type="button" onclick="calculadora.append(value)" value="6">
+            </div>
+            <div id="minus">
+                <input type="button" onclick="calculadora.append(value)" value="-">
+            </div>
+        </div>
+
+        <div class="fila">
+            <div id="+-">
+                <input type="button" onclick="calculadora.invert()" value="&#177">
+            </div>
+            <div id="x3">
+                <input type="button" onclick="calculadora.append(value)" value="1">
+            </div>
+            <div id="sin">
+                <input type="button" onclick="calculadora.append(value)" value="2">
+            </div>
+            <div id="cos">
+                <input type="button" onclick="calculadora.append(value)" value="3">
+            </div>
+            <div id="tan">
+                <input type="button" onclick="calculadora.append(value)" value="+">
+            </div>
+        </div>
+        <div class="fila">
+            <div id="leftParenthesis">
+                <input type="button" onclick="calculadora.append(value)" value="(">
+            </div>
+            <div id="rightParenthesis">
+                <input type="button" onclick="calculadora.append(value)" value=")">
+            </div>
+            <div id="dot">
+                <input type="button" onclick="calculadora.append(value)" value=".">
+            </div>
+            <div id="0">
+                <input type="button" onclick="calculadora.append(value)" value="0">
+            </div>
+            <div id="equals">
+                <input type="button" onclick="calculadora.equals()" value="=">
+            </div>
+        </div>
+    </div>
 </body>
+
 
 </html>
