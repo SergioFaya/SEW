@@ -2,19 +2,27 @@
 <html>
 
 <head>
-    <title>Euitio Audio Player</title>
+    <title>Creador de ligas de Judo</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="Ejercicio6.css">
     <script src="Ejercicio6.js"></script>
 </head>
 
 <body>
-    <h1>Selecciona el archivo a reproducir</h1>
-    <p>input</p>
-    <input type="text" id="input">
-    <p>output</p>
-    <input type="text" id="output">
-    <input type="button" value = "Convertir" onclick="cypher.cypher()">
+    <h1>Creacion de emparejamientos para combates</h1>
+    <p>Introduce el número de luchadores en la liga</p>
+    <input type="text" id = "txtFighter" >
+    <button id = "btnAddFighter" onclick="organizer.addFighter()">Añadir a la liga</button>
+    <p>Luchadores provisionales:</p>
+    <textarea name="provisional" id="txtProvisionalFighters" ></textarea>
+    <button id = "btnConfirm" onclick="organizer.confirmFighters()">Confirmar luchadores provisionales</button>
+    <p>Aqui se muestra la asociación de luchadores</p>
+    <textarea name="textArea" id="txtResultados" cols="60" rows="30"></textarea>
+    <p>Organizar Grupos</p>
+    <button id = "btnOrganize" onclick="organizer.organizeFighters()">Organizar</button>
+    <p></p>
+    <input type="text" id="txtWinner">
+    <button onclick="organizer.addWinner()">Establecer como ganador</button>
 </body>
 
 </html>

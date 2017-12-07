@@ -10,7 +10,7 @@
 
 <body>
     <h1>Encuesta de calidad de la calculadora</h1>
-    <form action="mailto:UO251005@uniovi.es" method="post" onsubmit="encuesta.sendMail()">
+    <form action="mailto:UO251005@uniovi.es" method="post">
         <!-- utilizariamos un post en casos reales -->
         <div class="encuesta">
             <p>Como calificarias la funcionalidad de la aplicacion?</p>
@@ -21,14 +21,14 @@
             </div>
             <p>Como calificarias la usabilidad de la aplicacion?</p>
             <div id="usabilidad">
-                <input type="radio" name="b" id="btnUsabBaja">Alta</input>
-                <input type="radio" name="b" id="btnUsabMedia">Media</input>
-                <input type="radio" name="b" id="btnUsabAlta">Alta</input>
+                <input type="radio" name="usability" id="btnUsabBaja" checked="checked">Baja</input>
+                <input type="radio" name="usability" id="btnUsabMedia">Media</input>
+                <input type="radio" name="usability" id="btnUsabAlta">Alta</input>
             </div>
             <p>De los siguientes cual crees que es el mejor aspecto de la calculadora:</p>
             <div id="divCbAspects">
-                <select id="cbAspects">
-
+                <select id="cbAspects" required="required">
+                    <option value=""></option>
                     <option value="utilidad">Utilidad</option>
                     <option value="originalidad">Originalidad</option>
                     <option value="estilo">Estilo</option>
@@ -36,8 +36,8 @@
             </div>
             <p>Puntua del 1 al 10 el estilo de la aplicacion</p>
             <div id="divCbRatingStyle">
-                <select id="cbRatingStyle">
-
+                <select id="cbRatingStyle" required="required">
+                    <option value=""></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -52,7 +52,8 @@
             </div>
             <p>Puntua del 1 al 10 como de utiles son las funciones propuestas en la calculadora cientifica</p>
             <div id="divCbFunctionStyle">
-                <select id="cbFunctionStyle">
+                <select id="cbRatingFunction" required="required">
+                    <option value=""></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -66,14 +67,49 @@
                 </select>
             </div>
             <p>Comentarios de recomendacion de la calculadora(opcional):</p>
-            <textarea name="area" id="textComment" cols="60" rows="5"></textarea>
-            <p>Aceptas que se recojan tus datos como parte de la encuesta de uniovi?</p>
-            <div id = "checkBox" onclick="encuesta.validate()">
-                    <input type="checkbox" name="checkAcept" id="chboxAcceptTerms" onclick="encuesta.clickTerms()">
+            <div id="txtComments">
+                <textarea name="area" id="textComment"></textarea>
             </div>
-            <div id = "button"> 
-                <button id = "btnSend" onclick="encuesta.showMean()">Confirmar y Enviar</button>
-                <textarea name="txtMeanResult" id="txtMean" cols="10" rows="1"></textarea>
+            <div id="userData">
+                <div id="divName">
+                    <label for="name">Nombre:</label>
+                    <input id="name" type="text" required="required">
+                </div>
+                <div id="divSurname">
+                    <label for="surname">Apellidos:</label>
+                    <input id="surname" type="text" required="required">
+                </div>
+                <div id = "divId">
+                    <label for="dni">DNI:</label>
+                    <input id = "dni" type="text">
+                </div>
+                <input id = "txtDni"type="txtDni" readonly="readonly">
+                <div id="divDate">
+                    <label for="dateOfBirth">Año de nacimiento:</label>
+                    <input id="dateOfBirth" type="date" min="1970-01-01" max="1999-01-01" required="required">
+                </div>
+                <div id="divGender">
+                    <label for="cbGender">Género:</label>
+                    <select name="cbGender" id="cbGender" required="required">
+                        <option value=""></option>
+                        <option value="male">Hombre</option>
+                        <option value="female">Mujer</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div id="divEmail">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" required="required">
+                </div>
+            </div>
+            <div id="checkBox">
+
+                <label for="chboxAcceptTerms">Aceptas la utilizacion de tus datos en la encuesta?</label>
+                <input type="checkbox" name="checkAcept" id="chboxAcceptTerms" onclick="encuesta.clickTerms()">
+            </div>
+            <div id="button">
+                <textarea name="txtMeanResult" id="txtMean" readonly="readonly"></textarea>
+                <button id="btnSend" onclick="encuesta.validate()">Confirmar y Enviar</button>
             </div>
         </div>
     </form>

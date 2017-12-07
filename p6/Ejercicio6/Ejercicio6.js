@@ -1,57 +1,124 @@
-
-/*
 "no strict"
-class MP3Player{
-
-    selectFile(){
-
+class Tuple {
+    constructor(a, b) {
+        this.a = a;
+        this.b = b;
     }
 
-}*/
-
-class Cypher {
-    constructor() {
-        console.log("cypher constructor");
-        this.binary = new BinaryCypher();
-        //this.caesar = new CaesarCypher();
-        //this.ascii = new AsciiCypher();
-        
+    getA() {
+        return this.a;
     }
-
-    cypher() {
-        console.log("cypher metodo");
-        this.binary.cypher();
-        //this.caesar.cypher;
-        //this.ascii.cypher;
+    getB() {
+        return this.b;
     }
 }
 
-class BinaryCypher {
+class Organizer {
 
     constructor() {
-        console.log("binarycypher constructor");
-        
+        this.provisionalFighters = [];
+        this.fighters = [];
+        this.pairs = [];
+        this.round = 1;
+        this.lenght = 0;
     }
-    cypher() {
-        console.log("binarycypher metodo");
-        document.getElementById("output").value = "";
-        var i = 0;
-        while(i < document.getElementById("input").value.length){
-            console.log("loop");
-            document.getElementById("output").value += 
-            document.getElementById("input")[i].charCodeAt(0).toString(2) + " ";
-            i++;
+
+    addFighter() {
+        var txtFighter = document.getElementById("txtFighter");
+        var txtProvisional = document.getElementById("txtProvisionalFighters");
+        if (txtFighter.value.trim() == "") {
+            txtFighter.value = "Introduce un nombre de luchador";
+        } else if (txtFighter.value.trim() == "El luchador ya existe" || txtFighter.value.trim() == "Introduce un nombre de luchador") {
+            txtFighter.value = ""
+        } else {
+            if (!this.provisionalFighters.includes(txtFighter.value)) {
+                this.provisionalFighters.push(txtFighter.value);
+                txtProvisional.value += "\n" + txtFighter.value;
+                this.lenght++;
+            } else {
+                txtFighter.value = "El luchador ya existe";
+            }
         }
-        console.log("Output value: "+document.getElementById("output").value);
+    }
+
+    confirmFighters() {
+        var l = this.provisionalFighters.length;
+
+        if ((l && (l & (l - 1)) === 0) && l > 1) {//power of 2 
+            this.fighters = this.provisionalFighters;
+            document.getElementById("btnAddFighter").disabled = true;
+            document.getElementById("btnConfirm").disabled = true;
+        } else {
+
+            var txtProvisional = document.getElementById("txtProvisionalFighters");
+            txtProvisional.value = "El numero de luchadores debe de ser potencia de 2";
+        }
+
+    }
+
+    selectRandomly() {
+        var posA = Math.floor(Math.random() * this.fighters.length);
+        var a = this.fighters[posA];
+        this.fighters.splice(posA, 1);
+        var posB = Math.floor(Math.random() * this.fighters.length);
+        var b = this.fighters[posB];
+        this.fighters.splice(posB, 1);
+        return new Tuple(a, b);
+    }
+
+    organizeFighters() {
+        this.pairs = [];
+        var mod = this.lenght % 2;
+        if (mod == 0) {
+            let i = 0;
+            while (i < this.lenght / 2) {
+                var tuple = this.selectRandomly();
+                this.pairs.push(tuple);
+                i++;
+            }
+            this.fighters = [];
+            this.lenght = 0;
+            this.list();
+        } else {
+            var result = document.getElementById("txtResultados");
+            result.value = "DEBE HABER UN NUMERO PAR DE LUCHADORES"
+        }
+    }
+
+    list() {
+        var result = document.getElementById("txtResultados");
+        if ("DEBE HABER UN NUMERO PAR DE LUCHADORES" == result.value) {
+            result.value = "";
+        }
+        result.value += "Ronda" + this.round + "\n\n";
+        this.pairs.forEach(element => {
+            console.log("foreach");
+            result.value += element.getA() + "-vs-" + element.getB() + "\n";
+        });
+        this.round++;
+    }
+
+    increaseLenght() {
+        this.lenght++;
+    }
+    addWinner() {
+        var winner = document.getElementById("txtWinner");
+        var result = document.getElementById("txtResultados");
+        if (this.pairs.length == 1) {
+            result.value = "EL GANADOR DEL CAMPEONATO ES:" + winner.value;
+            document.getElementById("btnOrganize").disabled = true;
+        } else {
+            this.pairs.forEach(element => {
+                if (element.getA() == winner.value) {
+                    this.fighters.push(element.getA());
+                    this.increaseLenght();
+                } else if (element.getB() == winner.value) {
+                    this.fighters.push(element.getB());
+                    this.increaseLenght();
+                }
+            });
+        }
     }
 }
-var cypher = new Cypher();
 
-function convert() {
-    var output = document.getElementById("output");
-    var input = document.getElementById("input").value;
-    output.value = "";
-    for (var i = 0; i < input.length; i++) {
-        output.value += input[i].charCodeAt(0).toString(2) + " ";
-    }
-  }
+var organizer = new Organizer();

@@ -1,33 +1,8 @@
-form textarea{
-    resize: none;
-}
-
-input[type=text]{
-    width: 50%;
-}
-
-form p{
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
 html{
     background-color: rgb(31, 69, 102);
 }
 
-button{
-    margin: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    padding-left: 25px; 
-    padding-right: 25px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
 body{
-    text-align: center;
     background-color: navajowhite;
     margin-top: 3%;
     margin-bottom: 5%;
@@ -35,10 +10,82 @@ body{
     margin-right: auto + 2%;
 }
 
+body div{
+    display: table;
+    margin: 0 auto; 
+}
+
+form textarea{
+    resize: none;
+}
+
+form p{
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label{
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+button{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 h1{
+    text-align: center;
     color: rgb(31, 69, 102);
-    margin-top: 15px;
     padding-top: 3%;
     padding-bottom: 1%;
     background-color : navajowhite;
+}
+
+#textComment{
+    width: 150%;
+    background-color:red; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+
+div #txtMean{
+    background-color: red; 
+}
+
+#txtMean {
+    width: 150%;
+    height: 200%;
+    border: none;
+    background-color: navajowhite;
+}
+
+#txtDni{
+    border: none;
+    background-color: navajowhite;
+}
+div input [type=text]{
+    margin: 2% 3%;
+    width: 100%;
+}
+
+#button input{ 
+    padding: 100%;
+    width: 100%;
+}
+
+input [type=date]{
+    margin: 2% 3%;
+    width: 100%;
+}
+
+input [type=email]{
+    margin: 2% 3%;
+    width: 100%;
 }
