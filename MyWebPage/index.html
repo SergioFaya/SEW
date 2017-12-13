@@ -9,6 +9,8 @@
     <title>Sergio Faya's Site</title>
     <link rel="icon" href="https://unioviedo-my.sharepoint.com/personal/uo251005_uniovi_es/_layouts/15/guestaccess.aspx?docid=0bd6e7955fd1f45aca31ddab36d705bad&authkey=ARliPMyruMWzFIQVpGL6LRM&e=1a77aec48d3146ec83784689899cea57"/>
     <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="navigator.js"></script>
 </head>
 
 <body>
@@ -21,6 +23,9 @@
                 <li><a tabindex="3" accesskey = "H" href="hobbies.html">My hobbies</a></li>
             </ul>
         </nav>
+        <input id = "txtFind" type="text">
+        <button id = "btnFind">Buscar</button>
+        
     <h2>About Me</h2>
     <h3>Summary</h3>
     <p>A student of Software Engineering, specially interested in testing, improving and git-workflow management. Currently
@@ -117,7 +122,7 @@
     </table>
     <!-- TODO: introduce a table with the info of the different completed courses -->
 
-    <h2>You can find me at</h2>
+    <h2 id = "h2Find">You can find me at</h2>
     <ul>
         <li>
             <a href="https://www.instagram.com/sergio_faya/?hl=es">Instagram</a>

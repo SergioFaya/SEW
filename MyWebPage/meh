@@ -1,0 +1,22 @@
+
+function parseText(tag) {
+    $(tag+":contains('" + wordToFind + "')", document.body).each(function () {
+        var uppercaseContent = this.innerText;
+        var contentSplit = uppercaseContent.split(" ");
+        var aux = contentSplit;
+        var tag = $(this).get(0).tagName.toLowerCase();
+
+        for (let i = 0; i < contentSplit.length; i++) {
+            if (contentSplit[i].toUpperCase() == wordToFind.toUpperCase()) {
+                aux[i] = colorize(contentSplit[i]);
+            }
+        }
+        var finalString = "";
+        for (let i = 0; i < aux.length; i++) {
+            finalString += aux[i] + " ";
+        }
+
+        this.innerText = finalString;
+        $(this).replaceWith("<"+tag+">"+this.innerText+"</"+tag+">");
+    });
+}
