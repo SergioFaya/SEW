@@ -10,23 +10,24 @@ window.onload = function () {
 }
 
 function parseText() {
-    $("*:contains('" + wordToFind + "')", document.body).each(function () {
-        var uppercaseContent = this.innerHTML;
-        var contentSplit = uppercaseContent.split(" ");
-        var aux = contentSplit;
-
-        for (let i = 0; i < contentSplit.length; i++) {
-            if (contentSplit[i].toUpperCase().trim() == wordToFind.toUpperCase().trim()) {
-                aux[i] = colorize(contentSplit[i].trim());
-            }
-        }
-        var finalString = "";
-        for (let i = 0; i < aux.length; i++) {
-            finalString += aux[i] + " ";
-        }
-
-        this.innerHTML = finalString;
+    $(".resource", document.body).each(function () {
+        var content = this.innerText;
+        var input = wordToFind;
+        var letters = input.split("");
+        var permCount = 1 <<input.length;
+        //Crea todas las posibles combinaciones de mayusculas y minusculas dentro de la palabra que se quiere encontrar
+        for (let perm = 0; perm < permCount; perm++) {
+            letters.reduce((perm, letter, i) => {
+              letters[i] = (perm & 1) ? letter.toUpperCase() : letter.toLowerCase();
+              return perm >> 1;
+            }, perm);
+            
+            var result = letters.join("");
+            content = content.replace(result, colorize(result));
+          }
+        this.innerHTML = content;
         $(this).replaceWith(this.outerHTML);
+
     });
 }
 
