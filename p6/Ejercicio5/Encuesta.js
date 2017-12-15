@@ -19,14 +19,12 @@ class Encuesta {
     }
 
     validateDni() {
-        var dni = document.getElementById("dni");
+        var dni = document.getElementById("dni").value;
         var dniTxt = document.getElementById("txtDni");
-        var numero
-        var letr
-        var letra
-        var expresion_regular_dni
-
-        expresion_regular_dni = /^\d{8}[a-zA-Z]$/;
+        var numero;
+        var letr;
+        var letra;
+        var expresion_regular_dni = /^\d{8}[a-zA-Z]$/;
 
         if (expresion_regular_dni.test(dni) == true) {
             numero = dni.substr(0, dni.length - 1);
@@ -52,7 +50,7 @@ class Encuesta {
         var functSelectedValue = funct.options[funct.selectedIndex].value;
         var functRadio = this.getRadioFunctionality();
         var radioUsab = this.getRadioUsab();
-        var mean = (eval(functRadio) + eval(radioUsab) + eval(styleSelectedValue) + eval(functSelectedValue)) / 4;
+        var mean = (eval(functRadio) + eval(radioUsab) + eval(styleSelectedValue) + eval(functSelectedValue)) / 4 + "";
         var result = document.getElementById("txtMean");
         result.value = "Media : " + mean.substring(0,3);
     }

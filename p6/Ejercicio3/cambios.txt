@@ -1,2 +1,0 @@
-calculadora quitar tabla, no son accesibles. Seminario de accesibilidad7
-css todo con % incluida la fuente

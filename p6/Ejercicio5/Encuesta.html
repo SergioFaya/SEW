@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8" />
@@ -15,20 +15,20 @@
         <div class="encuesta">
             <p>Como calificarias la funcionalidad de la aplicacion?</p>
             <div id="funcionalidad">
-                <input type="radio" name="functionality" id="btnFunctBaja" checked="checked">Baja</input>
-                <input type="radio" name="functionality" id="btnFunctMedia">Media</input>
-                <input type="radio" name="functionality" id="btnFunctAlta">Alta</input>
+                <input type="radio" name="functionality" id="btnFunctBaja" checked="checked">Baja
+                <input type="radio" name="functionality" id="btnFunctMedia">Media
+                <input type="radio" name="functionality" id="btnFunctAlta">Alta
             </div>
             <p>Como calificarias la usabilidad de la aplicacion?</p>
             <div id="usabilidad">
-                <input type="radio" name="usability" id="btnUsabBaja" checked="checked">Baja</input>
-                <input type="radio" name="usability" id="btnUsabMedia">Media</input>
-                <input type="radio" name="usability" id="btnUsabAlta">Alta</input>
+                <input type="radio" name="usability" id="btnUsabBaja" checked="checked">Baja
+                <input type="radio" name="usability" id="btnUsabMedia">Media
+                <input type="radio" name="usability" id="btnUsabAlta">Alta
             </div>
             <p>De los siguientes cual crees que es el mejor aspecto de la calculadora:</p>
             <div id="divCbAspects">
                 <select id="cbAspects" required="required">
-                    <option value=""></option>
+                    <option value="">Elige uno</option>
                     <option value="utilidad">Utilidad</option>
                     <option value="originalidad">Originalidad</option>
                     <option value="estilo">Estilo</option>
@@ -37,7 +37,7 @@
             <p>Puntua del 1 al 10 el estilo de la aplicacion</p>
             <div id="divCbRatingStyle">
                 <select id="cbRatingStyle" required="required">
-                    <option value=""></option>
+                    <option value="">Elige uno</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -53,7 +53,7 @@
             <p>Puntua del 1 al 10 como de utiles son las funciones propuestas en la calculadora cientifica</p>
             <div id="divCbFunctionStyle">
                 <select id="cbRatingFunction" required="required">
-                    <option value=""></option>
+                    <option value="">Elige uno</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -67,9 +67,8 @@
                 </select>
             </div>
             <p>Comentarios de recomendacion de la calculadora(opcional):</p>
-            <div id="txtComments">
-                <textarea name="area" id="textComment"></textarea>
-            </div>
+            <textarea name="area" id="txtComments" cols="50" rows="15"></textarea>
+
             <div id="userData">
                 <div id="divName">
                     <label for="name">Nombre:</label>
@@ -79,19 +78,22 @@
                     <label for="surname">Apellidos:</label>
                     <input id="surname" type="text" required="required">
                 </div>
-                <div id = "divId">
+                <div id="divId">
                     <label for="dni">DNI:</label>
-                    <input id = "dni" type="text">
+                    <input id="dni" type="text">
+                    <div>
+                        <textarea id="txtDni" cols="30" rows="2" readonly="readonly"></textarea>
+                    </div>
                 </div>
-                <input id = "txtDni"type="txtDni" readonly="readonly">
+
                 <div id="divDate">
                     <label for="dateOfBirth">Año de nacimiento:</label>
                     <input id="dateOfBirth" type="date" min="1970-01-01" max="1999-01-01" required="required">
                 </div>
-                <div id="divGender">
-                    <label for="cbGender">Género:</label>
-                    <select name="cbGender" id="cbGender" required="required">
-                        <option value=""></option>
+                <div id="divGenre">
+                    <label for="cbGenre">Género:</label>
+                    <select name="cbGenre" id="cbGenre" required="required">
+                        <option value="">Elige uno</option>
                         <option value="male">Hombre</option>
                         <option value="female">Mujer</option>
                         <option value="otro">Otro</option>

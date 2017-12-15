@@ -1,0 +1,45 @@
+html{
+    background-color: rgb(31, 69, 102);
+    text-align: center;
+}
+
+body{
+    background-color: navajowhite;
+    margin-top: 5%; 
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 5%; 
+}
+
+input [type = "text"]{
+    outline: none;
+    font-size: 200%;
+    width: 150%;
+    height: 15%; 
+    margin-bottom: 5%;
+}
+
+textarea{
+    font-size: 250%;
+    resize: none;
+    background-color: lightgray;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+
+div{
+    padding: 1%;
+}
+
+h1{
+    color: rgb(31, 69, 102);
+    margin-top: 3%;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color : navajowhite;
+}

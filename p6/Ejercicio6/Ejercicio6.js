@@ -21,6 +21,8 @@ class Organizer {
         this.pairs = [];
         this.round = 1;
         this.lenght = 0;
+        document.getElementById("btnOrganize").disabled = true;
+        document.getElementById("btnAddWinner").disabled = false;
     }
 
     addFighter() {
@@ -48,6 +50,9 @@ class Organizer {
             this.fighters = this.provisionalFighters;
             document.getElementById("btnAddFighter").disabled = true;
             document.getElementById("btnConfirm").disabled = true;
+            document.getElementById("btnOrganize").disabled = false;
+            document.getElementById("btnAddWinner").disabled = false;
+            
         } else {
 
             var txtProvisional = document.getElementById("txtProvisionalFighters");
@@ -79,6 +84,8 @@ class Organizer {
             this.fighters = [];
             this.lenght = 0;
             this.list();
+            document.getElementById("btnOrganize").disabled = true;
+            document.getElementById("btnAddWinner").disabled = false;
         } else {
             var result = document.getElementById("txtResultados");
             result.value = "DEBE HABER UN NUMERO PAR DE LUCHADORES"
@@ -118,7 +125,10 @@ class Organizer {
                 }
             });
         }
+        if(this.fighters.length == this.pairs.length){
+            document.getElementById("btnOrganize").disabled = false;
+            document.getElementById("btnAddWinner").disabled = true;
+        }
     }
 }
 
-var organizer = new Organizer();

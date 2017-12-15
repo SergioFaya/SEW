@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <title>Creador de ligas de Judo</title>
@@ -11,18 +11,27 @@
 <body>
     <h1>Creacion de emparejamientos para combates</h1>
     <p>Introduce el número de luchadores en la liga</p>
-    <input type="text" id = "txtFighter" >
-    <button id = "btnAddFighter" onclick="organizer.addFighter()">Añadir a la liga</button>
+    <div>
+        <input type="text" id="txtFighter">
+    </div>
+    <div>
+        <button id="btnAddFighter" onclick="organizer.addFighter()">Añadir a la liga</button>
+    </div>
     <p>Luchadores provisionales:</p>
-    <textarea name="provisional" id="txtProvisionalFighters" ></textarea>
-    <button id = "btnConfirm" onclick="organizer.confirmFighters()">Confirmar luchadores provisionales</button>
+    <textarea name="provisional" id="txtProvisionalFighters" rows = "4" readonly="readonly"></textarea>
+    <div>
+        <button id="btnConfirm" onclick="organizer.confirmFighters()">Confirmar luchadores provisionales</button>
+    </div>
+
     <p>Aqui se muestra la asociación de luchadores</p>
-    <textarea name="textArea" id="txtResultados" cols="60" rows="30"></textarea>
-    <p>Organizar Grupos</p>
-    <button id = "btnOrganize" onclick="organizer.organizeFighters()">Organizar</button>
-    <p></p>
+    <textarea name="textArea" id="txtResultados" rows="16" readonly="readonly"></textarea>
+    <div>
+        <p>Organizar Grupos</p>
+        <button id="btnOrganize" onclick="organizer.organizeFighters()">Organizar</button>
+    </div>
     <input type="text" id="txtWinner">
-    <button onclick="organizer.addWinner()">Establecer como ganador</button>
+    <button id="btnAddWinner" onclick="organizer.addWinner()">Establecer como ganador</button>
+    <script>var organizer = new Organizer();</script>
 </body>
 
 </html>

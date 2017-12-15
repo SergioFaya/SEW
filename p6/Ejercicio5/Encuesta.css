@@ -46,20 +46,33 @@ h1{
     background-color : navajowhite;
 }
 
-#textComment{
-    width: 150%;
-    background-color:red; 
+#txtComments{
+    width: 100%;
+    background-color: navajowhite;
+    border: 3px solid rgb(31, 69, 102);
     margin-left: auto;
     margin-right: auto;
     display: block;
-    
 }
 
-div #txtMean{
-    background-color: red; 
+#divName{
+    margin: 3%;
 }
 
+#divSurname{
+    margin: 3%;
+}
+
+#divDate{
+    margin: 3%;
+}
+
+#divGenre{
+    margin: 3%;
+}
 #txtMean {
+    background-color: navajowhite; 
+    color:red;
     width: 150%;
     height: 200%;
     border: none;
@@ -67,6 +80,7 @@ div #txtMean{
 }
 
 #txtDni{
+    color:red;
     border: none;
     background-color: navajowhite;
 }

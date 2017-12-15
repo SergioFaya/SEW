@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EL PONG</title>
+    <link rel="stylesheet" href="pong.css">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="pong-jquery.js"></script>
+</head>
+
+<body>
+    <h1>EL PONG</h1>
+    <p id = "pDisfruta">Disfruta de este mitico juego de maquinas de arcade</p>
+    <div class="dataSelection">
+        <p> Seleciona el tamaño del campo de juego</p>
+        <div>
+            <button id="btnSizeSmall">Pequeño</button>
+            <button id="btnSizeMedium">Mediano</button>
+            <button id="btnSizeBig">Grande</button>
+        </div>
+        <div id = "btnDimensions">
+            <button id="btnSizeOther">Introduce las dimensiones del campo</button>
+        </div>
+        <div id="inputHeight">
+            <label for="txtHeight">Alto:</label>
+            <input type="number" name="txtHeight" id="txtHeight" required="required">
+        </div>
+        <div id="inputWidth">
+            <label for="txtWidth">Ancho:</label>
+            <input type="number" name="txtWidth" id="txtWidth" required="required">
+        </div>
+        <div id="instrucciones">
+            <p>Pulsa espacio para sacar cada bola.</p>
+            <p>El jugador de la izquierda se mueve con las teclas w y s.
+            </p>
+            <p>
+                El de la derecha lo hace con las teclas de direccion de arriba y abajo.
+            </p>
+            <p>
+                Solo se puede mover la raqueta cuando la bola pasa la mitad de tu campo, así que se rápido.
+            </p>
+        </div>
+    </div>
+    <div class="dataSelection">
+        <p>Selecciona el tamaño de la bola</p>
+        <input type="number" id="txtBallSize">
+    </div>
+
+    <div class="dataSelection">
+        <p>Selecciona el tamaño de las raquetas</p>
+        <input type="number" id="txtPaddleSize">
+    </div>
+
+    <div id="divCanvas">
+
+    </div>
+    <button id="btnFullScreen">Jugar en Pantalla Completa</button>
+    <button id="btnStart">Empezar juego</button>
+</body>
+
+</html>

@@ -18,40 +18,37 @@ $(document).ready(function () {
 
     $("#addRows").click(function () {
         var txt = $("#textRow").val();
-        $("#tabla tbody").append("<tr><td>"+txt+"</td></tr>");
+        $("#tabla tbody").append("<tr><td>" + txt + "</td></tr>");
     });
 
-    $("#editH1").click(function(){
+    $("#editH1").click(function () {
         var txt = $("#textValueEditable").val();
         $("#h1").text(txt);
     });
 
-    $("#editH2").click(function(){
+    $("#editH2").click(function () {
         var txt = $("#textValueEditable").val();
         $("#h2").text(txt);
     });
-    $("#editH3").click(function(){
+    $("#editH3").click(function () {
         var txt = $("#textValueEditable").val();
         $("#h3").text(txt);
-    }); 
-    $("#editP").click(function(){
+    });
+    $("#editP").click(function () {
         var txt = $("#textValueEditable").val();
         $("#p").text(txt);
     });
 
-    $("#delete").click(function(){
+    $("#delete").click(function () {
         var combo = document.getElementById("combobox");
         var selectedItem = combo.options[combo.selectedIndex].value;
-        $("#"+selectedItem).remove();   
+        $("#" + selectedItem).remove();
     });
 
-   /* $("#recorrerPadre").click(function(){
-        $("body").s
-            //console.log($(this).parent().text())
+    $("#recorrerPadre").click(function () {
+        $("*", document.body).each(function () {
+            var etiquetaPadre = $(this).parent().get(0).tagName;
+            $(this).prepend(document.createTextNode("Etiqueta padre : <" + etiquetaPadre + "> elemento : <" + $(this).get(0).tagName + "> valor: "));
         });
     });
-
-
-    añadir un minibuscador que pinte si encuentra el texto
-    */
 });
