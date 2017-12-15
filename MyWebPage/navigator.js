@@ -1,6 +1,9 @@
 
-var matchingTags = [];
+
 var wordToFind = null;
+var selectedTag = "";
+var first = true;
+
 
 window.onload = function () {
     $("#btnFind").click(function () {
@@ -27,8 +30,15 @@ function parseText() {
           }
         this.innerHTML = content;
         $(this).replaceWith(this.outerHTML);
-
+        
+        if(first){
+            //coger id y meterlo para que pueda seleccionar la posicion
+            $(this).attr("id") = "firstOccurrence";
+            selectedTag = "firstOccurrence";
+            first = false;
+        }
     });
+    $(window).scrollTo("#"+selectedTag);
 }
 
 function colorize(word) {
