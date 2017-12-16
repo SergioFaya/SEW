@@ -1,5 +1,3 @@
-
-
 var wordToFind = null;
 var selectedTag = "";
 var first = true;
@@ -17,28 +15,21 @@ function parseText() {
         var content = this.innerText;
         var input = wordToFind;
         var letters = input.split("");
-        var permCount = 1 <<input.length;
-        //Crea todas las posibles combinaciones de mayusculas y minusculas dentro de la palabra que se quiere encontrar
+        var permCount = 1 << input.length;
+        //Crea todas las posibles combinaciones de mayusculas y minusculas dentro de la palabra
+        // que se quiere encontrar
         for (let perm = 0; perm < permCount; perm++) {
             letters.reduce((perm, letter, i) => {
-              letters[i] = (perm & 1) ? letter.toUpperCase() : letter.toLowerCase();
-              return perm >> 1;
+                letters[i] = (perm & 1) ? letter.toUpperCase() : letter.toLowerCase();
+                return perm >> 1;
             }, perm);
-            
+
             var result = letters.join("");
             content = content.replace(result, colorize(result));
-          }
+        }
         this.innerHTML = content;
         $(this).replaceWith(this.outerHTML);
-        
-        if(first){
-            //coger id y meterlo para que pueda seleccionar la posicion
-            $(this).attr("id") = "firstOccurrence";
-            selectedTag = "firstOccurrence";
-            first = false;
-        }
     });
-    $(window).scrollTo("#"+selectedTag);
 }
 
 function colorize(word) {
